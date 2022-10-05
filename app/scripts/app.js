@@ -143,19 +143,53 @@ const activateSliders = () => {
   }
 
   const detailsGoodSlider = new Swiper('.details-good__slider', {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    speed: 800,
+    centeredSlides: true,
+    speed: 500,
+    // allowTouchMove: false,
+    loop: true,
+    loopedSlides: 4,
     navigation: {
       nextEl: '.arrow-good__next',
       prevEl: '.arrow-good__prev',
     },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
+  });
+
+  const detailsGoodSliderSmall = new Swiper('.detail-good__slider_small', {
+    slidesPerView: 4,
+    speed: 500,
+    loopedSlides: 4,
+    slideToClickedSlide: true,
+    clickable: true,
+    loop: true,
+  });
+
+  detailsGoodSlider.controller.control = detailsGoodSliderSmall;
+  detailsGoodSliderSmall.controller.control = detailsGoodSlider;
+
+  const detailsGoodSliderFancy = new Swiper('.details-good__slider_fancy', {
+    centeredSlides: true,
+    speed: 500,
+    // allowTouchMove: false,
+    loop: true,
+    loopedSlides: 4,
+    navigation: {
+      nextEl: '.arrow-good__next',
+      prevEl: '.arrow-good__prev',
     },
   });
+
+  const detailsGoodSliderSmallFancy = new Swiper('.detail-good__slider_small_fancy', {
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+    speed: 500,
+    loopedSlides: 4,
+    slideToClickedSlide: true,
+    clickable: true,
+    loop: true,
+  });
+
+  detailsGoodSliderFancy.controller.control = detailsGoodSliderSmallFancy;
+  detailsGoodSliderSmallFancy.controller.control = detailsGoodSliderFancy;
 
   const detailsGoodSliderPopup = new Swiper('.details-good__slider_popup', {
     slidesPerView: 1,
