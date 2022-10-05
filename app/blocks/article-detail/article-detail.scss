@@ -1,0 +1,242 @@
+.article-detail-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 970px;
+}
+
+.article-detail-info__social-links {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin-left: 16px;
+  }
+}
+
+#article-page-detail {
+  .article-page__head-item:last-child {
+    width: initial;
+  }
+
+  .article-page__head-item:last-child a:first-child {
+    display: flex;
+  }
+
+  .article-page-content img {
+    margin-bottom: 50px;
+  }
+
+  .article-page-content__text_black {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #2B2C2E !important;
+  }
+
+  .article-detail-info__item {
+    .article-tag {
+      margin-bottom: 0;
+      color: #fff;
+      background: #2B2C2E;
+    }
+  }
+
+  .article-page__head-item_title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #2b2c2e;
+    border-bottom: 1px solid #e9e8ee;
+  }
+
+  .article-page__item-title {
+    margin-top: 0;
+  }
+
+  .article-page__head-block-item {
+    margin-bottom: 0;
+    padding: 30px 0;
+    border-bottom: 1px solid #e9e8ee;
+  }
+
+  .article-page__head {
+    margin-top: 24px;
+    margin-bottom: 50px;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .article-page-content {
+    width: 940px;
+  }
+
+  .article-detail-info .article-page__item-date {
+    margin-top: 0;
+  }
+
+  .article-page-content__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #7f818c;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 0 16px;
+
+    ul {
+      list-style: inside;
+      margin-left: 7px;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .article-page-content__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #2B2C2E;
+    padding: 0 16px;
+  }
+
+  .article-page-content__title_small {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2B2C2E;
+    margin-top: 50px;
+    padding: 0 16px;
+  }
+
+  .article-page__head-item_mobile {
+    display: none;
+    padding: 0 16px;
+  }
+
+}
+
+@media (max-width: 1400px) {
+  #article-page-detail {
+    .article-page__head-item:first-child {
+      display: block;
+    }
+
+    .article-page__head {
+     flex-wrap: nowrap;
+    }
+
+    .container {
+      padding: 0;
+    }
+
+    .title {
+      padding: 0 16px;
+    }
+
+    .article-detail-info {
+      padding: 0 16px;
+    }
+
+    .article-page__head-item:last-child {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+    }
+
+    .article-page__head-block-item {
+      padding: 10px 0;
+    }
+
+    .article-page__head-item_title {
+      padding-bottom: 10px;
+    }
+
+    .article-page__head-item:last-child {
+      gap: 10px 20px;
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  #article-page-detail {
+    .article-page__head-item:last-child {
+      display: none;
+    }
+
+    .article-detail-info {
+      width: 100%;
+    }
+
+    .article-page-content {
+      width: 100%;
+    }
+
+    .article-page__head-item_mobile {
+      display: block !important;
+      margin-left: 0 !important;
+      margin-top: 34px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #article-page-detail {
+    .article-page__head {
+      margin-top: 20px;
+    }
+
+    .article-page-content__text {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .article-page-content__title {
+      font-size: 16px;
+    }
+
+    .article-page-content__title_small {
+      font-size: 16px;
+      margin-top: 30px;
+      text-transform: lowercase;
+    }
+
+    .article-page__head {
+      padding-bottom: 40px;
+      margin-bottom: 0;
+    }
+
+    .article-page__head-item_title {
+      font-size: 24px;
+      padding-bottom: 30px;
+    }
+
+    .article-page__item-date {
+      margin-top: 10px;
+    }
+
+    .article-page__head-block-item {
+      padding: 20px 0;
+    }
+
+    .article-detail-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .article-detail-info__item {
+      .article-tag {
+        margin-bottom: 36px;
+      }
+    }
+  }
+}

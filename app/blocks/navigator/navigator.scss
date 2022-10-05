@@ -1,0 +1,389 @@
+#navigator {
+  padding-top: 100px;
+}
+
+.navigator-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.navigator-head__text {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #7f818c;
+}
+
+.navigator-head__tabs {
+  display: flex;
+  align-items: center;
+}
+
+.navigator-head__tab {
+  width: 160px;
+  padding: 15px;
+  margin-left: 10px;
+}
+
+.navigator-head__tab.active {
+  background: $dark;
+  color: #fff;
+}
+
+.navigator-content {
+  margin-top: 40px;
+}
+
+.navigator-content__item {
+  display: none;
+}
+
+.navigator-content__item.active {
+  display: flex;
+}
+
+.human-part__wrapper.active {
+  .human-part {
+    opacity: 0.6;
+    transition: 0.4s;
+  }
+}
+
+.human-part__wrapper.active-tab {
+  .human-part {
+    opacity: 0.6;
+    transition: 0.4s;
+  }
+}
+
+.person-title__wrapper {
+  cursor: pointer;
+}
+
+.navigator-content__first-list_item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #7f818c;
+  padding: 18px 0;
+  border-bottom: 1px solid #e9e8ee;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: inherit;
+}
+
+@media (min-width: 700px) {
+  .navigator-content__first-list_item:hover {
+    color: $accent;
+  }
+
+  .navigator-content__second-list_text:hover {
+    color: $accent;
+  }
+}
+
+
+
+.navigator-content__first-list_item.active-tab {
+  color: $accent;
+}
+
+.navigator-content__first-list {
+  display: flex;
+  flex-direction: column;
+  width: 315px;
+  margin-right: 60px;
+}
+
+.person-title__wrapper.active-tab g path {
+  fill: #fce194 !important;
+}
+
+.person-title__wrapper.active-tab rect {
+  fill: #fce194 !important;
+}
+
+.navigator-content__first-list_item.active-tab::after {
+  content: '';
+  display: flex;
+  height: 10px;
+  width: 30px;
+  background: url('../images/arrow-gold.svg') no-repeat center center;
+  margin-right: 3px;
+}
+
+.human-part {
+  opacity: 0;
+}
+
+.navigator-content__second-list_item {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 270px;
+}
+
+.navigator-content__second-list_item.active-tab {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigator-content__second-list_text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: $dark;
+  padding: 18px 0;
+}
+
+.navigator-img {
+  position: absolute;
+}
+
+.navigator-content__picture {
+  position: relative;
+}
+
+.body-img {
+  position: absolute;
+  top: 227px;
+  left: 0;
+  opacity: 0;
+  transition: 0.1s;
+}
+
+.body-img2 {
+  top: 252px;
+  left: 142px;
+}
+
+.body-img.active-tab {
+  opacity: 1;
+  transition: 0.1s;
+}
+
+.body-img.active {
+  opacity: 1;
+  transition: 0.1s;
+}
+
+.navigator-content__picture svg {
+  position: relative;
+}
+
+.navigator-content__picture {
+  margin-right: 30px;
+}
+
+.navigator-content__first-list_wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.navigator-content__first-list_item > .navigator-content__first-list_item-text-wrapp svg {
+  display: none;
+}
+
+@media (max-width: 1355px) {
+  .navigator-content__item {
+    flex-direction: column;
+  }
+
+  .navigator-content__second-list_item {
+    display: none;
+    position: absolute;
+    right: initial;
+    left: 50%;
+    top: 10%;
+    width: 270px;
+  }
+
+  .navigator-content__first-list {
+    margin-top: 30px;
+  }
+
+  .navigator-content__picture {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1150px) {
+  .navigator-head {
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .navigator-head__tab {
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .navigator-content__item {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 765px) {
+  .navigator-content__second-list_item {
+    left: 55%;
+  }
+}
+
+@media (max-width: 700px) {
+  .navigator-content__picture {
+    display: none;
+  }
+
+  .navigator-head__tabs {
+    flex-wrap: wrap;
+  }
+
+  .navigator-content__first-list {
+    margin-right: 20px;
+  }
+
+  .navigator-content__first-list {
+    width: 100%;
+  }
+
+  .navigator-content__second-list_wrapper {
+    max-width: 200px;
+  }
+
+  .navigator-content__item {
+    flex-wrap: nowrap;
+  }
+
+  .navigator-content__second-list_item {
+    position: static;
+  }
+
+  .navigator-content__first-list_item {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .navigator-content__first-list_item.active-tab::after {
+    display: none;
+  }
+
+  .navigator-content__first-list_item-text-wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .navigator-content__first-list {
+    margin-top: 0;
+  }
+
+  .navigator-content {
+    margin-top: 16px;
+  }
+
+  .navigator-content__first-list_item > .navigator-content__first-list_item-text-wrapp svg {
+    display: flex;
+  }
+
+  .navigator-content__first-list_item.active-tab > .navigator-content__first-list_item-text-wrapp svg path {
+    fill: $accent;
+  }
+
+  .navigator-content__first-list_item.active-tab > .navigator-content__first-list_item-text-wrapp svg {
+    transform: rotate(180deg);
+    transition: 0.35s;
+  }
+}
+
+@media (max-width: 576px) {
+  .navigator-content__first-list_item.active-tab::after {
+    width: 70px;
+  }
+
+
+  .navigator-head__tabs {
+    justify-content: space-around;
+    margin-top: 6px;
+  }
+
+  .navigator-head__tab {
+    max-width: 190px;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 440px) {
+  .navigator-head__tab {
+    max-width: 170px;
+  }
+}
+
+@media (max-width: 396px) {
+  .navigator-head__tab {
+    mxa-width: 155px;
+  }
+}
+
+@media (max-width: 365px) {
+  .navigator-head__tab {
+    width: 145px;
+  }
+
+  .navigator-head__tab {
+    font-size: 12px;
+    padding: 13px;
+  }
+}
+
+@media (max-width: 350px) {
+  .navigator-head__tab {
+    width: 125px;
+  }
+}
+
+
+//new
+
+#navigator .title {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 576px) {
+    #navigator .title {
+    margin-bottom: 20px;
+  }
+}
+
+.navigator-hide {
+  display: none;
+}
+
+.human-part_vein {
+
+  opacity: 1;
+  stroke: #000;
+}
+
+.human-part__wrapper.active-tab .human-part.human-part_vein {
+
+  opacity: 0.6;
+  stroke: #fce194;
+}
+
+.human-part__wrapper.active-tab .human-part.human-part_vein-adult {
+  opacity: 1;
+}
+
+.person-title__wrapper.active-tab {
+  z-index: 999999;
+}
+

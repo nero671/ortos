@@ -1,0 +1,121 @@
+.cart-overall {
+    $offset-left: 110px;
+    $col-gap: 49px;
+
+    @media(max-width: 767px) {
+        $col-gap: 12px;
+    }
+
+    // .cart-total__list
+
+    &__list {
+        padding: 21px 0;
+
+        @media(max-width: 767px) {
+            padding: 4px 0 20px;
+        }
+    }
+
+    // .cart-total__list-item
+
+    &__list-item {
+        color: $gray-2;
+
+        &:not(:last-child) {
+            margin-bottom: 13px;
+        }
+
+        dt {
+            font-size: 14px;
+            text-transform: uppercase;
+
+            @media(min-width: 768px) {
+                grid-area: key;
+            }
+        }
+
+        dd {
+            font-size: 15px;
+
+            @media(min-width: 768px) {
+                grid-area: value;
+            }
+        }
+    }
+
+    &__list-item,
+    &__box {
+        display: grid;
+        grid-template-columns: $offset-left 1fr max-content;
+        column-gap: $col-gap;
+        align-items: center;
+
+        @media(max-width: 767px) {
+            grid-template-columns: 1fr max-content;
+        }
+
+        @media(min-width: 768px) {
+            grid-template-areas: '. key value';
+        }
+    }
+
+    // .cart-total__overall
+
+    &__box {
+        padding: 19px 0;
+        background-color: $gray;
+        font-weight: 500;
+
+        @media(max-width: 767px) {
+            position: relative;
+            padding: 18px 0;
+        }
+
+        &::before,
+        &::after {
+            @media(max-width: 767px) {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                background-color: $gray;
+                width: 16px;
+            }
+        }
+
+        &::before {
+            left: -16px;
+        }
+
+        &::after {
+            right: -16px;
+        }
+    }
+
+    // .cart-total__box-text
+
+    &__box-text {
+        font-size: 16px;
+        text-transform: uppercase;
+
+        @media(min-width: 768px) {
+            grid-area: key;
+        }
+    }
+
+    // .cart-total__box-sum
+
+    &__box-sum {
+        font-size: 32px;
+        line-height: 100%;
+
+        @media(max-width: 576px) {
+            font-size: 26px;
+            line-height: 130%;
+        }
+
+        @media(min-width: 768px) {
+            grid-area: value;
+        }
+    }
+}

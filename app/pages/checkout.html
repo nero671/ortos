@@ -1,0 +1,102 @@
+@@include("blocks/head/head.html", {"title": "Корзина/Оформление заказа"})
+@@include("blocks/header/header.html", {
+"header-bottom": "header-bottom",
+})
+<main class="main">
+    <div id="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs-item">
+                    <a href="#">Главная страница</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <a href="#">Каталог</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <a href="#">Ортопедическая обувь</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <a href="#">Женская обувь</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <a href="#">Ортопедические сандалии Ortmann REYNA</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <a href="#">Моя корзина</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="cart">
+            <div class="container">
+                <h1 class="title cart__title">Моя корзина</h1>
+                <div class="cart__body">
+                    <div class="cart__table">
+                        @@include('blocks/cart-good/cart-good.html', {
+                        "element": "cart__good",
+                        "src": "assets/images/cart1.png",
+                        "articul": "KBX6101",
+                        "title": "Ортопедические сандалии Ortmann VEGAS",
+                        "price": "214,68 руб.",
+                        })
+                        @@include('blocks/cart-good/cart-good.html', {
+                        "element": "cart__good",
+                        "src": "assets/images/cart1.png",
+                        "articul": "KBX6101",
+                        "title": "Ортопедические сандалии Ortmann VEGAS",
+                        "price": "214,68 руб.",
+                        "oldprice": "220,13 руб.",
+                        "discount": {
+                        "value": "на второй товар скидка в 5%",
+                        "bg": "green"
+                        },
+                        })
+                        @@include('blocks/cart-good/cart-good.html', {
+                        "element": "cart__good",
+                        "label": {
+                        "value": "-10%",
+                        "bg": "red"
+                        },
+                        "src": "assets/images/cart1.png",
+                        "articul": "HANNEKE",
+                        "title": "Женские спортивные туфли HANNEKE",
+                        "price": "457,00 руб.",
+                        "oldprice": "469,13 руб.",
+                        "favorite": "true"
+                        })
+                    </div>
+                    @@include('blocks/cart-total/cart-total.html', {
+                    "element": "cart__total"
+                    })
+                    @@include('blocks/cart-box/cart-box.html', {
+                    "element": "cart__box",
+                    "text": "Для бесплатной доставки добавьте товаров еще на <span>5,32 руб</span>"
+                    })
+                </div>
+            </div>
+        </div>
+        @@include('blocks/checkout/checkout.html')
+        @@include('blocks/good-detail__slider/good-detail__slider.html')
+    </div>
+</main>
+@@include("blocks/footer/footer.html")
+
+@@include('blocks/shops-popup/shops-popup.html')
+
+@@include("blocks/footer-menu/footer-menu.html")
+@@include("blocks/popup-menu/popup-menu.html")
+@@include('blocks/popups/auth-popup.html', {
+"id": "register",
+"title": "Зарегистрируйтесь"
+})
+@@include('blocks/popups/auth-popup.html', {
+"id": "enter",
+"title": "Войти в аккаунт"
+})
+@@include('blocks/popups/favorite-popup.html')
+@@include("blocks/cookies/cookies.html")
+@@include('blocks/auth-tape/auth-tape.html')
+@@include("blocks/link/link.html")
+@@include('blocks/maps/maps.html')

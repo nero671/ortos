@@ -1,0 +1,994 @@
+<div id="catalog-page">
+  <div class="container">
+    <h1 class="title catalog-page__title">
+      каталог
+    </h1>
+    <div class="filter-btn__open">
+      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.9375 4.25H13.7594C13.4937 3.02813 12.4312 2.125 11.1562 2.125C9.88125 2.125 8.81875 3.02813 8.55313 4.25H1.0625V5.3125H8.55313C8.81875 6.53438 9.88125 7.4375 11.1562 7.4375C12.4312 7.4375 13.4937 6.53438 13.7594 5.3125H15.9375V4.25ZM11.1562 6.375C10.2531 6.375 9.5625 5.68438 9.5625 4.78125C9.5625 3.87812 10.2531 3.1875 11.1562 3.1875C12.0594 3.1875 12.75 3.87812 12.75 4.78125C12.75 5.68438 12.0594 6.375 11.1562 6.375ZM1.0625 12.75H3.24062C3.50625 13.9719 4.56875 14.875 5.84375 14.875C7.11875 14.875 8.18125 13.9719 8.44687 12.75H15.9375V11.6875H8.44687C8.18125 10.4656 7.11875 9.5625 5.84375 9.5625C4.56875 9.5625 3.50625 10.4656 3.24062 11.6875H1.0625V12.75ZM5.84375 10.625C6.74687 10.625 7.4375 11.3156 7.4375 12.2188C7.4375 13.1219 6.74687 13.8125 5.84375 13.8125C4.94062 13.8125 4.25 13.1219 4.25 12.2188C4.25 11.3156 4.94062 10.625 5.84375 10.625Z" fill="#2B2C2E"></path>
+      </svg>
+      сортировка и фильтры
+    </div>
+    <div class="catalog-page">
+      <div class="catalog-filter">
+        <div class="catalog-filter__container">
+          <div class="catalog-filter__mobile-title-wrapper">
+            <h2 class="catalog-filter__title-mobile">
+              сортировка и фильтры
+            </h2>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 10L30.0001 29.7991" stroke="#ABABAB" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M10 30L30.0001 10.2009" stroke="#ABABAB" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <div class="catalog-filter__title-wrapper">
+            <a href="#" class="catalog-filter__title catalog-filter__title-link">
+              Все категории
+            </a>
+          </div>
+          <div class="catalog-filter__category-list">
+            <a href="#" class="catalog-filter__category-list_item">
+              Женская
+            </a>
+            <a href="#" class="catalog-filter__category-list_item">
+              Мужская
+            </a>
+            <a href="#" class="catalog-filter__category-list_item">
+              Детская
+            </a>
+          </div>
+          <div class="mobile-filter__sort">
+            <div class="mobile-filter__sort-title">
+              сортировка
+            </div>
+            <div class="mobile-filter__sortlist">
+              <span>По возрастанию цены</span>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.27021 6.89696C4.6736 6.42032 5.38212 6.36512 5.85274 6.77367L9 9.50582L12.1473 6.77367C12.6179 6.36512 13.3264 6.42032 13.7298 6.89696C14.1332 7.37359 14.0787 8.09118 13.6081 8.49972L9 12.5L4.39194 8.49972C3.92133 8.09118 3.86682 7.37359 4.27021 6.89696Z" fill="#ABABAB"></path>
+              </svg>
+            </div>
+            <div class="mobile-filter__sort-wrapper">
+              <label class="radio">
+                <input class="radio__box" type="radio" name="sort" checked="">
+                <span class="radio__inner">
+                      <span class="radio__style"></span>
+                      <span class="radio__title filter-value">По возрастанию цены</span>
+                    </span>
+              </label>
+              <label class="radio">
+                <input class="radio__box" type="radio" name="sort">
+                <span class="radio__inner">
+                      <span class="radio__style"></span>
+                      <span class="radio__title filter-value">По убыванию цены</span>
+                    </span>
+              </label>
+              <label class="radio">
+                <input class="radio__box" type="radio" name="sort">
+                <span class="radio__inner">
+                      <span class="radio__style"></span>
+                      <span class="radio__title filter-value">По величине скидки</span>
+                    </span>
+              </label>
+              <label class="radio">
+                <input class="radio__box" type="radio" name="sort">
+                <span class="radio__inner">
+                      <span class="radio__style"></span>
+                      <span class="radio__title filter-value">По популярности</span>
+                    </span>
+              </label>
+              <label class="radio">
+                <input class="radio__box" type="radio" name="sort">
+                <span class="radio__inner">
+                      <span class="radio__style"></span>
+                      <span class="radio__title filter-value">По новизне</span>
+                    </span>
+              </label>
+            </div>
+          </div>
+          <div class="catalog-filter__wrapper">
+            <div class="catalog-filter__item">
+              <div class="catalog-filter__title-wrapper">
+                <div class="catalog-filter__title">
+                  Вид товара
+                </div>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.27021 6.89696C4.6736 6.42032 5.38212 6.36512 5.85274 6.77367L9 9.50582L12.1473 6.77367C12.6179 6.36512 13.3264 6.42032 13.7298 6.89696C14.1332 7.3736 14.0787 8.09118 13.6081 8.49972L9 12.5L4.39194 8.49972C3.92133 8.09118 3.86682 7.37359 4.27021 6.89696Z" fill="#2B2C2E"></path>
+                </svg>
+              </div>
+              <div class="catalog-filter__content">
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="type1" name="type1" value="yes">
+                  <label for="type1"></label>
+                  Босоножки <span>12</span>
+                </label>
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="type2" name="type2" value="yes">
+                  <label for="type2"></label>
+                  Сандали <span>32</span>
+                </label>
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="type3" name="type3" value="yes">
+                  <label for="type3"></label>
+                  Сабо <span>3</span>
+                </label>
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="type4" name="type4" value="yes">
+                  <label for="type4"></label>
+                  Шлепанцы <span>6</span>
+                </label>
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="type5" name="type5" value="yes">
+                  <label for="type5"></label>
+                  Балетки <span>15</span>
+                </label>
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="type6" name="type6" value="yes">
+                  <label for="type1"></label>
+                  Босоножкии <span>12</span>
+                </label>
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="type7" name="type7" value="yes">
+                  <label for="type2"></label>
+                  Сандалии <span>32</span>
+                </label>
+                <div class="show-more">
+                  Показать все
+                </div>
+              </div>
+            </div>
+            <div class="catalog-filter__item">
+              <div class="catalog-filter__title-wrapper">
+                <div class="catalog-filter__title">
+                  Размер
+                </div>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.27021 6.89696C4.6736 6.42032 5.38212 6.36512 5.85274 6.77367L9 9.50582L12.1473 6.77367C12.6179 6.36512 13.3264 6.42032 13.7298 6.89696C14.1332 7.3736 14.0787 8.09118 13.6081 8.49972L9 12.5L4.39194 8.49972C3.92133 8.09118 3.86682 7.37359 4.27021 6.89696Z" fill="#2B2C2E"></path>
+                </svg>
+              </div>
+              <div class="catalog-filter__content">
+                <div class="good-stats__size-wrapper">
+                  <div class="good-stats__size-item">
+                    <input type="checkbox" name="size-item1" id="good-size1">
+                    <label for="good-size1">35</label>
+                  </div>
+                  <div class="good-stats__size-item">
+                    <input type="checkbox" name="size-item2" id="good-size2">
+                    <label for="good-size2">36</label>
+                  </div>
+                  <div class="good-stats__size-item">
+                    <input type="checkbox" name="size-item3" id="good-size3">
+                    <label for="good-size3">37</label>
+                  </div>
+                  <div class="good-stats__size-item">
+                    <input type="checkbox" name="size-item4" id="good-size4">
+                    <label for="good-size4">38</label>
+                  </div>
+                  <div class="good-stats__size-item">
+                    <input type="checkbox" name="size-item5" id="good-size5">
+                    <label for="good-size5">39</label>
+                  </div>
+                  <div class="good-stats__size-item">
+                    <input type="checkbox" name="size-item6" id="good-size6">
+                    <label for="good-size6">40</label>
+                  </div>
+                  <div class="good-stats__size-item">
+                    <input type="checkbox" name="size-item7" id="good-size7">
+                    <label for="good-size7">41</label>
+                  </div>
+                  <div class="good-stats__size-item">
+                    <input type="checkbox" name="size-item8" id="good-size8">
+                    <label for="good-size8">42</label>
+                  </div>
+                  <div class="good-stats__size-item">
+                    <input type="checkbox" name="size-item9" id="good-size9">
+                    <label for="good-size9">43</label>
+                  </div>
+                  <div class="good-stats__size-item">
+                    <input type="checkbox" name="size-item10" id="good-size10">
+                    <label for="good-size10">44</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-filter__item">
+              <div class="catalog-filter__title-wrapper">
+                <div class="catalog-filter__title">
+                  Цвет
+                </div>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.27021 6.89696C4.6736 6.42032 5.38212 6.36512 5.85274 6.77367L9 9.50582L12.1473 6.77367C12.6179 6.36512 13.3264 6.42032 13.7298 6.89696C14.1332 7.3736 14.0787 8.09118 13.6081 8.49972L9 12.5L4.39194 8.49972C3.92133 8.09118 3.86682 7.37359 4.27021 6.89696Z" fill="#2B2C2E"></path>
+                </svg>
+              </div>
+              <div class="catalog-filter__content">
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="color1" name="color1" value="yes">
+                  <label for="color1"></label>
+                  Белый
+                </label>
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="color2" name="color2" value="yes">
+                  <label for="color2"></label>
+                  Зеленый
+                </label>
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="color3" name="color3" value="yes">
+                  <label for="color3"></label>
+                  Золотой
+                </label>
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="color4" name="color4" value="yes">
+                  <label for="color4"></label>
+                  Желтый
+                </label>
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="color5" name="color5" value="yes">
+                  <label for="color5"></label>
+                  Красный
+                </label>
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="color6" name="color6" value="yes">
+                  <label for="color6"></label>
+                  Фиолетовый
+                </label>
+                <label class="footer-form__label filter-type">
+                  <input type="checkbox" class="custom-checkbox" id="color7" name="color7" value="yes">
+                  <label for="color7"></label>
+                  Черный
+                </label>
+                <div class="show-more">
+                  Показать все
+                </div>
+              </div>
+            </div>
+            <div class="catalog-filter__item">
+              <div class="catalog-filter__title-wrapper">
+                <div class="catalog-filter__title">
+                  Бренд
+                </div>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.27021 6.89696C4.6736 6.42032 5.38212 6.36512 5.85274 6.77367L9 9.50582L12.1473 6.77367C12.6179 6.36512 13.3264 6.42032 13.7298 6.89696C14.1332 7.3736 14.0787 8.09118 13.6081 8.49972L9 12.5L4.39194 8.49972C3.92133 8.09118 3.86682 7.37359 4.27021 6.89696Z" fill="#2B2C2E"></path>
+                </svg>
+              </div>
+              <div class="catalog-filter__content">
+                test
+                <div class="show-more">
+                  Показать все
+                </div>
+              </div>
+            </div>
+            <div class="catalog-filter__item">
+              <div class="catalog-filter__title-wrapper">
+                <div class="catalog-filter__title">
+                  Сезон
+                </div>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.27021 6.89696C4.6736 6.42032 5.38212 6.36512 5.85274 6.77367L9 9.50582L12.1473 6.77367C12.6179 6.36512 13.3264 6.42032 13.7298 6.89696C14.1332 7.3736 14.0787 8.09118 13.6081 8.49972L9 12.5L4.39194 8.49972C3.92133 8.09118 3.86682 7.37359 4.27021 6.89696Z" fill="#2B2C2E"></path>
+                </svg>
+              </div>
+              <div class="catalog-filter__content">
+                test
+                <div class="show-more">
+                  Показать все
+                </div>
+              </div>
+            </div>
+            <div class="catalog-filter__item">
+              <div class="catalog-filter__title-wrapper">
+                <div class="catalog-filter__title">
+                  Материал вверха
+                </div>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.27021 6.89696C4.6736 6.42032 5.38212 6.36512 5.85274 6.77367L9 9.50582L12.1473 6.77367C12.6179 6.36512 13.3264 6.42032 13.7298 6.89696C14.1332 7.3736 14.0787 8.09118 13.6081 8.49972L9 12.5L4.39194 8.49972C3.92133 8.09118 3.86682 7.37359 4.27021 6.89696Z" fill="#2B2C2E"></path>
+                </svg>
+              </div>
+              <div class="catalog-filter__content">
+                test
+                <div class="show-more">
+                  Показать все
+                </div>
+              </div>
+            </div>
+            <div class="catalog-filter__item">
+              <div class="catalog-filter__title-wrapper">
+                <div class="catalog-filter__title">
+                  Дополнительно
+                </div>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.27021 6.89696C4.6736 6.42032 5.38212 6.36512 5.85274 6.77367L9 9.50582L12.1473 6.77367C12.6179 6.36512 13.3264 6.42032 13.7298 6.89696C14.1332 7.3736 14.0787 8.09118 13.6081 8.49972L9 12.5L4.39194 8.49972C3.92133 8.09118 3.86682 7.37359 4.27021 6.89696Z" fill="#2B2C2E"></path>
+                </svg>
+              </div>
+              <div class="catalog-filter__content">
+                test
+                <div class="show-more">
+                  Показать все
+                </div>
+              </div>
+            </div>
+            <div class="catalog-filter__result">
+              <div class="catalog-filter__result-text">
+                Найдено 36 товаров
+              </div>
+              <div class="btn catalog-filter__btn-result">
+                Очистить фильтр
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="catalog-content">
+        <div class="catalog-tags__wrapper">
+          <div class="catalog-tags">
+            <div class="catalog-tag">
+              trelax
+            </div>
+            <div class="catalog-tag">
+              orlett
+            </div>
+            <div class="catalog-tag">
+              sigvaris
+            </div>
+            <div class="catalog-tag">
+              test1
+            </div>
+            <div class="catalog-tag">
+              test14
+            </div>
+            <div class="catalog-tag">
+              test145
+            </div>
+            <div class="catalog-tag">
+              Lorem
+            </div>
+            <div class="catalog-tag">
+              Lorem,ipsum.
+            </div>
+            <div class="catalog-tag">
+              dfbdfb
+            </div>
+            <div class="catalog-tag">
+              dfbdf
+            </div>
+            <div class="catalog-tag">
+              ddddddd
+            </div>
+            <div class="catalog-tag">
+              sigvarisss
+            </div>
+            <div class="catalog-tag">
+              sigvarisssrs
+            </div>
+          </div>
+          <div class="show-more__tag">
+            Показать еще
+          </div>
+          <div class="remove-tags__mobile">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 11.5L12 3.5" stroke="#ABABAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M12 11.5L4 3.5" stroke="#ABABAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Сбросить все
+          </div>
+        </div>
+        <div class="catalog-tags__active">
+          <div class="catalog-tags__tabs-wrapper">
+          </div>
+          <div class="remove-tags">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 11.5L12 3.5" stroke="#ABABAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M12 11.5L4 3.5" stroke="#ABABAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Сбросить все
+          </div>
+        </div>
+        <div class="catalog-filter__page">
+          <div class="catalog-filter__pagination-item">
+            Сортировка
+            <select name="price" id="price" style="display: none;">
+              <option>По возрастанию цены</option>
+              <option selected="selected">По убыванию цены</option>
+              <option>По величине скидки</option>
+              <option>По популярности</option>
+              <option>По новизне</option>
+            </select>
+          </div>
+          <div class="catalog-filter__pagination-item">
+            Показывать по
+            <select name="count" id="count" style="display: none;">
+              <option selected="selected">24</option>
+              <option>36</option>
+              <option>48</option>
+              <option>60</option>
+            </select>
+          </div>
+        </div>
+        <div class="page">
+          <div class="container">
+            <div class="row-3">
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/new1.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-blue">Хит</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/new2.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-red">10%</span>
+                        <span class="label label--style_bg-pink">Суперцена</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/new3.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-red">10%</span>
+                        <span class="label label--style_bg-orange">Суперцена</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/new4.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-green">Новинка</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/sale1.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-red">10%</span>
+                        <span class="label label--style_bg-orange">Акция</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/sale2.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-blue">Хит</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/sale3.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-red">10%</span>
+                        <span class="label label--style_bg-pink">Суперцена</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/sale4.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-green">Новинка</span>
+                        <span class="label label--style_bg-blue">Хит</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/new2.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-red">10%</span>
+                        <span class="label label--style_bg-pink">Суперцена</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/new3.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-red">10%</span>
+                        <span class="label label--style_bg-orange">Суперцена</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/new4.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-green">Новинка</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/sale1.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-red">10%</span>
+                        <span class="label label--style_bg-orange">Акция</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/sale2.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-blue">Хит</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/sale3.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-red">10%</span>
+                        <span class="label label--style_bg-pink">Суперцена</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-slide">
+                <div class="goods-img">
+                  <a href="#">
+                    <img src="assets/images/sale4.png" alt="Orto">
+                  </a>
+                  <div class="goods-icon">
+                    <div class="goods-icon__left">
+                      <div class="goods-icon__left-item">
+                        <span class="label label--style_bg-green">Новинка</span>
+                        <span class="label label--style_bg-blue">Хит</span>
+                      </div>
+                    </div>
+                    <div class="goods-icon__right">
+                      <button class="favorite-btn goods-icon__right-item" type="button" aria-label="@@ariaLabel">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.0933 7.25337C27.3155 8.48036 28.0016 10.1416 28.0016 11.8734C28.0016 13.6052 27.3155 15.2664 26.0933 16.4934L16.7099 25.9512C16.3187 26.3454 15.6813 26.3454 15.2901 25.9512L5.90666 16.4934C4.99898 15.5796 4.38102 14.4183 4.13014 13.155C3.87925 11.8917 4.00658 10.5824 4.49619 9.39114C4.98581 8.19985 5.81595 7.17944 6.88269 6.45766C7.94944 5.73588 9.20539 5.3448 10.4933 5.33337C12.2155 5.34382 13.8639 6.03385 15.08 7.25337C15.4347 7.60434 15.7438 7.99855 16 8.42671C16.2562 7.99855 16.5653 7.60434 16.92 7.25337C17.5192 6.64545 18.2332 6.1627 19.0206 5.83319C19.808 5.50369 20.6531 5.334 21.5067 5.334C22.3602 5.334 23.2053 5.50369 23.9927 5.83319C24.7801 6.1627 25.4942 6.64545 26.0933 7.25337Z" stroke="#7F818C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goods-slide__content">
+                  <div class="goods-slide__note">
+                    <span>Артикул:</span> RKN-103
+                  </div>
+                  <a href="#" class="goods-slide__name">
+                    Бандаж на голеностопный сустав эластичный ORLETT
+                  </a>
+                  <div class="goods-slide__price">
+                    59,01 руб.
+                  </div>
+                  <div class="goods-btn__wrapper">
+                    <button class="btn goods-btn btn--border" type="button">
+                      <span>Добавить</span>&nbsp;в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination-wrapper">
+          <div class="pagination">
+            <ul>
+
+            </ul>
+          </div>
+          <div class="catalog-filter__pagination-item">
+            Показывать по
+            <select name="countBottom" id="countBottom">
+              <option selected="selected">24</option>
+              <option>36</option>
+              <option>48</option>
+              <option>60</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

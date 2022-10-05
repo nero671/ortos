@@ -1,0 +1,221 @@
+@@include("blocks/head/head.html", {"title": "Наши салоны"})
+@@include("blocks/header/header.html", {
+"header-bottom": "header-bottom",
+})
+<main class="main">
+    <div id="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs-item">
+                    <a href="#">Главная страница</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <span>Наши салоны</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page shops-page">
+        <div class="container">
+            <h1 class="title">Наши салоны</h1>
+            <div class="shops-page__map"
+                 id="map"></div>
+            <div class="tabs shops-page__tabs">
+                <button type="button"
+                        data-city-tab="all"
+                        class="tab shops-page__tab active">Все города</button>
+                <button type="button"
+                        data-city-tab="minsk"
+                        class="tab shops-page__tab">г.Минск</button>
+                <button type="button"
+                        data-city-tab="brest"
+                        class="tab shops-page__tab">г.Брест</button>
+                <button type="button"
+                        data-city-tab="vitebsk"
+                        class="tab shops-page__tab">г.Витебск</button>
+                <button type="button"
+                        data-city-tab="gomel"
+                        class="tab shops-page__tab">г.Гомель</button>
+                <button type="button"
+                        data-city-tab="mogilev"
+                        class="tab shops-page__tab">г.Могилев</button>
+            </div>
+
+            <div class="shops-table shops-page__table">
+                <div class="shops-table__row shops-table__head">
+                    <div class="shops-table__col shops-table__col--address">Адрес</div>
+                    <div class="shops-table__col shops-table__col--timetable">Режим работы</div>
+                    <div class="shops-table__col">Телефоны</div>
+                </div>
+                <div class="shops-table__body">
+                    <div class="shops-table__row"
+                         data-city="minsk">
+                        <div class="shops-table__col shops-table__col--address">г.Минск, ул. Гикало, 1</div>
+                        <div class="shops-table__col shops-table__col--timetable">
+                            С 9:00 до 20:00<br>
+                            без обеда, без выходных
+                        </div>
+                        <div class="shops-table__col shops-table__col--phones">
+                            <div class="shops-table__phones">
+                                <a href="tel:+375173650085">+ 375 (17) 365 00 85</a>
+                                <a href="tel:+375293337703">+ 375 (29) 333 77 03</a>
+                                <a href="tel:+375295557703">+ 375 (29) 555 77 03</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shops-table__row"
+                         data-city="minsk">
+                        <div class="shops-table__col shops-table__col--address">г.Минск, ул. Энгельса, 34</div>
+                        <div class="shops-table__col shops-table__col--timetable">
+                            С 9:00 до 20:00<br>
+                            без обеда, без выходных
+                        </div>
+                        <div class="shops-table__col shops-table__col--phones">
+                            <div class="shops-table__phones">
+                                <a href="tel:+375173650085">+ 375 (17) 365 00 85</a>
+                                <a href="tel:+375293337703">+ 375 (29) 333 77 03</a>
+                                <a href="tel:+375295557703">+ 375 (29) 555 77 03</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shops-table__row"
+                         data-city="minsk">
+                        <div class="shops-table__col shops-table__col--address">г.Минск, ул. Руссиянова, 4</div>
+                        <div class="shops-table__col shops-table__col--timetable">
+                            С 9:00 до 20:00<br>
+                            без обеда, без выходных
+                        </div>
+                        <div class="shops-table__col shops-table__col--phones">
+                            <div class="shops-table__phones">
+                                <a href="tel:+375173650085">+ 375 (17) 365 00 85</a>
+                                <a href="tel:+375293337703">+ 375 (29) 333 77 03</a>
+                                <a href="tel:+375295557703">+ 375 (29) 555 77 03</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shops-table__row"
+                         data-city="minsk">
+                        <div class="shops-table__col shops-table__col--address">г.Минск, ул. Притыцкого, 158</div>
+                        <div class="shops-table__col shops-table__col--timetable">
+                            С 9:00 до 20:00<br>
+                            без обеда, без выходных
+                        </div>
+                        <div class="shops-table__col shops-table__col--phones">
+                            <div class="shops-table__phones">
+                                <a href="tel:+375173650085">+ 375 (17) 365 00 85</a>
+                                <a href="tel:+375293337703">+ 375 (29) 333 77 03</a>
+                                <a href="tel:+375295557703">+ 375 (29) 555 77 03</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shops-table__row"
+                         data-city="minsk">
+                        <div class="shops-table__col shops-table__col--address">г.Минск, ул. Ежи Гедройца, 2</div>
+                        <div class="shops-table__col shops-table__col--timetable">
+                            С 9:00 до 20:00<br>
+                            без обеда, без выходных
+                        </div>
+                        <div class="shops-table__col shops-table__col--phones">
+                            <div class="shops-table__phones">
+                                <a href="tel:+375173650085">+ 375 (17) 365 00 85</a>
+                                <a href="tel:+375293337703">+ 375 (29) 333 77 03</a>
+                                <a href="tel:+375295557703">+ 375 (29) 555 77 03</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shops-table__row"
+                         data-city="brest">
+                        <div class="shops-table__col shops-table__col--address">г.Брест, ул.Комсомольская, 11</div>
+                        <div class="shops-table__col shops-table__col--timetable">
+                            С 9:00 до 20:00<br>
+                            без обеда, без выходных
+                        </div>
+                        <div class="shops-table__col shops-table__col--phones">
+                            <div class="shops-table__phones">
+                                <a href="tel:+375173650085">+ 375 (17) 365 00 85</a>
+                                <a href="tel:+375293337703">+ 375 (29) 333 77 03</a>
+                                <a href="tel:+375295557703">+ 375 (29) 555 77 03</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shops-table__row"
+                         data-city="vitebsk">
+                        <div class="shops-table__col shops-table__col--address">г. Витебск, ул. Кирова, 15/24</div>
+                        <div class="shops-table__col shops-table__col--timetable">
+                            С 9:00 до 20:00<br>
+                            без обеда, без выходных
+                        </div>
+                        <div class="shops-table__col shops-table__col--phones">
+                            <div class="shops-table__phones">
+                                <a href="tel:+375173650085">+ 375 (17) 365 00 85</a>
+                                <a href="tel:+375293337703">+ 375 (29) 333 77 03</a>
+                                <a href="tel:+375295557703">+ 375 (29) 555 77 03</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shops-table__row"
+                         data-city="gomel">
+                        <div class="shops-table__col shops-table__col--address">г. Гомель, ул. Крестьянская, 32</div>
+                        <div class="shops-table__col shops-table__col--timetable">
+                            С 9:00 до 20:00<br>
+                            без обеда, без выходных
+                        </div>
+                        <div class="shops-table__col shops-table__col--phones">
+                            <div class="shops-table__phones">
+                                <a href="tel:+375173650085">+ 375 (17) 365 00 85</a>
+                                <a href="tel:+375293337703">+ 375 (29) 333 77 03</a>
+                                <a href="tel:+375295557703">+ 375 (29) 555 77 03</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shops-table__row"
+                         data-city="mogilev">
+                        <div class="shops-table__col shops-table__col--address">г. Могилев, ул. Буденного, 13</div>
+                        <div class="shops-table__col shops-table__col--timetable">
+                            С 9:00 до 20:00<br>
+                            без обеда, без выходных
+                        </div>
+                        <div class="shops-table__col shops-table__col--phones">
+                            <div class="shops-table__phones">
+                                <a href="tel:+375173650085">+ 375 (17) 365 00 85</a>
+                                <a href="tel:+375293337703">+ 375 (29) 333 77 03</a>
+                                <a href="tel:+375295557703">+ 375 (29) 555 77 03</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shops-table__row"
+                         data-city="any">
+                        <div class="shops-table__col shops-table__col--address">
+                            г. любой, доставка в любой населенный пункт Республики Беларусь
+                        </div>
+                        <div class="shops-table__col shops-table__col--timetable">
+                            Прием заказов:<br>
+                            пон - пт: с 9:00 до 16:30<br>
+                            Курьеры:<br>
+                            пон - пт: с 10:00 до 18:00<br>
+                            (по Минску до 21:00)
+                        </div>
+                        <div class="shops-table__col shops-table__col--phones">
+                            <div class="shops-table__phones">
+                                <a href="tel:+375173650085">+ 375 (17) 365 00 85</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@@include("blocks/footer/footer.html")
+@@include('blocks/popups/auth-popup.html', {
+"id": "register",
+"title": "Зарегистрируйтесь"
+})
+@@include('blocks/popups/favorite-popup.html')
+
+@@include("blocks/footer-menu/footer-menu.html")
+@@include("blocks/popup-menu/popup-menu.html")
+@@include("blocks/cookies/cookies.html")
+@@include("blocks/link/link.html")
+@@include('blocks/maps/maps.html')

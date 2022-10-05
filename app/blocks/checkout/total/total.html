@@ -1,0 +1,21 @@
+<div class="checkout__total checkout-total">
+    <div class="checkout-total__btn-wrap">
+        <button class="btn checkout-total__promocode-btn btn--border"
+                type="button">Ввести промокод</button>
+        <!-- Если ошибка, то классу promocode ниже добавить рядом класс error, если успешно - success -->
+        <label class="checkout-total__promocode input-wrap">
+            <input class="input input-wrap__input input--with_border input-wrap__input--ttu"
+                   placeholder="Введите промокод">
+            <button class="input-wrap__btn"
+                    type="button"></button>
+            <span class="input-wrap__status input-wrap__status--success">Промокод применен</span>
+            <span class="input-wrap__status input-wrap__status--error">Промокод не найден</span>
+        </label>
+    </div>
+    <div class="checkout-total__overall">
+        К оплате:
+        <span class="checkout-total__overall-sum">744,68 руб.</span>
+    </div>
+    <button class="btn checkout-total__submit btn--border"
+            type="submit">Оформить заказ</button>
+</div>

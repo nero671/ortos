@@ -1,0 +1,59 @@
+<script>
+    ymaps.ready(init);
+
+    function init() {
+        const citiesMap = new ymaps.Map('map', {
+                center: [53.897626, 27.565856],
+                zoom: 6,
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+            objectManager = new ymaps.ObjectManager({
+                clusterize: true,
+                clusterIconColor: '#73A8F6',
+                gridSize: 32,
+                groupByCoordinates: false,
+                clusterDisableClickZoom: false,
+                clusterHideIconOnBalloonOpen: false,
+                geoObjectHideIconOnBalloonOpen: false
+            });
+        citiesMap.geoObjects.add(objectManager);
+
+        citiesMap.behaviors.disable('scrollZoom');
+
+        function filterCity(cityName, manager) {
+            let filterStr = 'options.city == "' + cityName + '"';
+            manager.setFilter(filterStr);
+        }
+
+        let shopsData;
+
+        // Клик по табам
+        $(document).on('click', '.shops-page__tab', function() {
+            const $tab = $(this);
+            const attr = $tab.attr('data-city-tab');
+
+            if (attr === 'all') {
+                objectManager.setFilter(() => true);
+                // возвращаемся в центр карты (Минск)
+                const minsk = shopsData.filter(shop => shop.options.city == 'minsk')[0];
+                citiesMap.setCenter(minsk.geometry.coordinates);
+                citiesMap.setZoom(7);
+            } else {
+                filterCity(attr, objectManager);
+                const activeShop = shopsData.find(shop => shop.options.city == attr);
+                citiesMap.setCenter(activeShop.geometry.coordinates);
+                citiesMap.setZoom(10);
+            }
+        });
+
+        $.ajax({
+            url: "assets/shops.json",
+            cash: false,
+        }).done(function(data) {
+            shopsData = data.features;
+            objectManager.add(data);
+        });
+    }
+
+</script>

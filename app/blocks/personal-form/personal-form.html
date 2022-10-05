@@ -1,0 +1,119 @@
+<form id="personal-form"
+      class="personal-form">
+  <label class="personal-form__field form-field">
+    <span class="input-label">Имя*</span>
+    <input class="input"
+           name="name"
+           disabled>
+  </label>
+  <label class="personal-form__field form-field">
+    <span class="input-label">Фамилия*</span>
+    <input class="input"
+           name="surname"
+           disabled>
+  </label>
+  <label class="personal-form__field form-field">
+    <span class="input-label">Дата рождения</span>
+    <input class="input"
+           type="date"
+           name="birthday"
+           disabled>
+  </label>
+  <label class="personal-form__field form-field">
+    <span class="input-label">Номер телефона*</span>
+    <div class="phone-select">
+      <div class="phone-select__title">
+        <button class="phone-select__drop"
+                type="button"
+                disabled>
+          <img class="phone-select__flag"
+               src="assets/images/blr.svg"
+               alt="флаг Беларуси">
+          <span></span>
+        </button>
+        <input class="input tel phone-select__input"
+               type="text"
+               placeholder="+375"
+               name="phone"
+               disabled>
+      </div>
+      <div class="phone-select__content">
+        <input id="phoneMask0"
+               class="phone-select__option"
+               type="radio"
+               name="phoneMask"
+               checked />
+        <label for="phoneMask0"
+               tabindex="0"
+               class="phone-select__label active"
+               data-value="+375">
+          +375
+        </label>
+        <input id="phoneMask1"
+               class="phone-select__option"
+               type="radio"
+               name="phoneMask" />
+        <label for="phoneMask1"
+               tabindex="0"
+               class="phone-select__label"
+               data-value="Другая страна">Другая страна</label>
+      </div>
+    </div>
+  </label>
+  <div>
+    <label class="personal-form__field form-field">
+      <span class="input-label">E-mail</span>
+      <input class="input"
+             name="personal_email"
+             type="email"
+             disabled>
+    </label>
+    <label class="personal-form__check disabled">
+      <input type="checkbox"
+             class="custom-checkbox custom-checkbox--size_xl"
+             id="personal_newsletter"
+             name="personal_newsletter"
+             value="yes"
+             disabled>
+      <label for="personal_newsletter"></label>
+      Подписаться на рассылку
+    </label>
+  </div>
+  <label class="personal-form__field loyalty-card form-field">
+    <span class="input-label">Карта лояльности</span>
+    <div class="personal-form__field input-wrap">
+      <input class="input input-wrap__input"
+             name="loyalty_card"
+             placeholder="Введите номер карты для получения скидки"
+             disabled>
+      <button class="input-wrap__reset"
+              type="reset">Удалить</button>
+      <button class="input-wrap__btn"
+              type="button"></button>
+      <span class="input-wrap__status input-wrap__status--active">Ваша скидка 15%</span>
+      <span class="input-wrap__status input-wrap__status--success">Карта привязана. Ваша скидка 15%</span>
+      <span class="input-wrap__status input-wrap__status--error">Некорректные данные*</span>
+    </div>
+  </label>
+  <!-- <label class="personal-form__field loyalty-card form-field">
+      <span class="input-label">Карта лояльности</span>
+      <div class="personal-form__field input-wrap active">
+          <input class="input input-wrap__input"
+                 value="3232 3234 2445"
+                 placeholder="Введите номер карты для получения скидки"
+                 readonly>
+          <button class="input-wrap__reset"
+                  type="reset">Удалить</button>
+          <button class="input-wrap__btn"
+                  type="button"></button>
+          <span class="input-wrap__status input-wrap__status--active">Ваша скидка 15%</span>
+          <span class="input-wrap__status input-wrap__status--success">Карта привязана. Ваша скидка 15%</span>
+          <span class="input-wrap__status input-wrap__status--error">Некорректные данные*</span>
+      </div>
+  </label> -->
+  <button class="btn personal-form__btn btn--border"
+          type="button">Редактировать данные</button>
+  <button class="btn personal-form__btn btn--style_bg-black"
+          type="submit">Сохранить изменения</button>
+  @@include('blocks/alerts/alerts.html')
+</form>

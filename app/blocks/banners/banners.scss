@@ -1,0 +1,43 @@
+#banners {
+    padding-top: 55px;
+}
+
+.banners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.banners-img {
+    margin-top: 15px;
+    border-radius: $brs;
+    transition: 0.35s;
+
+    @media(max-width: 576px) {
+        height: 175px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: $brs;
+    }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: $accent;
+}
+
+.swiper-pagination-bullet {
+    background: #d8bd6e;
+}
+
+@media (min-width: 991px) {
+    .banners-img:hover {
+        transform: scale(1.03);
+        transition: 0.35s;
+    }
+}

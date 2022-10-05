@@ -1,0 +1,56 @@
+<!-- Контент таба Забрать из салона -->
+<div id="pickup"
+     class="checkout__part tabs-content active">
+    <fieldset>
+        <legend class="checkout__part-title">Информация о самовывозе</legend>
+        <div class="checkout__fields">
+            <div class="checkout__field form-field">
+                <span class="input-label">Салон</span>
+                <a href="#shops"
+                   data-fancybox
+                   data-options='{"touch" : false}'
+                   class="btn checkout__btn btn--border">Выбрать салон</a>
+                <div class="pickup-field">
+                    <label class="pickup-field__input-wrap">
+                        <input class="input pickup-field__input input--with_border"
+                               value="г.Минск, ул. Филимонова, 55, корп. 3">
+                        <a href="#shops"
+                           data-fancybox
+                           data-options='{"touch" : false}'
+                           class="btn pickup-field__btn btn--border">Выбрать другой салон</a>
+                    </label>
+                    <div class="pickup-field__info">
+                        <div class="pickup-field__info-item">
+                            С 9:00 до 20:00<br>
+                            без обеда, без выходных
+                        </div>
+                        <div class="pickup-field__info-item">
+                            <a href="tel:+375173434405">+ 375 (17) 343 44 05</a>
+                            <a href="tel:+375293667703">+ 375 (29) 366 77 03</a>
+                            <a href="tel:+375297779603"> + 375 (29) 777 96 03</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <label class="checkout__field form-field">
+                <span class="input-label">Дата самовывоза</span>
+                <select class="select select--style_bg-gray"
+                        name="pickup_date"
+                        id="pickup-date">
+                    <option></option>
+                    <option>Четверг, 14 июля 2022</option>
+                    <option>Пятница, 15 июля 2022</option>
+                    <option>Суббота, 16 июля 2022</option>
+                    <option>Воскресенье, 17 июля 2022</option>
+                    <option>Понедельник, 18 июля 2022</option>
+                </select>
+            </label>
+            <label class="checkout__field form-field">
+                <span class="input-label">Комментарий к заказу</span>
+                <textarea class="input textarea checkout__textarea"></textarea>
+            </label>
+        </div>
+    </fieldset>
+
+    @@include('blocks/checkout/delivery/contacts.html')
+</div>

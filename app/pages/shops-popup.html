@@ -1,0 +1,21 @@
+@@include("blocks/head/head.html", {"title": "Магазины"})
+@@include("blocks/header/header.html", {
+"header-bottom": "header-bottom",
+})
+<main class="main">
+
+</main>
+@@include("blocks/footer/footer.html")
+@@include('blocks/shops-popup/shops-popup.html')
+@@include("blocks/footer-menu/footer-menu.html")
+@@include("blocks/popup-menu/popup-menu.html")
+@@include("blocks/cookies/cookies.html")
+@@include("blocks/link/link.html")
+@@include('blocks/maps/maps.html')
+<script>
+    $.fancybox.open({
+        src: '#shops',
+        type: 'inline',
+    });
+
+</script>

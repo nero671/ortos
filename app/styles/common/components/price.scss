@@ -1,0 +1,19 @@
+.price {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    font-feature-settings: 'pnum'on, 'lnum'on;
+}
+
+.price-old {
+    font-weight: 400;
+    font-size: 14px;
+    color: $gray-2;
+    text-decoration: line-through;
+    margin-left: 6px;
+}
+
+.prices {
+    display: flex;
+    align-items: flex-end;
+}

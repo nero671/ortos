@@ -1,0 +1,83 @@
+#map-block {
+    padding-top: 120px;
+}
+
+.map-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.after-title {
+    max-width: 670px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: $gray-2;
+    text-align: justify;
+}
+
+.map {
+    height: 500px;
+    width: 100%;
+    margin-top: 42px;
+
+    @media(max-width: 576px) {
+        height: 360px;
+    }
+
+    > * {
+        height: 100% !important;
+    }
+}
+
+// Захардкоженное скрытие кнопки в баллуне на главной странице и наши салоны
+#map-block,
+.shops-page__map {
+    .map-balloon__btn,
+    .status {
+        display: none;
+    }
+}
+
+#map-block,
+.good-detail__tab {
+  .map-balloon__btn {
+    display: none;
+  }
+  .status {
+    font-size: 14px;
+  }
+}
+
+
+.map__burger-img {
+    float: right;
+    height: 100px;
+    width: 100px;
+}
+
+@media (max-width: 1010px) {
+    .map-block .after-title {
+        margin-top: 20px;
+    }
+}
+
+//new
+
+#map-block .title {
+  margin-top: -9px;
+}
+
+@media (max-width: 576px) {
+  #map-block .after-title {
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+
+  #map {
+    margin-top: 0;
+  }
+}

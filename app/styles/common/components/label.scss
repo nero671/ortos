@@ -1,0 +1,51 @@
+.labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.label {
+    border-radius: $brs;
+    padding: 3px 3.5px;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+
+    &--style {
+        &_bg {
+            &-red {
+                background-color: $red;
+            }
+
+            &-green {
+                background-color: $green;
+            }
+
+            &-orange {
+                background-color: $orange;
+            }
+
+            &-blue {
+                background-color: #73A8F7;
+            }
+
+            &-pink {
+                background-color: $pink;
+            }
+
+            &-gray {
+                background-color: #E9E8EE;
+                color: $gray-2;
+            }
+        }
+    }
+
+    &--text-transform {
+        &_lowercase {
+            text-transform: lowercase;
+            @include padding-x(4.5px);
+        }
+    }
+}

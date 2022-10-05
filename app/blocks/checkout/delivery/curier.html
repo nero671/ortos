@@ -1,0 +1,48 @@
+<!-- Контент таба Курьером -->
+<div id="curier"
+     class="checkout__part tabs-content">
+    <fieldset class="span-2">
+        <legend class="checkout__part-title">Адрес доставки</legend>
+        <div class="checkout__fields checkout__fields--col-4">
+            <label class="checkout__field form-field">
+                <span class="input-label">Населенный пункт*</span>
+                <input class="input checkout__input"
+                       name="delivery_placement">
+            </label>
+            <label class="checkout__field form-field">
+                <span class="input-label">Улица*</span>
+                <input class="input checkout__input"
+                       name="delivery_street">
+            </label>
+            <label class="checkout__field form-field">
+                <span class="input-label">Дом*</span>
+                <input class="input checkout__input"
+                       name="delivery_home">
+            </label>
+            <label class="checkout__field form-field">
+                <span class="input-label">Подъезд</span>
+                <input class="input checkout__input"
+                       name="delivery_entrance">
+            </label>
+            <label class="checkout__field form-field">
+                <span class="input-label">Этаж</span>
+                <input class="input checkout__input"
+                       name="delivery_floor">
+            </label>
+            <label class="checkout__field form-field">
+                <span class="input-label">Квартира</span>
+                <input class="input checkout__input"
+                       name="delivery_flat">
+            </label>
+        </div>
+    </fieldset>
+    @@include('blocks/checkout/delivery/contacts.html')
+    <fieldset class="span-2">
+        <legend class="visually-hidden">Комментарий к заказу</legend>
+        <label class="checkout__field form-field">
+            <span class="input-label">Комментарий к заказу</span>
+            <textarea class="input textarea checkout__textarea"
+                      placeholder="Оставьте свои пожелания по времени и дате доставки"></textarea>
+        </label>
+    </fieldset>
+</div>

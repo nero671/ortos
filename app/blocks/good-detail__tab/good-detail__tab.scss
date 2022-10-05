@@ -1,0 +1,247 @@
+.good-detail__tab {
+    padding-top: 60px;
+}
+
+.good-detail__tab-links {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9e8ee;
+}
+
+.good-detail__tab-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: $dark;
+    margin-right: 60px;
+    cursor: pointer;
+    width: max-content;
+}
+
+.good-detail__tab-link:hover {
+    color: $accent;
+}
+
+.good-detail__tab-text {
+    padding-top: 30px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    color: $gray-2;
+    width: 900px;
+
+    span {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: $dark;
+        margin-bottom: 8px;
+    }
+}
+
+.good-detail__tab-content_buttons {
+    display: flex;
+}
+
+.button-content {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: $dark;
+    padding: 11px 26px;
+    display: flex;
+    align-items: center;
+    border-radius: $brs;
+
+    svg {
+        margin-right: 6px;
+    }
+}
+
+.button-content:first-child {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.button-content:last-child {
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.button-content.active {
+    color: #fff;
+    background: $dark;
+
+    svg path {
+        fill: #fff;
+    }
+
+    svg circle {
+        fill: $dark;
+    }
+}
+
+.good-detail__tab-content_tabs {
+    margin-top: 30px;
+
+    @media(max-width: 767px) {
+        margin-top: 20px;
+    }
+}
+
+.good-detail__tab-content_table-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.good-detail__tab-content_table-title {
+    color: $gray-2;
+}
+
+.good-detail__tab-content_table-text {
+    color: $dark;
+}
+
+.good-detail__tab-content_table-title,
+.good-detail__tab-content_table-text {
+    width: 270px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+}
+
+.good-detail__tab-content_table-item {
+    padding: 26px 0;
+    border-bottom: 1px solid #e9e8ee;
+}
+
+.stock {
+    color: $dark;
+}
+
+.stock::before {
+    background: url('../images/stock.svg') no-repeat center center;
+}
+
+.deny {
+    color: $gray-3;
+}
+
+.deny::before {
+    background: url('../images/deny.svg') no-repeat center center;
+}
+
+.good-detail__tab-content_item {
+    display: none;
+}
+
+.good-detail__tab-content_item.active {
+    display: block;
+}
+
+.good-detail__tab-link.active {
+    color: $accent;
+}
+
+.good-detail__tab-content_item:not(:first-child) {
+    margin-top: 30px;
+}
+
+.good-detail__tab-content_tab-item {
+    display: none;
+}
+
+.good-detail__tab-content_tab-item.active {
+    display: block;
+}
+
+@media (max-width: 1080px) {
+    .good-detail__tab-text {
+        width: auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .good-detail__tab {
+        padding-top: 36px;
+    }
+
+    .good-detail__tab-content_table-title,
+    .good-detail__tab-content_table-text {
+        width: 175px;
+    }
+}
+
+@media (max-width: 576px) {
+    .good-detail__tab-link {
+        width: fit-content;
+    }
+
+    .good-detail__tab-text {
+        font-size: 14px;
+    }
+
+    .good-detail__tab-link {
+        font-size: 14px;
+    }
+
+    .good-detail__tab-content_table-item:first-child {
+        display: none;
+    }
+
+    .good-detail__tab-content_table-item {
+        flex-direction: column;
+    }
+
+    .good-detail__tab-content_table-text:first-child {
+        font-weight: 600;
+        padding-bottom: 16px;
+    }
+
+    .good-detail__tab-content_table-text:nth-child(3) {
+        padding-top: 16px;
+        padding-bottom: 10px;
+    }
+
+    .good-detail__tab-content_table-text .good-stats__status {
+        margin-bottom: 0;
+    }
+
+    .good-detail__tab-content_table-text {
+        font-style: 14px;
+    }
+
+    .good-detail__tab-content_tabs {
+        margin-top: 0;
+    }
+
+    .good-detail__tab-content_item:not(:first-child) {
+        margin-top: 20px;
+    }
+}
+
+//new 
+
+@media (max-width: 576px) {
+    .good-detail__tab-links {
+        overflow: scroll;
+        -ms-overflow-style: none;
+          scrollbar-width: none;
+    }
+    
+    .good-detail__tab-links::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+    
+    .good-detail__tab-link {
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+}

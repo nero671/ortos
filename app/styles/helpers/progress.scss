@@ -1,0 +1,33 @@
+// Стили для странмицы показа
+._progress {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+
+    @media (max-width: 767px) {
+        padding: 50px 0;
+    }
+}
+
+._progress__inner {
+    @media (min-width: 768px) {
+        columns: 2;
+    }
+}
+
+._progress__link {
+    display: block;
+    font-size: 1.5vmax;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #222;
+    transition: opacity 0.3s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

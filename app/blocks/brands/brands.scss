@@ -1,0 +1,56 @@
+#brands {
+    padding-top: 55px;
+}
+
+.brands {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.brands-item {
+    width: 256px;
+    margin-bottom: 20px;
+}
+
+.brands-item:not(last-child):hover {
+    filter: drop-shadow(0px 7px 40px rgba(133, 133, 133, 0.12));
+    border-radius: $brs;
+}
+
+.brands-item:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    @include padding-x(20px);
+}
+
+.brand-btn svg {
+    margin-left: 8px;
+}
+
+@media (max-width: 576px) {
+    .brands {
+        justify-content: center;
+    }
+
+    .brands-item {
+        width: 170px;
+    }
+
+    .brand-btn {
+        font-size: 14px;
+        padding: 14px;
+
+        svg {
+            width: 16px;
+        }
+    }
+}

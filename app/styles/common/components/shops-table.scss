@@ -1,0 +1,207 @@
+.shops-table {
+    $this: &;
+
+    font-size: 15px;
+
+    &__body {
+        @media(min-width: 576px) and (max-width: 767px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 30px;
+        }
+    }
+
+    // .shops-table__row
+
+    &__row {
+        display: grid;
+        gap: 16px;
+        padding: 26px 0;
+
+        @media(max-width: 767px) {
+            padding: 20px 0;
+        }
+
+        @media(min-width: 768px) {
+            grid-template-columns: 0.6fr 0.6fr 0.4fr 0.4fr;
+            align-items: flex-start;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #E9E8EE;
+        }
+    }
+
+    // .shops-table__head
+
+    &__head {
+        display: none;
+
+        @media(min-width: 768px) {
+            display: grid;
+            color: $gray-2;
+            padding: 0 0 16px;
+            border-bottom: 1px solid #E9E8EE;
+        }
+
+        #{$this} {
+            &__col {
+                &--availability {
+                    text-align: right;
+                    padding-right: 38px;
+                }
+            }
+        }
+    }
+
+    // .shops-table__col
+
+    &__col {
+        &:first-child {
+            @media(max-width: 767px) {
+                font-weight: 600;
+                font-size: 14px;
+            }
+        }
+
+        a {
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+
+        &--address,
+        &--timetable {
+            max-width: 280px;
+        }
+
+        &--phones {
+            @media(min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+        }
+
+        &--availability {
+            @media(min-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            @media(max-width: 767px) {
+                margin-top: -16px;
+            }
+        }
+    }
+
+    &__phones {
+        display: flex;
+        flex-direction: column;
+
+        @media(max-width: 767px) {
+            margin-bottom: 12px;
+        }
+    }
+
+    // .shops-table__btn
+
+    &__btn {
+        padding: 14px 43px;
+    }
+}
+
+.shops-popup {
+    .shops-table {
+        &__head {
+            margin-right: 24px;
+        }
+
+        &__body {
+            padding-right: 24px;
+            height: calc(802px - 40px * 2 - 34px - 30px * 2 - 42px - 21px - 16px);
+            overflow: auto;
+            scrollbar-width: thin;
+
+            &::-webkit-scrollbar {
+                background-color: #fff;
+                width: 6px;
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #E9E8EE;
+                border-radius: 10px;
+            }
+        }
+
+        &__row {
+            @media(min-width: 768px) {
+                grid-template-columns: 0.25fr 0.25fr 0.5fr;
+            }
+
+            @media(min-width: 1201px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            &:first-child {
+                @media(max-width: 767px) {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.shops-page {
+    &__map {
+        height: 500px;
+        margin-bottom: 60px;
+
+        @media(max-width: 576px) {
+            height: 360px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px 45px;
+
+        @media(max-width: 576px) {
+            margin: 0 -4px 16px;
+        }
+    }
+
+    &__tab {
+        min-width: 132px;
+        margin: 5px;
+        padding: 15px;
+
+        @media(max-width: 576px) {
+            width: calc(50% - 8px);
+            margin: 4px;
+        }
+    }
+
+    &__table {
+        width: 1130px;
+        max-width: 100%;
+
+        .shops-table {
+            &__row {
+                @media(min-width: 768px) {
+                    grid-template-columns: 0.4fr 0.4fr 0.2fr;
+                }
+            }
+        }
+    }
+}

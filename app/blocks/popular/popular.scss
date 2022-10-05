@@ -1,0 +1,38 @@
+#popular {
+    padding-top: 55px;
+}
+
+.popular {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.popular-title {
+    margin-top: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: $dark;
+    max-width: 380px;
+}
+
+.popular-item {
+    margin-bottom: 15px;
+    transition: 0.35s;
+}
+
+@media (min-width: 991px) {
+    .popular-item:hover {
+        transform: scale(1.02);
+        transition: 0.35s;
+    }
+}
+
+@media (max-width: 576px) {
+    .popular-item {
+        width: 45%;
+    }
+}

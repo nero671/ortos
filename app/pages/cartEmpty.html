@@ -1,0 +1,63 @@
+@@include("blocks/head/head.html", {"title": "Корзина/Оформление заказа"})
+@@include("blocks/header/header.html", {
+"header-bottom": "header-bottom",
+})
+<main class="main">
+    <div id="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs-item">
+                    <a href="#">Главная страница</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <a href="#">Каталог</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <a href="#">Ортопедическая обувь</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <a href="#">Женская обувь</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <a href="#">Ортопедические сандалии Ortmann REYNA</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <a href="#">Моя корзина</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="cart">
+            <div class="container">
+                <h1 class="title cart__title">Моя корзина</h1>
+
+                <div class="cart-info-box">
+                    <div class="cart-info-box__title">
+                        Корзина пуста
+                    </div>
+                    <p class="cart-info-box__text">
+                        Перейдите в каталог, чтобы начать добавлять товары в корзину
+                    </p>
+                    <a href="#"
+                       class="btn cart-info-box__btn btn--border">перейти в каталог</a>
+                </div>
+            </div>
+        </div>
+        @@include('blocks/good-detail__slider/good-detail__slider.html')
+    </div>
+</main>
+@@include("blocks/footer/footer.html")
+
+@@include('blocks/shops-popup/shops-popup.html')
+
+@@include("blocks/footer-menu/footer-menu.html")
+@@include("blocks/popup-menu/popup-menu.html")
+@@include('blocks/popups/auth-popup.html', {
+"id": "register",
+"title": "Зарегистрируйтесь"
+})
+@@include('blocks/popups/favorite-popup.html')
+@@include("blocks/cookies/cookies.html")
+@@include("blocks/link/link.html")

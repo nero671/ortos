@@ -1,0 +1,30 @@
+@@include("blocks/head/head.html", {"title": "Title"})
+@@include("blocks/header/header.html", {
+"header-bottom": "header-bottom",
+})
+<main class="main">
+    @@include("blocks/main-banners/main-banners.html")
+    @@include("blocks/navigator/navigator.html")
+    @@include("blocks/hits/hits.html")
+    @@include("blocks/banners/banners.html")
+    @@include("blocks/new-goods/new-goods.html")
+    @@include("blocks/ortos-tab/ortos-tab.html")
+    @@include("blocks/sale-goods/sale-goods.html")
+    @@include("blocks/brands/brands.html")
+    @@include("blocks/special/special.html")
+    @@include("blocks/popular/popular.html")
+    @@include("blocks/articles/articles.html")
+    @@include("blocks/map-block/map-block.html")
+</main>
+@@include("blocks/footer/footer.html")
+
+@@include("blocks/footer-menu/footer-menu.html")
+@@include("blocks/popup-menu/popup-menu.html")
+@@include('blocks/popups/auth-popup.html', {
+"id": "register",
+"title": "Зарегистрируйтесь"
+})
+@@include('blocks/popups/favorite-popup.html')
+@@include("blocks/cookies/cookies.html")
+@@include("blocks/link/link.html")
+@@include('blocks/maps/maps.html')

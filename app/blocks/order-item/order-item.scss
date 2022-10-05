@@ -1,0 +1,128 @@
+.orders-history {
+    width: 670px;
+    max-width: 100%;
+}
+
+.order-item {
+    &:not(:last-child) {
+        border-bottom: 1px solid #E9E8EE;
+        padding-bottom: 30px;
+    }
+
+    &:not(:first-child) {
+        padding-top: 30px;
+    }
+
+    > .btn--underlined {
+        display: none;
+
+        @media(max-width: 767px) {
+            display: block;
+            margin-top: 14px;
+        }
+    }
+
+    // .order-item__inner
+
+    &__inner {
+        @media(min-width: 768px) {
+            margin: -7px -7px 13px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    // .order-item__left
+
+    &__left,
+    &__right {
+        display: flex;
+        flex-direction: column;
+
+        @media(min-width: 768px) {
+            padding: 7px;
+        }
+    }
+
+    // .order-item__title
+
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    &__label {
+        padding: 6px 12px;
+        margin-bottom: 10px;
+    }
+
+    // .order-item__date
+
+    &__date {
+        display: flex;
+        font-size: 15px;
+        color: $gray-2;
+
+        @media(max-width: 767px) {
+            margin-bottom: 14px;
+        }
+
+        time {
+            color: $dark;
+            margin-left: 6px;
+        }
+    }
+
+    &__left {
+        align-items: flex-start;
+    }
+
+    // .order-item__right
+
+    &__right {
+        @media(min-width: 768px) {
+            align-items: flex-end;
+        }
+
+        > * {
+            &:not(:last-child) {
+                margin-bottom: 17px;
+            }
+        }
+
+        @media(max-width: 767px) {
+            .btn--underlined {
+                display: none;
+            }
+        }
+    }
+
+    // .order-item__sum
+
+    &__sum {
+        display: flex;
+        align-items: center;
+        color: $gray-2;
+        text-transform: uppercase;
+
+        b {
+            margin-left: 6px;
+            font-weight: 500;
+            font-size: 24px;
+            color: $dark;
+        }
+    }
+
+    &__toggle-content {
+        display: none;
+        padding-top: 20px;
+    }
+
+    &__good {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}

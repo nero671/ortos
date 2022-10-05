@@ -1,0 +1,59 @@
+<fieldset class="span-2">
+    <legend class="checkout__part-title">Контактные данные</legend>
+    <div class="checkout__fields checkout__fields--col-2">
+        <label class="checkout__field form-field">
+            <span class="input-label">Имя*</span>
+            <input class="input checkout__input"
+                   name="name">
+        </label>
+        <label class="checkout__field form-field">
+            <span class="input-label">Фамилия</span>
+            <input class="input checkout__input">
+        </label>
+        <label class="checkout__field form-field">
+            <span class="input-label">E-mail*</span>
+            <input class="input checkout__input"
+                   type="email"
+                   name="email">
+        </label>
+        <label class="checkout__field form-field">
+            <span class="input-label">Номер телефона*</span>
+            <div class="phone-select">
+                <div class="phone-select__title">
+                    <button class="phone-select__drop"
+                            type="button">
+                        <img class="phone-select__flag"
+                             src="assets/images/blr.svg"
+                             alt="флаг Беларуси">
+                        <span></span>
+                    </button>
+                    <input class="input tel phone-select__input"
+                           type="tel"
+                           placeholder="+375"
+                           name="phone">
+                </div>
+                <div class="phone-select__content">
+                    <input id="phoneMask0"
+                           class="phone-select__option"
+                           type="radio"
+                           name="phoneMask"
+                           checked />
+                    <label for="phoneMask0"
+                           tabindex="0"
+                           class="phone-select__label active"
+                           data-value="+375">
+                        +375
+                    </label>
+                    <input id="phoneMask1"
+                           class="phone-select__option"
+                           type="radio"
+                           name="phoneMask" />
+                    <label for="phoneMask1"
+                           tabindex="0"
+                           class="phone-select__label"
+                           data-value="Другая страна">Другая страна</label>
+                </div>
+            </div>
+        </label>
+    </div>
+</fieldset>

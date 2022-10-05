@@ -1,0 +1,31 @@
+.popup-size__wrapper {
+  padding: 40px;
+  padding-top: 20px;
+  background: #fff;
+  max-width: 810px;
+
+  .popup-cross img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.popup-size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-size.active {
+  visibility: visible;
+}
+
+@media (max-width: 576px) {
+  .popup-size.active {
+    padding: 12px;
+  }
+
+  .popup-size__wrapper {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,96 @@
+@@include("blocks/head/head.html", {"title": "История заказов"})
+@@include("blocks/header/header.html", {
+"header-bottom": "header-bottom",
+})
+<main class="main">
+    <div id="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs-item">
+                    <a href="#">Главная страница</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <a href="#">Личный кабинет</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <span>История заказов</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="container">
+            <h1 class="title">Личный кабинет</h1>
+            <div class="page-tabs">
+                <a href="#"
+                   class="tab page-tabs__item">Персональные данные</a>
+                <a href="#"
+                   class="tab page-tabs__item active">История заказов</a>
+                <a href="#"
+                   class="tab page-tabs__item">Избранное</a>
+            </div>
+            <div class="orders-history">
+                @@include('blocks/order-item/order-item.html', {
+                "number": "12345-78",
+                "status": {
+                "text": "Ожидает подтверждения",
+                "bg": "orange"
+                },
+                "date": {
+                "text": "12.06.2022",
+                "datetime": "2022-06-12",
+                },
+                "sum": "700,00"
+                })
+                @@include('blocks/order-item/order-item.html', {
+                "number": "3555-09",
+                "status": {
+                "text": "В работе",
+                "bg": "green"
+                },
+                "date": {
+                "text": "22.08.2022",
+                "datetime": "2022-08-22",
+                },
+                "sum": "252,76"
+                })
+                @@include('blocks/order-item/order-item.html', {
+                "number": "2444-33",
+                "status": {
+                "text": "Отменен",
+                "bg": "gray"
+                },
+                "date": {
+                "text": "22.05.2022",
+                "datetime": "2022-05-22",
+                },
+                "sum": "427,00"
+                })
+                @@include('blocks/order-item/order-item.html', {
+                "number": "1885-78",
+                "status": {
+                "text": "Получен",
+                "bg": "gray"
+                },
+                "date": {
+                "text": "09.06.2022",
+                "datetime": "2022-06-09",
+                },
+                "sum": "213,00"
+                })
+            </div>
+        </div>
+    </div>
+</main>
+@@include("blocks/footer/footer.html")
+
+@@include("blocks/footer-menu/footer-menu.html")
+@@include("blocks/popup-menu/popup-menu.html")
+@@include('blocks/popups/auth-popup.html', {
+"id": "register",
+"title": "Зарегистрируйтесь"
+})
+@@include('blocks/popups/favorite-popup.html')
+@@include("blocks/cookies/cookies.html")
+@@include("blocks/link/link.html")

@@ -1,0 +1,154 @@
+// поменял классы, тк на странице оформления заказа есть такая же по дизайну плашка (регистрация / авторизация, но которой название cookies не подходит по смыслу
+.yellow-tape {
+    position: fixed;
+    bottom: 30px;
+    background-color: $yellow;
+    border-radius: 14px;
+    padding: 14px 14px 14px 27px;
+    width: 1360px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+
+    @media(max-width: 576px) {
+        padding: 16px 13px;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+    }
+
+    &__actions {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+
+        @media(max-width: 576px) {
+            width: 100%;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+
+        @media(max-width: 576px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            width: 100%;
+        }
+    }
+
+    &__btn {
+        font-weight: 500;
+        font-size: 14px;
+        padding: 13px;
+
+        @media(min-width: 576px) {
+            @include padding-x(58px);
+        }
+
+        &:active,
+        &:focus {
+            background-color: $dark;
+            border-color: $dark;
+        }
+    }
+
+    &__btn + &__btn {
+        margin-left: 10px;
+
+        @media(max-width: 576px) {
+            margin-left: 0;
+        }
+    }
+
+    &__link-btn {
+        margin-right: 40px;
+
+        .btn {
+
+            &:active,
+            &:focus {
+                border-bottom: 1px solid $dark;
+            }
+        }
+    }
+}
+
+.cookies {
+    z-index: 101;
+
+    .yellow-tape {
+        &__actions {
+            @media(max-width: 576px) {
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+.auth-tape {
+    z-index: 100;
+
+    .yellow-tape {
+        &__actions {
+            @media(max-width: 576px) {
+                flex-direction: column-reverse;
+            }
+        }
+
+        &__buttons {
+            grid-template-columns: unset;
+        }
+
+        &__link-btn {
+            @media(max-width: 576px) {
+                margin-top: 20px;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .yellow-tape {
+        width: calc(100% - 32px);
+    }
+}
+
+@media (max-width: 1170px) {
+    .yellow-tape {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__actions {
+            margin-left: 0;
+            margin-top: 14px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .yellow-tape {
+        &__text {
+            font-size: 14px;
+        }
+
+        &__actions {
+            flex-direction: column;
+        }
+
+        &__link-btn {
+            font-size: 14px;
+            margin-bottom: 16px;
+            display: block;
+        }
+    }
+
+    .yellow-tape {
+        bottom: 100px;
+    }
+}

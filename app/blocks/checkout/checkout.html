@@ -1,0 +1,12 @@
+<form id="checkout-form"
+      class="checkout">
+    <div class="container">
+        <div class="checkout__container">
+            <div class="checkout__fieldsets">
+                @@include('blocks/checkout/delivery/delivery.html')
+                @@include('blocks/checkout/payment/payment.html')
+            </div>
+            @@include('blocks/checkout/total/total.html')
+        </div>
+    </div>
+</form>

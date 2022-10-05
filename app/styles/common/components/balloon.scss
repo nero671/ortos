@@ -1,0 +1,77 @@
+/* *[class$="balloon__close"] {
+    @media(min-width: 768px) {
+        display: none !important;
+    }
+} */
+
+*[class$="balloon__tail"] {
+    display: none !important;
+}
+
+*[class$="balloon__content"] {
+    font-family: 'Roboto Flex', sans-serif !important;
+    font-style: normal;
+    font-size: 14px !important;
+    line-height: 140% !important;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
+    padding: 0 !important;
+    margin-right: 0 !important;
+
+    @media(max-width: 576px) {
+        font-size: 12px !important;
+    }
+
+    > * {
+        width: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+}
+
+.map-balloon {
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0px 7px 40px rgba(133, 133, 133, 0.12);
+    border-radius: $brs;
+    display: grid;
+    row-gap: 16px;
+
+    @media(max-width: 576px) {
+        width: 100%;
+        padding: 16px;
+        row-gap: 8px;
+    }
+
+    &__logo {
+        display: block;
+        width: 117px;
+        height: 50px;
+
+        @media(min-width: 768px) {
+            @include margin-x(auto);
+        }
+    }
+
+    &__list {
+        display: grid;
+        row-gap: 8px;
+    }
+
+    &__list-item {
+        display: flex;
+
+        dt {
+            font-weight: 600;
+        }
+
+        dd {
+            margin-left: 6px;
+
+            @media(max-width: 576px) {
+                margin-left: 4px;
+            }
+
+            //letter-spacing: 0.02em;
+        }
+    }
+}

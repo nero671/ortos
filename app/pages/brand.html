@@ -1,0 +1,30 @@
+@@include("blocks/head/head.html", {"title": "Бренды"})
+@@include("blocks/header/header.html", {
+"header-bottom": "header-bottom",
+})
+<main class="main">
+    <div id="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs-item">
+                    <a href="#">Главная страница</a>
+                </div>
+                <div class="breadcrumbs-item">
+                    <a href="#">Бренды</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('blocks/brand-page/brand-page.html')
+</main>
+@@include("blocks/footer/footer.html")
+@@include("blocks/footer-menu/footer-menu.html")
+@@include('blocks/popups/auth-popup.html', {
+"id": "register",
+"title": "Зарегистрируйтесь"
+})
+@@include('blocks/popups/favorite-popup.html')
+@@include("blocks/link/link.html")
+</body>
+
+</html>

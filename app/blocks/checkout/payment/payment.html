@@ -1,0 +1,73 @@
+<fieldset class="checkout__item">
+    <legend class="checkout__item-title">Оплата</legend>
+    <div class="checkout__fields checkout__fields--col-2">
+        <label class="radio">
+            <input class="radio__box"
+                   type="radio"
+                   name="payment"
+                   checked>
+            <span class="radio__inner">
+                <span class="radio__style"></span>
+                <span class="radio__title">Наличными при получении</span>
+            </span>
+        </label>
+        <label class="radio">
+            <input class="radio__box"
+                   type="radio"
+                   name="payment">
+            <span class="radio__inner">
+                <span class="radio__style"></span>
+                <span class="radio__title">Картой при получении</span>
+            </span>
+        </label>
+        <label class="radio">
+            <input class="radio__box"
+                   type="radio"
+                   name="payment">
+            <span class="radio__inner">
+                <span class="radio__style"></span>
+                <span class="radio__title">Онлайн оплата</span>
+            </span>
+        </label>
+        <label class="radio">
+            <input class="radio__box"
+                   type="radio"
+                   name="payment">
+            <span class="radio__inner">
+                <span class="radio__style"></span>
+                <span class="radio__title">Оплата через ЕРИП</span>
+            </span>
+        </label>
+    </div>
+    <small class="small-text checkout__small-text">* Оплата подарочным сертификатом возможна только в салонах нашей сети</small>
+    <div class="agrees checkout__agrees">
+        <label class="checkout__agree">
+            <input type="checkbox"
+                   class="custom-checkbox custom-checkbox--size_xl"
+                   id="checkout_public_agree"
+                   name="checkout_public_agree"
+                   checked>
+            <label for="checkout_public_agree"></label>
+            <span>
+                Нажав кнопку "Оформить заказ" вы подтвержаете, что ознакомлены и принимаете условия <a href="#">Публичного договора оферты</a>
+            </span>
+        </label>
+        <label class="checkout__agree">
+            <input type="checkbox"
+                   class="custom-checkbox custom-checkbox--size_xl"
+                   id="checkout_personal_agree"
+                   name="checkout_personal_agree"
+                   checked>
+            <label for="checkout_personal_agree"></label>
+            <span>Согласен(-на) на обработку персональных данных</span>
+        </label>
+        <label class="checkout__agree">
+            <input type="checkbox"
+                   class="custom-checkbox custom-checkbox--size_xl"
+                   id="checkout_newsletter_agree"
+                   name="checkout_newsletter_agree">
+            <label for="checkout_newsletter_agree"></label>
+            <span>Подписаться на рассылку новостей</span>
+        </label>
+    </div>
+</fieldset>

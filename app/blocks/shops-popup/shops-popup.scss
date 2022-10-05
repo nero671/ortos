@@ -1,0 +1,34 @@
+.shops-popup {
+    padding-right: 16px;
+
+    @media(max-width: 576px) {
+        padding-right: 10px;
+    }
+
+    // .shops-popup__tabs
+
+    &__tabs {
+        display: flex;
+        margin-bottom: 30px;
+
+        @media(max-width: 576px) {
+            margin-bottom: 36px;
+        }
+    }
+
+    // .shops-popup__tab
+
+    &__tab {
+        @media(max-width: 576px) {
+            width: 50%;
+        }
+    }
+
+    &__map {
+        height: 586px;
+
+        @media(max-width: 767px) {
+            height: 466px;
+        }
+    }
+}

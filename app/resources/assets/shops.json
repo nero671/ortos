@@ -1,0 +1,167 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [53.916546, 27.587065]
+      },
+      "properties": {
+        "balloonContentBody": "<div class=\"map-balloon\"><img class=\"map-balloon__logo\" src=\"./assets/images/logo.svg\" alt=\"логотип Ortos\"><dl class=\"map-balloon__list\"><div class=\"map-balloon__list-item\"><dt>Адрес:</dt><dd>г.Минск, ул. Гикало, 1</dd></div><div class=\"map-balloon__list-item\"><dt>Время работы:</dt><dd>пн-вск с 09:00 до 20:00</dd></div><div class=\"map-balloon__list-item\"><dt>Телефон:</dt><dd><a href=\"tel:+375173932316\">+375 17 393 23 16</a></dd></div> <div class=\"map-balloon__list-item\"><dt>E-mail:</dt><dd><a href=\"mailto:post@email.ru\">post@email.ru</a></dd></div> <div class=\"map-balloon__list-item\"><dt>Наличие:</dt><dd><div class=\"status available\">В наличии</div></dd></div></dl><button class=\"btn map-balloon__btn btn--border\" type=\"button\">Выбрать</button></div>"
+      },
+      "options": {
+        "city": "minsk",
+        "iconImageHref": "assets/images/map.svg",
+        "iconLayout":"default#image",
+        "iconImageSize": [27, 33],
+        "iconImageOffset": [-13.5, -33]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [53.897626, 27.565856]
+      },
+      "properties": {
+        "balloonContentBody": "<div class=\"map-balloon\"><img class=\"map-balloon__logo\" src=\"./assets/images/logo.svg\" alt=\"логотип Ortos\"><dl class=\"map-balloon__list\"><div class=\"map-balloon__list-item\"><dt>Адрес:</dt><dd>г.Минск, ул. Гикало, 1</dd></div><div class=\"map-balloon__list-item\"><dt>Время работы:</dt><dd>пн-вск с 09:00 до 20:00</dd></div><div class=\"map-balloon__list-item\"><dt>Телефон:</dt><dd><a href=\"tel:+375173932316\">+375 17 393 23 16</a></dd></div> <div class=\"map-balloon__list-item\"><dt>E-mail:</dt><dd><a href=\"mailto:post@email.ru\">post@email.ru</a></dd></div> <div class=\"map-balloon__list-item\"><dt>Наличие:</dt><dd><div class=\"status available\">В наличии</div></dd></div></dl><button class=\"btn map-balloon__btn btn--border\" type=\"button\">Выбрать</button></div>"
+      },
+      "options": {
+        "city": "minsk",
+        "iconImageHref": "assets/images/map.svg",
+        "iconLayout":"default#image",
+        "iconImageSize": [27, 33],
+        "iconImageOffset": [-13.5, -33]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [53.943440, 27.686158]
+      },
+      "properties": {
+        "balloonContentBody": "<div class=\"map-balloon\"><img class=\"map-balloon__logo\" src=\"./assets/images/logo.svg\" alt=\"логотип Ortos\"><dl class=\"map-balloon__list\"><div class=\"map-balloon__list-item\"><dt>Адрес:</dt><dd>г.Минск, ул. Гикало, 1</dd></div><div class=\"map-balloon__list-item\"><dt>Время работы:</dt><dd>пн-вск с 09:00 до 20:00</dd></div><div class=\"map-balloon__list-item\"><dt>Телефон:</dt><dd><a href=\"tel:+375173932316\">+375 17 393 23 16</a></dd></div> <div class=\"map-balloon__list-item\"><dt>E-mail:</dt><dd><a href=\"mailto:post@email.ru\">post@email.ru</a></dd></div> <div class=\"map-balloon__list-item\"><dt>Наличие:</dt><dd><div class=\"status available\">В наличии</div></dd></div></dl><button class=\"btn map-balloon__btn btn--border\" type=\"button\">Выбрать</button></div>"
+      },
+      "options": {
+        "city": "minsk",
+        "iconImageHref": "assets/images/map.svg",
+        "iconLayout":"default#image",
+        "iconImageSize": [27, 33],
+        "iconImageOffset": [-13.5, -33]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [53.908076, 27.428512]
+      },
+      "properties": {
+        "balloonContentBody": "<div class=\"map-balloon\"><img class=\"map-balloon__logo\" src=\"./assets/images/logo.svg\" alt=\"логотип Ortos\"><dl class=\"map-balloon__list\"><div class=\"map-balloon__list-item\"><dt>Адрес:</dt><dd>г.Минск, ул. Гикало, 1</dd></div><div class=\"map-balloon__list-item\"><dt>Время работы:</dt><dd>пн-вск с 09:00 до 20:00</dd></div><div class=\"map-balloon__list-item\"><dt>Телефон:</dt><dd><a href=\"tel:+375173932316\">+375 17 393 23 16</a></dd></div> <div class=\"map-balloon__list-item\"><dt>E-mail:</dt><dd><a href=\"mailto:post@email.ru\">post@email.ru</a></dd></div> <div class=\"map-balloon__list-item\"><dt>Наличие:</dt><dd><div class=\"status available\">В наличии</div></dd></div></dl><button class=\"btn map-balloon__btn btn--border\" type=\"button\">Выбрать</button></div>"
+      },
+      "options": {
+        "city": "minsk",
+        "iconImageHref": "assets/images/map.svg",
+        "iconLayout":"default#image",
+        "iconImageSize": [27, 33],
+        "iconImageOffset": [-13.5, -33]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [53.852329, 27.478431]
+      },
+      "properties": {
+        "balloonContentBody": "<div class=\"map-balloon\"><img class=\"map-balloon__logo\" src=\"./assets/images/logo.svg\" alt=\"логотип Ortos\"><dl class=\"map-balloon__list\"><div class=\"map-balloon__list-item\"><dt>Адрес:</dt><dd>г.Минск, ул. Гикало, 1</dd></div><div class=\"map-balloon__list-item\"><dt>Время работы:</dt><dd>пн-вск с 09:00 до 20:00</dd></div><div class=\"map-balloon__list-item\"><dt>Телефон:</dt><dd><a href=\"tel:+375173932316\">+375 17 393 23 16</a></dd></div> <div class=\"map-balloon__list-item\"><dt>E-mail:</dt><dd><a href=\"mailto:post@email.ru\">post@email.ru</a></dd></div> <div class=\"map-balloon__list-item\"><dt>Наличие:</dt><dd><div class=\"status available\">В наличии</div></dd></div></dl><button class=\"btn map-balloon__btn btn--border\" type=\"button\">Выбрать</button></div>"
+      },
+      "options": {
+        "city": "minsk",
+        "iconImageHref": "assets/images/map.svg",
+        "iconLayout":"default#image",
+        "iconImageSize": [27, 33],
+        "iconImageOffset": [-13.5, -33]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [52.097593, 23.685457]
+      },
+      "properties": {
+        "balloonContentBody": "<div class=\"map-balloon\"><img class=\"map-balloon__logo\" src=\"./assets/images/logo.svg\" alt=\"логотип Ortos\"><dl class=\"map-balloon__list\"><div class=\"map-balloon__list-item\"><dt>Адрес:</dt><dd>г.Минск, ул. Гикало, 1</dd></div><div class=\"map-balloon__list-item\"><dt>Время работы:</dt><dd>пн-вск с 09:00 до 20:00</dd></div><div class=\"map-balloon__list-item\"><dt>Телефон:</dt><dd><a href=\"tel:+375173932316\">+375 17 393 23 16</a></dd></div> <div class=\"map-balloon__list-item\"><dt>E-mail:</dt><dd><a href=\"mailto:post@email.ru\">post@email.ru</a></dd></div> <div class=\"map-balloon__list-item\"><dt>Наличие:</dt><dd><div class=\"status available\">В наличии</div></dd></div></dl><button class=\"btn map-balloon__btn btn--border\" type=\"button\">Выбрать</button></div>"
+      },
+      "options": {
+        "city": "brest",
+        "iconImageHref": "assets/images/map.svg",
+        "iconLayout":"default#image",
+        "iconImageSize": [27, 33],
+        "iconImageOffset": [-13.5, -33]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [55.193258, 30.195305]
+      },
+      "properties": {
+        "balloonContentBody": "<div class=\"map-balloon\"><img class=\"map-balloon__logo\" src=\"./assets/images/logo.svg\" alt=\"логотип Ortos\"><dl class=\"map-balloon__list\"><div class=\"map-balloon__list-item\"><dt>Адрес:</dt><dd>г.Минск, ул. Гикало, 1</dd></div><div class=\"map-balloon__list-item\"><dt>Время работы:</dt><dd>пн-вск с 09:00 до 20:00</dd></div><div class=\"map-balloon__list-item\"><dt>Телефон:</dt><dd><a href=\"tel:+375173932316\">+375 17 393 23 16</a></dd></div> <div class=\"map-balloon__list-item\"><dt>E-mail:</dt><dd><a href=\"mailto:post@email.ru\">post@email.ru</a></dd></div> <div class=\"map-balloon__list-item\"><dt>Наличие:</dt><dd><div class=\"status available\">В наличии</div></dd></div></dl><button class=\"btn map-balloon__btn btn--border\" type=\"button\">Выбрать</button></div>"
+      },
+      "options": {
+        "city": "vitebsk",
+        "iconImageHref": "assets/images/map.svg",
+        "iconLayout":"default#image",
+        "iconImageSize": [27, 33],
+        "iconImageOffset": [-13.5, -33]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [52.425451, 31.002998]
+      },
+      "properties": {
+        "balloonContentBody": "<div class=\"map-balloon\"><img class=\"map-balloon__logo\" src=\"./assets/images/logo.svg\" alt=\"логотип Ortos\"><dl class=\"map-balloon__list\"><div class=\"map-balloon__list-item\"><dt>Адрес:</dt><dd>г.Минск, ул. Гикало, 1</dd></div><div class=\"map-balloon__list-item\"><dt>Время работы:</dt><dd>пн-вск с 09:00 до 20:00</dd></div><div class=\"map-balloon__list-item\"><dt>Телефон:</dt><dd><a href=\"tel:+375173932316\">+375 17 393 23 16</a></dd></div> <div class=\"map-balloon__list-item\"><dt>E-mail:</dt><dd><a href=\"mailto:post@email.ru\">post@email.ru</a></dd></div> <div class=\"map-balloon__list-item\"><dt>Наличие:</dt><dd><div class=\"status available\">В наличии</div></dd></div></dl><button class=\"btn map-balloon__btn btn--border\" type=\"button\">Выбрать</button></div>"
+      },
+      "options": {
+        "city": "gomel",
+        "iconImageHref": "assets/images/map.svg",
+        "iconLayout":"default#image",
+        "iconImageSize": [27, 33],
+        "iconImageOffset": [-13.5, -33]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [53.902385, 30.339925]
+      },
+      "properties": {
+        "balloonContentBody": "<div class=\"map-balloon\"><img class=\"map-balloon__logo\" src=\"./assets/images/logo.svg\" alt=\"логотип Ortos\"><dl class=\"map-balloon__list\"><div class=\"map-balloon__list-item\"><dt>Адрес:</dt><dd>г.Минск, ул. Гикало, 1</dd></div><div class=\"map-balloon__list-item\"><dt>Время работы:</dt><dd>пн-вск с 09:00 до 20:00</dd></div><div class=\"map-balloon__list-item\"><dt>Телефон:</dt><dd><a href=\"tel:+375173932316\">+375 17 393 23 16</a></dd></div> <div class=\"map-balloon__list-item\"><dt>E-mail:</dt><dd><a href=\"mailto:post@email.ru\">post@email.ru</a></dd></div> <div class=\"map-balloon__list-item\"><dt>Наличие:</dt><dd><div class=\"status available\">В наличии</div></dd></div></dl><button class=\"btn map-balloon__btn btn--border\" type=\"button\">Выбрать</button></div>"
+      },
+      "options": {
+        "city": "mogilev",
+        "iconImageHref": "assets/images/map.svg",
+        "iconLayout":"default#image",
+        "iconImageSize": [27, 33],
+        "iconImageOffset": [-13.5, -33]
+      }
+    }
+  ]
+}

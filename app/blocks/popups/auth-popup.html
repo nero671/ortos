@@ -1,0 +1,61 @@
+<div style="display: none;"
+     id="@@id"
+     class="modal modal--size_xs">
+    <div class="modal__title">@@title</div>
+    <form action="#"
+          class="modal__form">
+        <label class="modal__field form-field">
+            <span class="input-label">Номер телефона</span>
+            <div class="phone-select">
+                <div class="phone-select__title">
+                    <button class="phone-select__drop"
+                            type="button">
+                        <img class="phone-select__flag"
+                             src="assets/images/blr.svg"
+                             alt="флаг Беларуси">
+                        <span></span>
+                    </button>
+                    <input class="input tel phone-select__input"
+                           type="text"
+                           placeholder="+375">
+                </div>
+                <div class="phone-select__content">
+                    <input id="phoneMask0"
+                           class="phone-select__option"
+                           type="radio"
+                           name="phoneMask"
+                           checked />
+                    <label for="phoneMask0"
+                           tabindex="0"
+                           class="phone-select__label active"
+                           data-value="+375">
+                        +375
+                    </label>
+                    <input id="phoneMask1"
+                           class="phone-select__option"
+                           type="radio"
+                           name="phoneMask" />
+                    <label for="phoneMask1"
+                           tabindex="0"
+                           class="phone-select__label"
+                           data-value="Другая страна">Другая страна</label>
+                </div>
+            </div>
+        </label>
+        <label class="modal__agree">
+            <input type="checkbox"
+                   class="custom-checkbox custom-checkbox--size_xl"
+                   id="public-agree"
+                   name="public-agree"
+                   checked>
+            <label for="public-agree"></label>
+            <span>
+                Я ознакомлен (-а) с <a href="#">Политикой использования персональных данных</a> и <a href="#">Договором публичной оферты</a> и согласен (-а) на обработку моих персональных данных
+            </span>
+        </label>
+        <a href="#phone-code"
+           data-fancybox
+           class="btn btn--style_bg-black"
+           type="submit">Получить код</a>
+    </form>
+</div>

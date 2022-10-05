@@ -1,0 +1,47 @@
+.alerts {
+    display: grid;
+    gap: 20px;
+}
+
+.alert {
+    position: relative;
+    padding: 26px 26px 26px calc(26px + 24px + 10px);
+    border-radius: 14px;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 26px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+    }
+
+    &.success {
+        background-color: #E7FCCD;
+
+        &:before {
+            background-image: url(../images/alert-check.svg);
+        }
+    }
+
+    &.warning {
+        background-color: $yellow;
+
+        &:before {
+            background-image: url(../images/alert-warning.svg);
+        }
+    }
+
+    &.error {
+        background-color: #FFDBDB;
+        color: $dark;
+
+        &:before {
+            background-image: url(../images/alert-error.svg);
+        }
+    }
+}

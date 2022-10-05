@@ -1,0 +1,31 @@
+#sale-goods {
+    padding-top: 120px;
+}
+
+.sale {
+    background: #f16363;
+    border-radius: $brs;
+    padding: 6px;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.goods-slide__price-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.goods-slide__price {
+    margin-right: 10px;
+}
+
+.goods-slide__price-old {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: $gray-2;
+    text-decoration: line-through;
+    margin-bottom: 22px;
+}

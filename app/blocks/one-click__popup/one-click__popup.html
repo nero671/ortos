@@ -1,0 +1,53 @@
+<div class="popup one-click__popup">
+  <div class="one-click__popup-wrapper">
+    <div class="popup-head">
+      <div class="popup-cross">
+        <img src="assets/images/cross.svg" alt="Ortos">
+      </div>
+    </div>
+    <div class="popup-title">
+      Заказать в один клик
+    </div>
+    <div class="popup-aftertitle">
+      Менеджер перезвонит вам для уточнения деталей и оформления заказа на ваше имя
+    </div>
+    <form id="checkout-form" class="popup-form" novalidate="novalidate">
+      <label class="checkout__field form-field">
+        <span class="input-label">Имя*</span>
+        <input class="input checkout__input" name="name">
+      </label>
+      <label class="checkout__field form-field">
+        <span class="input-label">Номер телефона*</span>
+        <div class="phone-select">
+            <div class="phone-select__title">
+                <button class="phone-select__drop" type="button">
+                    <img class="phone-select__flag" src="assets/images/blr.svg" alt="флаг Беларуси">
+                    <span></span>
+                </button>
+                <input class="input tel phone-select__input" type="tel" placeholder="+375" name="phone">
+            </div>
+            <div class="phone-select__content">
+                <input id="phoneMask0" class="phone-select__option" type="radio" name="phoneMask" checked="">
+                <label for="phoneMask0" tabindex="0" class="phone-select__label active" data-value="+375">
+                    +375
+                </label>
+                <input id="phoneMask1" class="phone-select__option" type="radio" name="phoneMask">
+                <label for="phoneMask1" tabindex="0" class="phone-select__label" data-value="Другая страна">Другая страна</label>
+            </div>
+        </div>
+      </label>
+      <label class="checkout__field form-field">
+        <span class="input-label">E-mail*</span>
+        <input class="input checkout__input" type="email" name="email">
+      </label>
+      <label class="modal__agree">
+        <input type="checkbox" class="custom-checkbox custom-checkbox--size_xl" id="public-agree" name="public-agree" checked="" required>
+        <label for="public-agree"></label>
+        <span>
+            Я ознакомлен (-а) с <a href="#">Политикой использования персональных данных</a> и <a href="#">Договором публичной оферты</a> и согласен (-а) на обработку моих персональных данных
+        </span>
+      </label>
+      <button class="btn btn--style_bg-black" type="submit">Заказать</button>
+    </form>
+  </div>
+</div>

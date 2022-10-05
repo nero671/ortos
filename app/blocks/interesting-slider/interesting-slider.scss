@@ -1,0 +1,19 @@
+#interesting-block {
+  .news-page__item-title {
+    margin-top: 20px !important;
+  }
+
+  .interesting-slider {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  #interesting-block {
+    padding-left: 20px;
+  }
+
+  #interesting-block .interesting-slider {
+    margin-top: 30px;
+  }
+}

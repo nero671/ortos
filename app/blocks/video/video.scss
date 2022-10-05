@@ -1,0 +1,38 @@
+.video {
+  margin-top: 50px;
+}
+
+#video row-4 {
+  gap: 20px 50px;
+}
+
+.video-item {
+  cursor: pointer;
+}
+
+.video-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #2b2c2e;
+  margin-top: 20px;
+}
+
+.video-item:hover .video-title {
+  color: #dba300;
+}
+
+#video .pagination ul {
+  margin-top: 50px;
+}
+
+@media (max-width: 576px) {
+  .video-item img {
+    width: 100%;
+  }
+
+  #video .pagination ul {
+    margin-top: 30px;
+  }
+}

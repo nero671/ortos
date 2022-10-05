@@ -1,0 +1,147 @@
+.main-banners {
+    padding-top: 6px;
+}
+
+.main-banners {
+    display: flex;
+}
+
+.main-banners__item {
+    max-width: 911px;
+    position: relative;
+}
+
+.main-banners__item-img:first-child {
+    margin-bottom: 20px;
+}
+
+.slider-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 52px;
+    z-index: 2;
+    padding: 0 50px;
+}
+
+.slider-btn {
+    background: $dark;
+    padding: 14px 40px;
+    border-radius: $brs;
+}
+
+.slider-btn:hover {
+    background: #fce194;
+    border: 1px solid #fce194;
+    color: $dark;
+}
+
+.arrow-block {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s background-color;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #FCE194;
+        }
+    }
+}
+
+.arrow:first-child {
+    margin-right: 16px;
+}
+
+.main-banners__item-img {
+    display: block;
+    transition: 0.35s;
+}
+
+.main-banners__slide img {
+    border-radius: $brs;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    .main-banners {
+        flex-direction: column;
+    }
+
+    .main-banners__item:last-child {
+        display: flex;
+        margin-top: 15px;
+    }
+
+    .main-banners__item-img {
+        width: 50%;
+    }
+
+    .main-banners__item-img:first-child {
+        margin-right: 8px;
+    }
+}
+
+@media (min-width: 991px) {
+    .main-banners__item-img:hover {
+        transform: scale(1.02);
+        transition: 0.35s;
+    }
+}
+
+@media (max-width: 900px) {
+    #main-banners {
+        background: #f9f9f9;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider-bottom {
+        padding: 0 20px;
+    }
+
+    .main-banners__item-img {
+        width: 100%;
+    }
+
+    .main-banners__item-img img {
+        width: 100%;
+    }
+
+    .slider-bottom {
+        bottom: 20px;
+    }
+
+    .main-banners__item-img:first-child {
+        margin-right: 8px;
+    }
+
+    .desk {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 340px) {
+    .slider-btn {
+        padding: 15px;
+    }
+}

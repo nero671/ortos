@@ -1,0 +1,13 @@
+<fieldset class="checkout__item tabs-wrap">
+    <legend class="checkout__item-title">Доставка</legend>
+    <div class="checkout__tabs tabs">
+        <button class="tab checkout__tab active"
+                type="button"
+                data-tab="pickup">Забрать из салона</button>
+        <button class="tab checkout__tab"
+                type="button"
+                data-tab="curier">Курьером</button>
+    </div>
+    @@include('blocks/checkout/delivery/pickup.html')
+    @@include('blocks/checkout/delivery/curier.html')
+</fieldset>

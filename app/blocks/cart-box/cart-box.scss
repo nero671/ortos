@@ -1,0 +1,42 @@
+.cart-box {
+    $this: &;
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 7px 40px rgba(133, 133, 133, 0.12);
+    display: flex;
+    align-items: center;
+    padding: 20px 16px;
+    // .cart-box__icon
+
+    &__icon {
+        flex-shrink: 0;
+        width: 61px;
+        height: 44px;
+        margin-right: 16px;
+        fill: $accent;
+    }
+
+    // .cart-box__text
+
+    &__text {
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        color: $dark;
+
+        @media(max-width: 576px) {
+            max-width: 196px;
+        }
+
+        span {
+            color: $accent;
+        }
+    }
+
+    &.free {
+        #{$this} {
+            &__icon {
+                fill: #70A031;
+            }
+        }
+    }
+}

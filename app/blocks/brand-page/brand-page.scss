@@ -1,0 +1,36 @@
+.dop-page-title {
+  margin-top: 50px;
+}
+
+#brand-page .row-3 {
+  gap: 40px 100px;
+  margin-top: 50px;
+}
+
+.brand-page__item-title {
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.brand-page__item-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #7f818c;
+  margin-top: 10px;
+}
+
+@media (max-width: 576px) {
+  #brand-page .row-3 {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 30px;
+    gap: 30px 100px;
+  }
+
+  .dop-page-title {
+    margin-top: 15px;
+  }
+}
