@@ -27,7 +27,7 @@
             max-width: 196px;
         }
 
-        span {
+        span:last-child {
             color: $accent;
         }
     }

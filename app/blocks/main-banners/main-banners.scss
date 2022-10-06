@@ -7,12 +7,16 @@
 }
 
 .main-banners__item {
-    max-width: 911px;
+    max-width: 900px;
     position: relative;
 }
 
 .main-banners__item-img:first-child {
     margin-bottom: 20px;
+}
+
+.main-banners__item:last-child {
+  margin-left: 20px;
 }
 
 .slider-bottom {
