@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   width: 970px;
+  margin-top: 20px;
 }
 
 .article-detail-info__social-links {
@@ -75,6 +76,13 @@
 
   .article-detail-info .article-page__item-date {
     margin-top: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #7F818C;
+    text-transform: initial;
   }
 
   .article-page-content__text {
@@ -238,5 +246,13 @@
         margin-bottom: 36px;
       }
     }
+  }
+
+  .article-detail-info .article-page__item-date {
+    font-size: 14px!important;
+  }
+
+  .article-page__head-item_mobile {
+    margin-top: 0 !important;
   }
 }

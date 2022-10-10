@@ -2,10 +2,6 @@
   margin-top: 50px;
 }
 
-#article-page {
-  padding-bottom: 20px;
-}
-
 #article-page .row-3 {
   gap: 40px 100px;
   margin-top: 50px;
@@ -16,7 +12,7 @@
 }
 
 .article-page__item-title {
-  margin-top: 16px;
+  margin-top: 20px;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
@@ -25,10 +21,10 @@
 
 .article-page__item-text {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 140%;
   color: #7f818c;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .article-tags {
@@ -132,11 +128,13 @@
 
 #article-page .pagination ul {
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
-.article-page__head-block:hover .article-page__item-title {
-  color: #DBA300;
+@media (min-width: 991px) {
+  .article-page__head-block:hover .article-page__item-title {
+    color: #DBA300;
+  }
 }
 
 .article-page__head {
@@ -180,6 +178,7 @@
 @media (max-width: 930px) {
   #article-page .row-4 {
     grid-template-columns: repeat(2, 1fr);
+    gap: 40px 8px;
   }
 
   .article-page__head-item:last-child {
