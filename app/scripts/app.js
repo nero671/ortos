@@ -1810,8 +1810,10 @@ const fixHeader = () => {
     // eslint-disable-next-line no-restricted-globals
     if (scrollY > 112 && window.innerWidth > 1100) {
       $('.header-main').addClass('fixed');
+      $('.header-bottom').addClass('active');
     } else {
       $('.header-main').removeClass('fixed');
+      $('.header-bottom').removeClass('active');
     }
   });
 };
