@@ -735,7 +735,7 @@ const mobileMenu = () => {
   const footerPhonePopup = document.querySelector('.footer-phone__popup');
   const headerCompanyItem = document.querySelector('.header-company__item');
   const headerCompany = document.querySelector('.header-company');
-  const cart = document.querySelector('.cart.personal-issues__content ');
+  const cart = document.querySelector('.cart.personal-issues__content');
   const cartPopup = document.querySelector('.cart-popup');
   const headerCatalog = document.querySelector('.header-catalog');
   const catalog = document.querySelector('#catalog');
@@ -769,16 +769,12 @@ const mobileMenu = () => {
   cart.addEventListener('click', () => {
     if (bw > 700) {
       const cartPopupGood = document.querySelectorAll('.cart-popup__good');
+      cartPopup.classList.toggle('active-cart');
+      cart.classList.toggle('active-cart');
 
       if (cartPopupGood.length === 0) {
-        cartPopup.classList.remove('active');
-        cart.classList.remove('active');
-      } else if (!cart.classList.contains('active')) {
-        cartPopup.classList.add('active');
-        cart.classList.add('active');
-      } else if (cartActive || cartPopupActive) {
-        cartPopup.classList.remove('active');
-        cart.classList.remove('active');
+        cartPopup.classList.remove('active-cart');
+        cart.classList.remove('active-cart');
       }
     }
   });
@@ -800,11 +796,11 @@ const mobileMenu = () => {
   }
 
   footerPhoneNumber.addEventListener('click', () => {
-    footerPhonePopup.classList.toggle('active');
+    footerPhonePopup.classList.toggle('active-phone');
     if (bw < 576) {
-      footerFormWrapper.classList.toggle('active');
+      footerFormWrapper.classList.toggle('active-phone');
     }
-    footerPhoneNumber.classList.toggle('active');
+    footerPhoneNumber.classList.toggle('active-phone');
   });
 
   if (popupMenu) {
@@ -1788,14 +1784,14 @@ $(document).on('mouseup', (e) => {
   }
 });
 
-$(document).on('mouseup', (e) => {
-  const $footerPhonePopup = $('.footer-phone__popup');
-
-  if (!$footerPhonePopup.is(e.target) && !$footerPhonePopup.is(e.target)) {
-    $footerPhonePopup.removeClass('active');
-    $footerPhonePopup.closest('.footer-phone__number').removeClass('active');
-  }
-});
+// $(document).on('mouseup', (e) => {
+//   const $footerPhonePopup = $('.footer-phone__popup');
+//
+//   if (!$footerPhonePopup.is(e.target) && !$footerPhonePopup.is(e.target)) {
+//     $footerPhonePopup.removeClass('active-phone');
+//     $footerPhonePopup.closest('.footer-phone__number').removeClass('active-phone');
+//   }
+// });
 
 $(document).on('mouseup', (e) => {
   const $phoneSelect = $('.phone-select');
@@ -1894,7 +1890,7 @@ $(document).on('click', '.input-wrap__reset', function () {
 // paginator
 const element = document.querySelector('.pagination ul');
 const totalPages = 20;
-const page = 5;
+const page = 1;
 
 if (element) {
   // eslint-disable-next-line no-use-before-define
