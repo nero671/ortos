@@ -166,23 +166,23 @@
 //.good-stats__color-item:nth-child(2) label {
 //  background: #73a8f7;
 //}
+//
+//
+//.good-stats__color-item:nth-child(3) label {
+//  background: $green;
+//}
+//
+//.good-stats__color-item:nth-child(4) label {
+//  background: $gray-3;
+//}
 
-
-.good-stats__color-item:nth-child(3) label {
-  background: $green;
-}
-
-.good-stats__color-item:nth-child(4) label {
-  background: $gray-3;
-}
-
-.good-stats__color-item:nth-child(5) label {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), $pink;
-}
-
-.good-stats__color-item:nth-child(6) label {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), $dark;
-}
+//.good-stats__color-item:nth-child(5) label {
+//  background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), $pink;
+//}
+//
+//.good-stats__color-item:nth-child(6) label {
+//  background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), $dark;
+//}
 
 .good-stats__color-item input[type="radio"][disabled] + label {
   border: 6px solid $gray;
@@ -284,7 +284,7 @@
 .good-stats__size-wrapper {
   margin-top: 7px;
   display: flex;
-  margin-top: 0px;
+  margin-top: -10px;
 }
 
 .buttonCountNumber.conter-input__good {
@@ -305,7 +305,7 @@
 }
 
 .good-stats__size-item input[type="checkbox"]:checked + label {
-  border: 1px solid #fce194;
+  border: 6px solid #fce194;
   background: #fce194;
   border-radius: 9px;
 }
@@ -355,6 +355,7 @@
   color: $dark;
   padding: 15px;
   cursor: pointer;
+  user-select: none;
 }
 
 .good-btn {

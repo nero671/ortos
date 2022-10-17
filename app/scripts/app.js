@@ -762,20 +762,17 @@ const mobileMenu = () => {
     }
   });
 
-  cart.addEventListener('click', () => {
-    if (bw > 700) {
-      const cartPopupGood = document.querySelectorAll('.cart-popup__good');
+  document.body.addEventListener('click', (e) => {
+    if (e.target.closest('.cart.personal-issues__content')) {
+      if (bw > 700) {
+        const cartPopupGood = document.querySelectorAll('.cart-popup__good');
 
-      if (cartPopupGood.length === 0) {
-        cartPopup.classList.remove('active');
-        cart.classList.remove('active');
-      } else if (!cart.classList.contains('active')) {
-        cartPopup.classList.add('active');
-        cart.classList.add('active');
-      } else if (cartActive || cartPopupActive) {
-        cartPopup.classList.remove('active');
-        cart.classList.remove('active');
+        cartPopup.classList.toggle('active-cart');
+        cart.classList.toggle('active-cart');
       }
+    } else if (!e.target.closest('.cart-popup')) {
+      cartPopup.classList.remove('active-cart');
+      cart.classList.remove('active-cart');
     }
   });
 
@@ -795,12 +792,18 @@ const mobileMenu = () => {
     });
   }
 
-  footerPhoneNumber.addEventListener('click', () => {
-    footerPhonePopup.classList.toggle('active');
-    if (bw < 576) {
-      footerFormWrapper.classList.toggle('active');
+  document.body.addEventListener('click', (e) => {
+    if (e.target.closest('.footer-phone__number')) {
+      footerPhonePopup.classList.toggle('active-phone');
+      if (bw < 576) {
+        footerFormWrapper.classList.toggle('active-phone');
+      }
+      footerPhoneNumber.classList.toggle('active-phone');
+    } else if (!e.target.closest('.footer-phone__popup')) {
+      footerPhonePopup.classList.remove('active-phone');
+      footerFormWrapper.classList.remove('active-phone');
+      footerPhoneNumber.classList.remove('active-phone');
     }
-    footerPhoneNumber.classList.toggle('active');
   });
 
   if (popupMenu) {
@@ -1784,14 +1787,14 @@ $(document).on('mouseup', (e) => {
   }
 });
 
-$(document).on('mouseup', (e) => {
-  const $footerPhonePopup = $('.footer-phone__popup');
-
-  if (!$footerPhonePopup.is(e.target) && !$footerPhonePopup.is(e.target)) {
-    $footerPhonePopup.removeClass('active');
-    $footerPhonePopup.closest('.footer-phone__number').removeClass('active');
-  }
-});
+// $(document).on('mouseup', (e) => {
+//   const $footerPhonePopup = $('.footer-phone__popup');
+//
+//   if (!$footerPhonePopup.is(e.target) && !$footerPhonePopup.is(e.target)) {
+//     $footerPhonePopup.removeClass('active');
+//     $footerPhonePopup.closest('.footer-phone__number').removeClass('active');
+//   }
+// });
 
 $(document).on('mouseup', (e) => {
   const $phoneSelect = $('.phone-select');

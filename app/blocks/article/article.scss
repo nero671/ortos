@@ -80,15 +80,18 @@
   }
 
   .dop-page-title {
-    margin-top: 15px;
+    margin-top: 13px;
+    margin-bottom: 30px;
   }
 }
 
-.article-page__item:hover {
-  cursor: pointer;
+@media (min-width: 991px) {
+  .article-page__item:hover {
+    cursor: pointer;
 
-  .article-page__item-title {
-    color: #DBA300;
+    .article-page__item-title {
+      color: #DBA300;
+    }
   }
 }
 
@@ -128,7 +131,7 @@
 
 #article-page .pagination ul {
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 @media (min-width: 991px) {

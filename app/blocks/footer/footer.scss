@@ -27,7 +27,7 @@
     }
 }
 
-.footer-phone__number.active {
+.footer-phone__number.active-phone {
     .footer-phone__number_text {
         color: $accent;
     }
@@ -238,7 +238,7 @@
     margin-top: 3px;
 }
 
-.footer-phone__popup.active {
+.footer-phone__popup.active-phone {
     display: block;
 }
 
@@ -322,7 +322,7 @@
         width: 100%;
     }
 
-    .footer-form__wrapper.active {
+    .footer-form__wrapper.active-phone {
         visibility: hidden;
     }
 
