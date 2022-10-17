@@ -47,10 +47,12 @@
   border-radius: 0%;
   opacity: 0.3;
   cursor: pointer;
+  transition: 0.35s;
 }
 
-.detail-good__slider_slide.swiper-slide-active {
+.detail-good__slider_slide.swiper-slide-thumb-active {
   opacity: 1;
+  transition: 0.35s;
 }
 
 .details-good__slide.swiper-slide {

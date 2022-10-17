@@ -9,11 +9,11 @@
 
     > * {
         & + * {
-            margin-top: 24px;
+            margin-top: 20px;
         }
 
         & + #{$this}__btn {
-            margin-top: 32px;
+            margin-top: 24px;
         }
     }
 

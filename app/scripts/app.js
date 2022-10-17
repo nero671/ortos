@@ -142,29 +142,25 @@ const activateSliders = () => {
     });
   }
 
-  const detailsGoodSlider = new Swiper('.details-good__slider', {
-    centeredSlides: true,
+  const swiper = new Swiper('.detail-good__slider_small', {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
     speed: 500,
-    // allowTouchMove: false,
-    loop: true,
-    loopedSlides: 4,
+  });
+
+  const swiper2 = new Swiper('.details-good__slider', {
+    speed: 500,
+    spaceBetween: 10,
     navigation: {
       nextEl: '.arrow-good__next',
       prevEl: '.arrow-good__prev',
     },
+    thumbs: {
+      swiper,
+    },
   });
-
-  const detailsGoodSliderSmall = new Swiper('.detail-good__slider_small', {
-    slidesPerView: 4,
-    speed: 500,
-    loopedSlides: 4,
-    slideToClickedSlide: true,
-    clickable: true,
-    loop: true,
-  });
-
-  detailsGoodSlider.controller.control = detailsGoodSliderSmall;
-  detailsGoodSliderSmall.controller.control = detailsGoodSlider;
 
   const detailsGoodSliderFancy = new Swiper('.details-good__slider_fancy', {
     centeredSlides: true,
@@ -1894,7 +1890,8 @@ $(document).on('click', '.input-wrap__reset', function () {
 // paginator
 const element = document.querySelector('.pagination ul');
 const totalPages = 20;
-const page = 5;
+const page = 1;
+const bw = document.body.clientWidth;
 
 if (element) {
   // eslint-disable-next-line no-use-before-define
@@ -1906,10 +1903,20 @@ function createPagination(totalPages, page) {
   let liTag = '';
   let active;
   let beforePage = page - 1;
-  let afterPage = page + 1;
+  let afterPageValue = '';
+
+  if (bw > 576) {
+    afterPageValue = page + 3;
+  } else if (bw < 576) {
+    afterPageValue = page + 1;
+  }
+
+  let afterPage = afterPageValue;
 
   if (page > 1) {
     liTag += `<li class="btn numb prev" onclick="createPagination(totalPages, ${page - 1})"><span><i class="fas fa-angle-left"></i></span></li>`;
+  } else if (page === 1) {
+    liTag += `<li class="btn numb prev disabled" onclick="createPagination(totalPages, ${page - 1})"><span><i class="fas fa-angle-left"></i></span></li>`;
   }
 
   // if (page > 2) {
@@ -1927,8 +1934,6 @@ function createPagination(totalPages, page) {
   }
 
   if (page === 1) {
-    afterPage += 1;
-  } else if (page === 1) {
     afterPage += 1;
   }
 
@@ -1950,7 +1955,7 @@ function createPagination(totalPages, page) {
   }
 
   // eslint-disable-next-line max-len
-  if (page < totalPages - 1) {
+  if (page < totalPages - 3) {
     // eslint-disable-next-line max-len
     if (page < totalPages - 2) {
       liTag += '<li class="numb dots"><span>...</span></li>';
@@ -1960,6 +1965,8 @@ function createPagination(totalPages, page) {
 
   if (page < totalPages) {
     liTag += `<li class="btn numb next" onclick="createPagination(totalPages, ${page + 1})"><span> <i class="fas fa-angle-right"></i></span></li>`;
+  } else if (page === totalPages) {
+    liTag += `<li class="btn numb next disabled" onclick="createPagination(totalPages, ${page + 1})"><span> <i class="fas fa-angle-right"></i></span></li>`;
   }
 
   if (element) {

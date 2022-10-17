@@ -294,13 +294,21 @@
   transition: all 0.3s ease;
 }
 
-.pagination ul li.numb.next {
-  margin-left: 11px;
+.btn.numb.next.disabled {
+  pointer-events: none;
 }
+
+.btn.numb.prev.disabled {
+  pointer-events: none;
+}
+
+//.pagination ul li.numb.next {
+//  margin-left: 11px;
+//}
 
 @media (max-width: 576px) {
   .pagination ul li.numb.next {
-    margin-left: 8px;
+    margin-left: 3px;
   }
 }
 
@@ -327,9 +335,9 @@
   margin: 0px 3px 0 -5px;
 }
 
-.pagination ul li.numb.last{
-  margin: 0px -5px 0 3px;
-}
+//.pagination ul li.numb.last{
+//  margin: 0px -5px 0 3px;
+//}
 
 .pagination ul li.dots{
   font-size: 22px;

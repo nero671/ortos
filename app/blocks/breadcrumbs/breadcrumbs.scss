@@ -1,5 +1,5 @@
 #breadcrumbs {
-    padding-top: 16px;
+    padding-top: 20px;
 }
 
 .breadcrumbs {
@@ -46,6 +46,7 @@
 @media (max-width: 576px) {
     #breadcrumbs {
         //background: #f9f9f9;
+        padding-top: 16px;
         padding-bottom: 20px;
     }
 
