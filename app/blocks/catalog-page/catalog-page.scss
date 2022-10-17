@@ -191,7 +191,7 @@
 .catalog-tag,
 .active-tag {
   margin-right: 8px;
-  padding: 12px;
+  padding: 11px 12px;
   font-weight: 500;
   font-size: 12px;
   text-align: center;
@@ -202,6 +202,7 @@
   border: 1px solid $gray;
   border-radius: $brs;
   margin-bottom: 8px;
+  height: 40px;
 }
 
 .catalog-tag.active {
@@ -633,7 +634,7 @@
   }
 
   .catalog-filter__item:nth-child(2) .catalog-filter__content.active {
-    height: 85px !important;
+    height: 90px !important;
   }
 }
 

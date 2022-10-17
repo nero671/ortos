@@ -11,6 +11,7 @@
     line-height: 140%;
     letter-spacing: 0.02em;
     color: #7f818c;
+    text-transform: initial;
   }
 }
 
@@ -187,6 +188,10 @@
 
 @media (max-width: 576px) {
   #news-page-detail {
+    .title {
+      width: 310px;
+    }
+
     .news-page__head {
       margin-top: 20px;
     }
@@ -213,6 +218,7 @@
     .news-page__head-item_title {
       font-size: 24px;
       padding-bottom: 30px;
+      margin-top: 24px;
     }
 
     .news-page__item-date {
@@ -221,6 +227,10 @@
 
     .news-page__head-block-item {
       padding: 20px 0;
+    }
+
+    .news-detail-info__social-links a {
+      margin-left: 10px;
     }
   }
 }

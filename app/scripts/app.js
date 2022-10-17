@@ -1184,7 +1184,7 @@ const useCatalogFilter = () => {
           showMore.classList.remove('show-less');
           showMore.textContent = 'Показать все';
           // eslint-disable-next-line no-param-reassign
-          dropdown.style.height = '190px';
+          dropdown.style.height = 'auto';
         }
       });
     }
@@ -2090,15 +2090,19 @@ const openVideo = () => {
   const mobileCross = document.querySelector('.video-popup .mobile-cross');
   const videoItem = document.querySelectorAll('.video-item');
   const eqVideo = document.querySelector('.eq_video');
+  // eslint-disable-next-line no-shadow
+  const bw = document.body.clientWidth;
 
-  videoItem.forEach((item) => {
-    item.addEventListener('click', () => {
-      videoPopup.classList.add('active');
-      const videoTitle = item.querySelector('.video-title');
-      eqVideo.src = item.dataset.video;
-      videoPopupTitle.textContent = videoTitle.textContent;
+  if (bw > 576) {
+    videoItem.forEach((item) => {
+      item.addEventListener('click', () => {
+        videoPopup.classList.add('active');
+        const videoTitle = item.querySelector('.video-title');
+        eqVideo.src = item.dataset.video;
+        videoPopupTitle.textContent = videoTitle.textContent;
+      });
     });
-  });
+  }
 
   if (mobileCross) {
     mobileCross.addEventListener('click', () => {

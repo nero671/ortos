@@ -42,6 +42,17 @@
     }
 }
 
+.shops-page,
+.shops-page__map {
+    .map-balloon__btn,
+    .status {
+        display: none;
+    },
+  .map-balloon__list-item:last-child {
+    display: none;
+  }
+}
+
 #map-block,
 .good-detail__tab {
   .map-balloon__btn {

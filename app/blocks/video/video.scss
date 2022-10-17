@@ -19,8 +19,14 @@
   margin-top: 20px;
 }
 
-.video-item:hover .video-title {
-  color: #dba300;
+.video-wrapper iframe {
+  display: none;
+}
+
+@media (min-width: 991px) {
+  .video-item:hover .video-title {
+    color: #dba300;
+  }
 }
 
 #video .pagination ul {
@@ -34,5 +40,13 @@
 
   #video .pagination ul {
     margin-top: 30px;
+  }
+
+  .video-wrapper img {
+    display: none;
+  }
+
+  .video-wrapper iframe {
+    display: block;
   }
 }

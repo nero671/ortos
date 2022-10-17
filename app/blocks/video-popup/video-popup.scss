@@ -34,6 +34,10 @@
   width: 90%;
 }
 
+.mobile-cross:hover svg path {
+  stroke: #dba300;
+}
+
 @media (max-width: 991px) {
   .video.row-4 {
     grid-template-columns: repeat(3, 1fr);

@@ -97,7 +97,6 @@
 .faq-articel__link {
   font-weight: 500;
   font-size: 16px;
-  line-height: 140%;
   text-transform: uppercase;
   color: #2b2c2e;
 }
@@ -138,6 +137,11 @@
 @media (max-width: 576px) {
   .faq {
     margin-top: 30px;
+  }
+
+  .faq-content.active {
+    height: auto;
+    margin-top: 20px;
   }
 
   .faq-title {
