@@ -162,30 +162,22 @@ const activateSliders = () => {
     },
   });
 
-  const detailsGoodSliderFancy = new Swiper('.details-good__slider_fancy', {
-    centeredSlides: true,
-    speed: 500,
-    // allowTouchMove: false,
-    loop: true,
-    loopedSlides: 4,
+  const swiper1 = new Swiper('.detail-good__slider_small_fancy', {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  const swiper3 = new Swiper('.details-good__slider_fancy', {
+    spaceBetween: 10,
     navigation: {
       nextEl: '.arrow-good__next',
       prevEl: '.arrow-good__prev',
     },
+    thumbs: {
+      swiper: swiper1,
+    },
   });
-
-  const detailsGoodSliderSmallFancy = new Swiper('.detail-good__slider_small_fancy', {
-    slidesPerView: 4,
-    slidesPerGroup: 1,
-    speed: 500,
-    loopedSlides: 4,
-    slideToClickedSlide: true,
-    clickable: true,
-    loop: true,
-  });
-
-  detailsGoodSliderFancy.controller.control = detailsGoodSliderSmallFancy;
-  detailsGoodSliderSmallFancy.controller.control = detailsGoodSliderFancy;
 
   const detailsGoodSliderPopup = new Swiper('.details-good__slider_popup', {
     slidesPerView: 1,
@@ -1414,7 +1406,7 @@ $('.phone-select__label').on('click', function () {
   if ($phoneSelectLabel.attr('data-value') === '+375') {
     $phoneSelectFlag.show();
     $phoneSelectDrop.find('span').empty();
-
+    $phoneSelectInput.removeClass('any');
     $phoneSelectInput.val('');
     $phoneSelectInput.attr('placeholder', '+375');
     $phoneSelectInput.setCursorPosition(4);
@@ -1425,7 +1417,8 @@ $('.phone-select__label').on('click', function () {
 
     $phoneSelectInput.addClass('any');
     $phoneSelectInput.val('');
-    $phoneSelectInput.attr('placeholder', '+');
+    $phoneSelectInput.attr('placeholder', '+375');
+    $phoneSelectInput.mask('+');
     $phoneSelectInput.setCursorPosition(0);
     $phoneSelectInput.unmask('+');
   }
@@ -2142,7 +2135,12 @@ const openFancy = () => {
 
   if (detailsGoodSlider) {
     detailsGoodSlider.addEventListener('click', (e) => {
-      if (e.target.closest('.swiper-slide-active')) {
+      if (e.target.closest('.favorite-btn')) {
+        const target = e.target.closest('.favorite-btn');
+        fancyPopup.classList.remove('active');
+        target.classList.toggle('favorite');
+      } else if (e.target.closest('.swiper-slide-active')) {
+        document.body.classList.add('open-mobile-menu');
         fancyPopup.classList.add('active');
         fancyPopupTitle.textContent = goodStatsTitle.textContent;
       }
@@ -2152,6 +2150,7 @@ const openFancy = () => {
   if (mobileCross) {
     mobileCross.addEventListener('click', () => {
       fancyPopup.classList.remove('active');
+      document.body.classList.remove('open-mobile-menu');
     });
   }
 
@@ -2159,6 +2158,7 @@ const openFancy = () => {
     fancyPopup.addEventListener('click', (e) => {
       if (e.target.matches('.popup')) {
         fancyPopup.classList.remove('active');
+        document.body.classList.remove('open-mobile-menu');
       }
     });
   }

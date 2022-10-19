@@ -19,8 +19,10 @@
     width: max-content;
 }
 
-.good-detail__tab-link:hover {
+@media (min-width: 991px) {
+  .good-detail__tab-link:hover {
     color: $accent;
+  }
 }
 
 .good-detail__tab-text {
@@ -226,7 +228,7 @@
     }
 }
 
-//new 
+//new
 
 @media (max-width: 576px) {
     .good-detail__tab-links {
@@ -234,12 +236,12 @@
         -ms-overflow-style: none;
           scrollbar-width: none;
     }
-    
+
     .good-detail__tab-links::-webkit-scrollbar {
         width: 0;
         height: 0;
     }
-    
+
     .good-detail__tab-link {
         flex-shrink: 0;
         margin-right: 20px;

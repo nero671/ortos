@@ -4,9 +4,8 @@
   background: #fff;
   max-width: 810px;
 
-  .popup-cross img {
-    width: 24px;
-    height: 24px;
+  .popup-cross:hover svg path {
+    stroke: #dba300;
   }
 }
 

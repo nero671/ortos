@@ -45,12 +45,10 @@
 .shops-page,
 .shops-page__map {
     .map-balloon__btn,
-    .status {
+    .status,
+    .map-balloon__list-item:last-child {
         display: none;
-    },
-  .map-balloon__list-item:last-child {
-    display: none;
-  }
+    }
 }
 
 #map-block,

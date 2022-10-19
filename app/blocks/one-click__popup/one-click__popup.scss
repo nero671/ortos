@@ -3,9 +3,8 @@
     justify-content: center;
     align-items: center;
 
-  .popup-cross img {
-    width: 24px;
-    height: 24px;
+  .popup-cross:hover svg path {
+    stroke: #dba300;
   }
 }
 
@@ -82,12 +81,7 @@
 }
 
 .popup-form label:nth-child(4) {
-    flex-direction: row !important;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    letter-spacing: 0.02em;
-    color: $dark;
+    margin-bottom: 24px;
 }
 
 .checkbox-text a {
@@ -112,7 +106,6 @@
 }
 
 .popup-cross {
-    margin-right: -14px;
 
     @media (max-width: 576px) {
         margin-right: 7px;
