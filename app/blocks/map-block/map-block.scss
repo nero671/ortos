@@ -61,6 +61,14 @@
   }
 }
 
+#map-block
+#map {
+  .map-balloon__btn,
+  .status,
+  .map-balloon__list-item:last-child {
+    display: none;
+  }
+}
 
 .map__burger-img {
     float: right;

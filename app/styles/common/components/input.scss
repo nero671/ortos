@@ -120,6 +120,7 @@
         background-size: 32px 8px;
         background-repeat: no-repeat;
         transition: .3s opacity;
+        z-index: 2;
 
         &[disabled] {
             visibility: hidden;

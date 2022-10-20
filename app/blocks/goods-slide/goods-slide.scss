@@ -1,3 +1,31 @@
 .goods-slide {
-  // your code
+
+}
+
+.prices-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+}
+
+.old-price {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #7f818c;
+  text-decoration: line-through;
+}
+
+.old-price__none {
+  visibility: hidden;
+}
+
+#hits, #new-goods {
+  .goods-slider .old-price  {
+    display: none;
+  }
 }

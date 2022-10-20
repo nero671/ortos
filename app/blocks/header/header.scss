@@ -14,7 +14,7 @@
         background-color: #fff;
         top: 60px;
         width: 100%;
-        z-index: 500;
+        z-index: 5;
 
         &.fixed {
             @media(min-width: 1101px) {
@@ -142,8 +142,10 @@
     transition: 1s;
 }
 
-.header-phone__number_text:hover {
+@media (min-width: 1350px) {
+  .header-phone__number_text:hover {
     color: $accent;
+  }
 }
 
 .header-phone__number.active {
@@ -335,6 +337,7 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     padding-left: 3px;
+    line-height: 1.6;
 }
 
 .input-btn {
@@ -487,6 +490,7 @@
     margin-top: 3px;
     box-shadow: 0px 7px 5px rgba(133, 133, 133, 0.12);
     display: none;
+    //z-index: 600;
 }
 
 .header-company.active {
@@ -626,10 +630,6 @@
     .header-logo {
         margin-bottom: 15px;
     }
-
-    .header-catalog {
-        order: 2;
-    }
 }
 
 @media (max-width: 1091px) {
@@ -641,6 +641,14 @@
 @media (max-width: 1050px) {
     .header-top__navbar {
         display: none;
+    }
+
+    .header-logo {
+      order: -1;
+    }
+
+    .header-mob__menu {
+      order: -1;
     }
 
     .personal-area__text.hidden {
