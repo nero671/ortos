@@ -64,6 +64,13 @@
         @media(max-width: 576px) {
             font-size: 14px;
             line-height: 130%;
+          margin-bottom: 17px;
         }
     }
+
+  @media (max-width: 576px) {
+    .prices {
+      align-items: center;
+    }
+  }
 }

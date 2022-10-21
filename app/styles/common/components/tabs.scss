@@ -106,4 +106,8 @@
             margin-right: 20px;
         }
     }
+
+    @media (max-width: 576px) {
+      padding-bottom: 30px;
+    }
 }

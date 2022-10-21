@@ -15,9 +15,10 @@
   <label class="personal-form__field form-field">
     <span class="input-label">Дата рождения</span>
     <input class="input"
-           type="date"
+           type="text"
            name="birthday"
-           disabled>
+           disabled
+           onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" />
   </label>
   <label class="personal-form__field form-field">
     <span class="input-label">Номер телефона*</span>

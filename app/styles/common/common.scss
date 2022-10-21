@@ -103,8 +103,12 @@ a {
 .page {
   padding-top: 50px;
 
+  .label {
+    padding: 3px 4.5px;
+  }
+
   @media(max-width: 767px) {
-    padding-top: 36px;
+    padding-top: 16px;
   }
 }
 
@@ -152,6 +156,8 @@ a {
 body.open-mobile-menu {
   overflow: hidden;
   position: relative;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 .inactive {
