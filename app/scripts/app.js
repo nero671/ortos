@@ -1520,7 +1520,7 @@ const phoneSelectInput = document.querySelectorAll('.phone-select__input');
 phoneSelectInput.forEach((phone) => {
   phone.addEventListener('input', () => {
     // eslint-disable-next-line no-param-reassign
-    phone.value = phone.value.replace(/[^0-9+]/g, '');
+    phone.value = phone.value.replace(/[^+0-9]/g, '');
   });
 });
 
@@ -2249,6 +2249,7 @@ const openFancy = () => {
   }
 };
 
+
 activateSliders();
 navigatorTabsBlock();
 // mapBlock(); // вылетает ошибка на других страницах
@@ -2279,6 +2280,6 @@ showPromocode();
 tabs();
 filterShopsTable();
 fixHeader();
-// addToCart();
+addToCart();
 validateFooter();
 addToCartDetail();
