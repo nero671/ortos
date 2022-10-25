@@ -12,7 +12,7 @@
 }
 
 .news-page__item-title {
-  margin-top: 16px;
+  margin-top: 20px;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
@@ -66,6 +66,12 @@
 .news-page__head-block-item {
   width: 325px;
   margin-bottom: 20px;
+
+  @media (min-width: 576px) {
+    &:first-child {
+      width: 210px;
+    }
+  }
 }
 
 .news-page__head {

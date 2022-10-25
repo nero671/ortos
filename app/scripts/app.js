@@ -923,7 +923,7 @@ const catalog = () => {
         } else {
           catalogFirstListItem[i].classList.remove('active');
           catalogSecondList[i].classList.remove('active');
-          catalogThirdList[i].classList.remove('active');
+          // catalogThirdList[i].classList.remove('active');
           catalogSecondListItem[i].classList.remove('active');
         }
       }
