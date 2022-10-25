@@ -59,7 +59,7 @@ const activateSliders = () => {
     slidesPerView: 4,
     slidesPerGroup: 1,
     spaceBetween: 20,
-    speed: 800,
+    speed: 650,
     navigation: {
       nextEl: '.arrow-goods__next',
       prevEl: '.arrow-goods__prev',
@@ -1477,6 +1477,7 @@ const validateFooter = () => {
     } else if (target.value.length >= 1) {
       inputWrapper.classList.remove('success');
       inputWrapper.classList.add('error');
+      e.preventDefault();
     } else if (target.value.length < 1) {
       inputWrapper.classList.remove('error');
     }
@@ -1489,8 +1490,9 @@ const validateFooter = () => {
 
     if (e.target.closest('.input-wrap__btn')) {
       if (inputWrapper.classList.contains('error')) {
-        input.value = '';
-        inputWrapper.classList.remove('error');
+        e.preventDefault();
+        // input.value = '';
+        // inputWrapper.classList.remove('error');
       } else if (inputWrapper.classList.contains('success')) {
         inputWrapper.classList.remove('success');
         inputWrapper.classList.remove('error');
@@ -1513,7 +1515,16 @@ $('.submit-form .input-wrap__input').on('input', function () {
 });
 
 // validation
-$.validator.addMethod('minlenghtphone', (value, element) => value.replace(/\D+/g, '').length === 12);
+
+const phoneSelectInput = document.querySelectorAll('.phone-select__input');
+phoneSelectInput.forEach((phone) => {
+  phone.addEventListener('input', () => {
+    // eslint-disable-next-line no-param-reassign
+    phone.value = phone.value.replace(/[^0-9+]/g, '');
+  });
+});
+
+$.validator.addMethod('minlenghtphone', (value, element) => value.replace(/\D+/g, '').length > 1);
 
 // validation
 $.validator.addMethod('loyaltyCardLength', (value, element) => value.replace(/\D+/g, '').length === 12);
@@ -1608,12 +1619,12 @@ function validateForms(form) {
         email: true,
         emailfull: true,
       },
-      loyalty_card: {
-        loyaltyCardLength: {
-          param: true,
-          depends: fieldRequired,
-        },
-      },
+      // loyalty_card: {
+      //   loyaltyCardLength: {
+      //     param: true,
+      //     depends: fieldRequired,
+      //   },
+      // },
       delivery_placement: 'required',
       delivery_street: 'required',
       delivery_home: 'required',
@@ -1893,6 +1904,21 @@ $(document).on('click', '.input-wrap__btn', function () {
   }
 });
 
+$(document).on('click', '.personal-form__field .input-wrap__btn', function () {
+  const $inputWrapBtn = $(this);
+  const $inputWrap = $inputWrapBtn.closest('.input-wrap');
+  const $inputWrapInput = $inputWrap.find('.input-wrap__input');
+  const $inputWrapReset = $inputWrap.find('.input-wrap__reset');
+  $inputWrapInput.prop('readonly', true);
+
+  if ($inputWrapInput.val().length === 3) {
+    $inputWrap.addClass('success');
+    $inputWrapReset.addClass('active');
+  } else {
+    // $inputWrap.addClass('error');
+  }
+});
+
 $(document).on('click', '.input-wrap__reset', function () {
   const $inputWrapReset = $(this);
   const $inputWrap = $inputWrapReset.closest('.input-wrap');
@@ -2077,6 +2103,32 @@ const addToCart = () => {
   });
 };
 
+const addToCartDetail = () => {
+  $('.good-btn').on('click', function () {
+    const $goodsBtn = $(this);
+    const $goodsSlide = $('.details-good__slider-wrapper');
+
+    $($goodsSlide).clone().css({
+      position: 'absolute',
+      top: `${$goodsSlide.offset().top}px`,
+      left: `${$goodsSlide.offset().left}px`,
+      'z-index': '9999',
+      width: `${$goodsSlide.width()}px`,
+      height: `${$goodsSlide.height()}px`,
+    }).prependTo($('body'))
+      .animate({
+        width: $(this).width() / 3,
+        height: $(this).height() / 3,
+        left: $('.cart.personal-issues__content').offset().left,
+        top: $('.cart.personal-issues__content').offset().top,
+        opacity: 0.7,
+      }, 1000)
+      .hide(300, function () {
+        $(this).remove();
+      });
+  });
+};
+
 const faq = () => {
   const faqAccordion = document.querySelector('.faq-accordion');
 
@@ -2115,7 +2167,7 @@ const openVideo = () => {
   const videoPopupTitle = document.querySelector('.video-popup__title');
   const mobileCross = document.querySelector('.video-popup .mobile-cross');
   const videoItem = document.querySelectorAll('.video-item');
-  const eqVideo = document.querySelector('.eq_video');
+  const eqVideo = document.querySelector('.eq_video_popup');
   // eslint-disable-next-line no-shadow
   const bw = document.body.clientWidth;
 
@@ -2227,5 +2279,6 @@ showPromocode();
 tabs();
 filterShopsTable();
 fixHeader();
-addToCart();
+// addToCart();
 validateFooter();
+addToCartDetail();

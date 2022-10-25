@@ -69,10 +69,10 @@
         color: #7F818C;
         transition: .3s all;
 
-        &.active {
-            display: inline-block;
-            right: 70px;
-        }
+        //&.active {
+        //    display: inline-block;
+        //    right: 70px;
+        //}
 
         @media (any-hover: hover) {
             &:hover {
@@ -189,13 +189,13 @@
                 border: 1px solid #70A031;
             }
 
-            &__btn {
-                &::before {
-                    content: '';
-                    background-color: #70A031;
-                    background-image: url(../images/success-check.svg);
-                }
-            }
+            //&__btn {
+            //    &::before {
+            //        content: '';
+            //        background-color: #70A031;
+            //        background-image: url(../images/success-check.svg);
+            //    }
+            //}
 
             &__status {
                 &--success {
@@ -211,13 +211,13 @@
                 border: 1px solid $red;
             }
 
-            &__btn {
-                &::before {
-                    content: '';
-                    background-color: $red;
-                    background-image: url(../images/error-cross.svg);
-                }
-            }
+            //&__btn {
+            //    &::before {
+            //        content: '';
+            //        background-color: $red;
+            //        background-image: url(../images/error-cross.svg);
+            //    }
+            //}
 
             &__status {
                 &--error {
