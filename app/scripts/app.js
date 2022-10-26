@@ -1473,7 +1473,7 @@ const validateFooter = () => {
 
     if (isEmailValid(target.value)) {
       inputWrapper.classList.remove('error');
-      inputWrapper.classList.add('success');
+      // inputWrapper.classList.add('success');
     } else if (target.value.length >= 1) {
       inputWrapper.classList.remove('success');
       inputWrapper.classList.add('error');
@@ -1493,8 +1493,12 @@ const validateFooter = () => {
         e.preventDefault();
         // input.value = '';
         // inputWrapper.classList.remove('error');
-      } else if (inputWrapper.classList.contains('success')) {
-        inputWrapper.classList.remove('success');
+      } else if (!inputWrapper.classList.contains('error')) {
+        inputWrapper.classList.add('success');
+        setTimeout(() => {
+          inputWrapper.classList.remove('success');
+        }, 1000);
+
         inputWrapper.classList.remove('error');
         input.value = '';
       }
@@ -2248,7 +2252,6 @@ const openFancy = () => {
     });
   }
 };
-
 
 activateSliders();
 navigatorTabsBlock();

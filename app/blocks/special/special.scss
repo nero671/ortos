@@ -1,3 +1,9 @@
 #special {
   padding-top: 120px;
+
+  @media (max-width: 576px) {
+    .title {
+      width: 180px;
+    }
+  }
 }

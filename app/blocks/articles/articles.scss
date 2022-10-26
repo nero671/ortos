@@ -9,6 +9,10 @@
     flex-wrap: wrap;
     padding-bottom: 40px;
     padding-top: 5px;
+
+    @media (min-width: 991px) {
+      overflow: visible;
+    }
 }
 
 .articles-img__wrapper {

@@ -143,7 +143,7 @@
 }
 
 .header-phone__number svg {
-    transition: 1s;
+    transition: 0.35s;
 }
 
 @media (min-width: 1350px) {
@@ -163,7 +163,7 @@
 
     svg {
         transform: rotate(180deg);
-        transition: 1s;
+        transition: 0.35s;
     }
 }
 
@@ -223,7 +223,7 @@
 .header-main {
     display: flex;
     align-items: center;
-    padding-top: 18px;
+    padding-top: 26.5px;
     padding-bottom: 26px;
     border-bottom: 1px solid #e9e8ee;
 
@@ -447,24 +447,40 @@
 
 .header-bottom__navbar-item {
   .header-bottom__nav-link {
-    transition: .3s;
+    transition: 0.35s;
+  }
+
+  svg {
+    transition: 0.35s;
   }
 
   svg path {
-    transition: .3s;
+    transition: 0.35s;
   }
 }
 
 .header-bottom__navbar-item:hover {
     .header-bottom__nav-link {
         color: $accent;
-        transition: .3s;
+        transition: 0.35s;
     }
 
     svg path {
         fill: $accent;
-        transition: .3s;
+        transition: 0.35s;
     }
+}
+
+.header-bottom__navbar-item.active {
+  .header-bottom__nav-link {
+    color: $accent;
+    transition: 0.35s;
+  }
+
+  svg {
+    transition: 0.35s;
+    transform: rotate(180deg);
+  }
 }
 
 .header-mob__menu {
