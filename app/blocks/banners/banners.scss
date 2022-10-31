@@ -8,6 +8,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding-bottom: 30px;
+
+    @media (min-width: 991px) {
+      overflow: visible;
+    }
 }
 
 .banners-img {
@@ -27,6 +31,10 @@
         height: 100%;
         object-fit: cover;
         border-radius: $brs;
+
+      @media (min-width: 1500px) {
+        height: 360px;
+      }
     }
 }
 

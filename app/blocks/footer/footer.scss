@@ -265,17 +265,21 @@
 }
 
 @media (max-width: 870px) {
-    .footer-main {
-        flex-wrap: wrap;
-    }
+  .footer-main {
+    flex-wrap: wrap;
+  }
 
-    .footer-top {
-        flex-wrap: wrap;
-    }
+  .footer-top {
+    flex-wrap: wrap;
+  }
 
-    .footer-top__logo {
-        margin-bottom: 20px;
-    }
+  .footer-top__logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-form__wrapper {
+    margin-top: 25px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -320,6 +324,7 @@
         order: -1;
         margin-bottom: 30px;
         width: 100%;
+        margin-top: 0;
     }
 
     .footer-form__wrapper.active-phone {

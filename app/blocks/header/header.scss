@@ -233,6 +233,7 @@
 
     @media(max-width: 576px) {
         padding-bottom: 14px;
+        padding-top: 14px;
     }
 }
 
@@ -274,6 +275,7 @@
 
 .header-catalog:hover .header-catalog__span span {
     border: 1px solid $dark;
+    background: #fff;
     transition: 0.35s;
 }
 
@@ -493,6 +495,10 @@
     display: none;
     padding: 10px 20px;
 
+    @media (min-width: 760px) and (max-width: 1049px) {
+      padding: 13px 20px;
+    }
+
     @media(max-width: 576px) {
         padding: 9.5px 25px;
     }
@@ -561,6 +567,11 @@
 
 .header-company__item {
     transition: 0.35s;
+    cursor: pointer;
+
+    svg {
+      transition: 0.35s;
+    }
 }
 
 .header-company__item.active {
@@ -724,6 +735,7 @@
 
     .header-phone {
         margin-left: auto;
+        z-index: 500;
     }
 
     .header-phone__popup {

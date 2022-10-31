@@ -672,7 +672,7 @@ const ortosTAbBlock = () => {
   const toggleOrtosTab = (index) => {
     for (let i = 0; i < ortosTabContentItem.length; i++) {
       if (index === i) {
-        if (bw < 700) {
+        if (bw < 860) {
           ortosTabLink[i].classList.toggle('active');
           ortosTabContentItem[i].classList.toggle('active');
         } else {
@@ -680,8 +680,8 @@ const ortosTAbBlock = () => {
           ortosTabContentItem[i].classList.add('active');
         }
       } else {
-        ortosTabLink[i].classList.remove('active');
-        ortosTabContentItem[i].classList.remove('active');
+        // ortosTabLink[i].classList.remove('active');
+        // ortosTabContentItem[i].classList.remove('active');
       }
     }
   };
@@ -1530,7 +1530,9 @@ const phoneSelectInput = document.querySelectorAll('.phone-select__input');
 phoneSelectInput.forEach((phone) => {
   phone.addEventListener('input', () => {
     // eslint-disable-next-line no-param-reassign
-    phone.value = phone.value.replace(/[^+0-9]/g, '');
+    phone.value = phone.value.replace(/([^0-9+])/g, '');
+    // eslint-disable-next-line no-param-reassign
+    phone.value = phone.value.replace(/[+]{2}/g, '');
   });
 });
 

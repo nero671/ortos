@@ -1,5 +1,6 @@
 .order-good {
     display: flex;
+    align-items: flex-start;
     // .order-good__img
 
     &__img {
@@ -28,7 +29,7 @@
         @media(min-width: 768px) {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
         }
     }
 

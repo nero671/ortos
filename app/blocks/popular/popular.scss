@@ -8,6 +8,10 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media (max-width: 1050px) {
+      justify-content: space-around;
+    }
 }
 
 .popular-title {
