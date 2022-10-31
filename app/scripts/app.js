@@ -2249,7 +2249,6 @@ const openFancy = () => {
   }
 };
 
-
 activateSliders();
 navigatorTabsBlock();
 // mapBlock(); // вылетает ошибка на других страницах
