@@ -18,6 +18,26 @@
 .goods-img {
   position: relative;
 
+  @media (min-width: 1550px) {
+    height: 317px;
+  }
+
+  @media (min-width: 1300px) {
+    height: 275px;
+  }
+
+  @media (max-width: 1025px) {
+    height: 230px;
+  }
+
+  @media (max-width: 576px) {
+    height: 185px;
+  }
+
+  @media (max-width: 380px) {
+    height: 165px;
+  }
+
   a {
     display: block;
   }
@@ -81,6 +101,7 @@
   margin-bottom: 24px;
   transition: .3s color;
   user-select: none;
+  height: 65px;
 
   @media (any-hover: hover) {
     &:hover {

@@ -104,7 +104,8 @@ a {
   padding-top: 50px;
 
   .label {
-    padding: 3px 4.5px;
+    padding: 5px 4.5px;
+    font-size: 12px;
   }
 
   @media(max-width: 767px) {
@@ -231,6 +232,11 @@ body.open-mobile-menu {
 
 ymaps {
   border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+.ymaps-2-1-79-map {
+  overflow: hidden !important;
 }
 
 body.fancybox-active.compensate-for-scrollbar,
