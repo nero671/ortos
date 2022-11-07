@@ -7,9 +7,11 @@
   align-items: flex-start;
   margin-bottom: 24px;
   user-select: none;
+  height: 20px;
 
   @media (max-width: 576px) {
     flex-direction: column;
+    height: 45px;
   }
 }
 

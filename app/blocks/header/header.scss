@@ -96,7 +96,7 @@
     background: #fff;
     box-shadow: 0px 7px 7px rgba(133, 133, 133, 0.12);
     z-index: 2;
-    width: 290px;
+    width: 300px;
     left: -20px;
     display: none;
     margin-top: 3px;
@@ -116,6 +116,10 @@
 
 .header-phone__popup-wrapper {
     padding: 20px;
+
+  .header-phone__after-number_text {
+    font-size: 14px;
+  }
 }
 
 .header-phone__work-time {
@@ -275,7 +279,7 @@
 
 .header-catalog:hover .header-catalog__span span {
     border: 1px solid $dark;
-    background: #fff;
+    background: $dark;
     transition: 0.35s;
 }
 
@@ -296,6 +300,8 @@
     border: 1px solid #fff;
     width: 14px;
     border-radius: 3px;
+    height: 1px;
+    background: #fff;
 }
 
 .header-catalog__span span:first-child {
@@ -382,6 +388,7 @@
     padding: 0 15px;
     cursor: pointer;
     user-select: none;
+    position: relative;
 }
 
 .personal-issues__content:hover {
@@ -621,7 +628,7 @@
     display: none;
 }
 
-.small-catalog.active {
+.small-catalog.active-small {
     display: block;
 }
 
@@ -701,8 +708,9 @@
 
     .personal-area__text {
         color: #fff;
-        position: relative;
+        position: absolute;
         width: 0;
+        right: 0;
     }
 
     .personal-issues__content:hover .personal-area__text {
@@ -830,12 +838,14 @@
     }
 
     .header-phone__popup {
-        left: -80%;
-        top: 20px;
+      left: -98%;
+      top: 20px;
+      width: 328px;
     }
 
     .personal-issues__content {
         padding: 0 12px;
+        position: relative;
     }
 
     .personal-issues__content:last-child {

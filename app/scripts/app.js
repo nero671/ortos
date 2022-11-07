@@ -671,17 +671,29 @@ const ortosTAbBlock = () => {
 
   const toggleOrtosTab = (index) => {
     for (let i = 0; i < ortosTabContentItem.length; i++) {
-      if (index === i) {
-        if (bw < 860) {
-          ortosTabLink[i].classList.toggle('active');
-          ortosTabContentItem[i].classList.toggle('active');
+      if (bw > 860) {
+        if (index === i) {
+          if (bw < 860) {
+            ortosTabLink[i].classList.toggle('active');
+            ortosTabContentItem[i].classList.toggle('active');
+          } else {
+            ortosTabLink[i].classList.add('active');
+            ortosTabContentItem[i].classList.add('active');
+          }
         } else {
-          ortosTabLink[i].classList.add('active');
-          ortosTabContentItem[i].classList.add('active');
+          ortosTabLink[i].classList.remove('active');
+          ortosTabContentItem[i].classList.remove('active');
         }
-      } else {
-        // ortosTabLink[i].classList.remove('active');
-        // ortosTabContentItem[i].classList.remove('active');
+      } else if (bw < 860) {
+        if (index === i) {
+          if (bw < 860) {
+            ortosTabLink[i].classList.toggle('active');
+            ortosTabContentItem[i].classList.toggle('active');
+          } else {
+            ortosTabLink[i].classList.add('active');
+            ortosTabContentItem[i].classList.add('active');
+          }
+        }
       }
     }
   };
@@ -718,11 +730,11 @@ const iosFix = () => {
   const headerPhoneNumber = document.querySelector('.header-phone__number');
   const headerPhonePopup = document.querySelector('.header-phone__popup');
 
-  headerPhoneNumber.addEventListener('click', (e) => {
-    headerPhonePopup.classList.toggle('active-phone');
-    headerPhoneNumber.classList.toggle('active-phone');
-
-    if (!e.target.closest('.header-phone__popup') && !e.target.closest('.header-phone__number')) {
+  document.body.addEventListener('click', (e) => {
+    if (e.target.closest('.header-phone__number')) {
+      headerPhonePopup.classList.toggle('active-phone');
+      headerPhoneNumber.classList.toggle('active-phone');
+    } else if (!e.target.closest('.header-phone__popup') && !e.target.closest('.header-phone__number')) {
       headerPhonePopup.classList.remove('active-phone');
       headerPhoneNumber.classList.remove('active-phone');
     }
@@ -793,12 +805,17 @@ const mobileMenu = () => {
   });
 
   if (hedaerBottom) {
-    hedaerBottom.addEventListener('click', (e) => {
-      hedaerBottomNavLinkMore.classList.toggle('active');
-      smallCatalog.classList.toggle('active');
+    document.body.addEventListener('click', (e) => {
+      if (e.target.closest('.header-bottom__nav-link_more')) {
+        hedaerBottomNavLinkMore.classList.toggle('active');
+        smallCatalog.classList.toggle('active-small');
+      } else if (!e.target.closest('.small-catalog')) {
+        smallCatalog.classList.remove('active-small');
+        hedaerBottomNavLinkMore.classList.remove('active');
+      }
     });
 
-    if (!hedaerBottomNavLinkMore.classList.contains('active') || !e.target.closest('.small-catalog')) {
+    if (!hedaerBottomNavLinkMore.classList.contains('active')) {
       smallCatalog.classList.remove('active');
     }
   }
@@ -1052,7 +1069,7 @@ const goodDetailsTab = () => {
       if (index === i) {
         goodTabLink[i].classList.add('active');
         goodDetailTabContent[i].classList.add('active');
-        goodTabLink[i].scrollIntoView({
+        goodTabLink[i].scrollIfntoView({
           block: 'center', behavior: 'smooth',
         });
       } else {
