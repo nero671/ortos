@@ -124,5 +124,12 @@
         &:not(:last-child) {
             margin-bottom: 20px;
         }
+
+      &:hover {
+        cursor: pointer;
+        .order-good__title {
+          color: #dba300;
+        }
+      }
     }
 }

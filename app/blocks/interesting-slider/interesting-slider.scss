@@ -8,6 +8,29 @@
   .interesting-slider {
     margin-top: 40px;
   }
+
+  .news-page__item-img {
+    position: relative;
+  }
+  
+  .hide {
+    display: none;
+  }
+}
+
+.interesting-slide__tag {
+  position: absolute;
+  padding: 8px 12px;
+  background: #2b2c2e;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #fff;
+  bottom: 16px;
+  left: 16px;
+  height: 34px;
 }
 
 @media (max-width: 576px) {

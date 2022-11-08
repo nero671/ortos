@@ -1200,7 +1200,7 @@ const useCatalogFilter = () => {
   const showDropdownContent = (dropdown) => {
     const showMore = dropdown.querySelector('.show-more');
     if (showMore) {
-      showMore.classList.add('active');
+      // showMore.classList.add('active');
 
       showMore.addEventListener('click', () => {
         if (showMore.textContent.includes('Показать все')) {
@@ -1219,8 +1219,22 @@ const useCatalogFilter = () => {
   };
 
   const open = (button, dropdown) => {
-    /* eslint-disable-next-line */
-    dropdown.style.height = 181 + 'px'
+    const footerFormLabel = dropdown.querySelectorAll('.footer-form__label');
+    const goodStatsSizeItem = dropdown.querySelectorAll('.good-stats__size-item ');
+    const showMore = dropdown.querySelector('.show-more');
+
+    if (footerFormLabel.length > 5) {
+      /* eslint-disable-next-line */
+      dropdown.style.height = 181 + 'px';
+      showMore.classList.add('active');
+    } else if (goodStatsSizeItem.length > 12) {
+      /* eslint-disable-next-line */
+      dropdown.style.height = 181 + 'px';
+      showMore.classList.add('active');
+    } else {
+      /* eslint-disable-next-line */
+      dropdown.style.height = "".concat(dropdown.scrollHeight + 1, "px");
+    }
     button.classList.add('active');
     dropdown.classList.add('active');
   };
@@ -1418,7 +1432,7 @@ $.fn.setCursorPosition = function (pos) {
 };
 
 if ($('.phone-select__input').length) {
-  $('.phone-select__input').setCursorPosition(4);
+  // $('.phone-select__input').setCursorPosition(4);
   $('.phone-select__input').mask('+375 (99) 999-99-99');
 }
 
@@ -1439,18 +1453,20 @@ $('.phone-select__label').on('click', function () {
     $phoneSelectInput.removeClass('any');
     $phoneSelectInput.val('');
     $phoneSelectInput.attr('placeholder', '+375');
-    $phoneSelectInput.setCursorPosition(4);
+    // $phoneSelectInput.setCursorPosition(4);
     $phoneSelectInput.mask('+375 (99) 999-99-99');
   } else {
     $phoneSelectFlag.hide();
     $phoneSelectDrop.find('span').text($phoneSelectLabel.attr('data-value'));
 
     $phoneSelectInput.addClass('any');
-    $phoneSelectInput.val('');
-    $phoneSelectInput.attr('placeholder', '+375');
-    $phoneSelectInput.mask('+');
-    $phoneSelectInput.setCursorPosition(0);
-    $phoneSelectInput.unmask('+');
+    $phoneSelectInput.val('+');
+    $phoneSelectInput.attr('placeholder', '+');
+
+    // $phoneSelectInput.mask('+');
+    // $phoneSelectInput.setCursorPosition(0);
+    // eslint-disable-next-line
+    $phoneSelectInput.unmask('+', { selectOnFocus: false });
   }
 });
 
@@ -1711,7 +1727,7 @@ function validateForms(form) {
       loyalty_card: {
         loyaltyCardLength: 'Некорректные данные: необходимо ввести 12 цифр*',
       },
-      // birthday: "Обязательное поле для заполнения*",
+      birthday: 'Некорректные данные',
       delivery_placement: 'Обязательное поле для заполнения*',
       delivery_street: 'Обязательное поле для заполнения*',
       delivery_home: 'Обязательное поле для заполнения*',
