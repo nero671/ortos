@@ -54,15 +54,87 @@ const activateSliders = () => {
     autoplay: true,
   });
 
-  const goodsSlider = new Swiper('.goods-slider', {
+  const goodsSlider = new Swiper('#hits .goods-slider', {
     loop: true,
     slidesPerView: 4,
     slidesPerGroup: 1,
     spaceBetween: 20,
     speed: 650,
     navigation: {
-      nextEl: '.arrow-goods__next',
-      prevEl: '.arrow-goods__prev',
+      nextEl: '#hits .arrow-goods__next',
+      prevEl: '#hits .arrow-goods__prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 8,
+      },
+      576: {
+        slidesPerView: 3,
+      },
+      911: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  const goodsSlider2 = new Swiper('#new-goods .goods-slider', {
+    loop: true,
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    speed: 650,
+    navigation: {
+      nextEl: '#new-goods .arrow-goods__next',
+      prevEl: '#new-goods .arrow-goods__prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 8,
+      },
+      576: {
+        slidesPerView: 3,
+      },
+      911: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  const goodsSlider3 = new Swiper('#sale-goods .goods-slider', {
+    loop: true,
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    speed: 650,
+    navigation: {
+      nextEl: '#sale-goods .arrow-goods__next',
+      prevEl: '#sale-goods .arrow-goods__prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 8,
+      },
+      576: {
+        slidesPerView: 3,
+      },
+      911: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  const goodsSlider4 = new Swiper('#special .goods-slider', {
+    loop: true,
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    speed: 650,
+    navigation: {
+      nextEl: '#special .arrow-goods__next',
+      prevEl: '#special .arrow-goods__prev',
     },
     breakpoints: {
       320: {
@@ -295,7 +367,7 @@ const navigatorTabsBlock = () => {
 
       navigatorContent.addEventListener('click', (e) => {
         e.preventDefault();
-
+        /* eslint-disable-next-line */
         const target = e.target.closest('[data-part]').dataset.part;
         if (target) {
           /* eslint-disable-next-line */
@@ -317,7 +389,11 @@ const navigatorTabsBlock = () => {
       if (bw > 700) {
         navigatorContent.addEventListener('mouseover', (e) => {
           e.preventDefault();
-          const target = e.target.closest('[data-part]').dataset.part;
+          if (e.target.closest('[data-part]')) {
+            /* eslint-disable-next-line */
+            var target = e.target.closest('[data-part]').dataset.part;
+          }
+          /* eslint-disable-next-line */
           if (target) {
             /* eslint-disable-next-line */
             arr.find((item) => {
