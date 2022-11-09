@@ -13,6 +13,23 @@
   .cart-popup__good-item {
     align-items: center;
   }
+
+  .cart-popup__good_wrapper {
+    height: 300px;
+    overflow: auto;
+    scrollbar-color: #e8e8e8 #083ab3;
+    scrollbar-width: thin;
+  }
+
+  .cart-popup__good_wrapper::-webkit-scrollbar-thumb {
+    background-color: #e8e8e8;
+    border-radius: 5px;
+  }
+
+  .cart-popup__good_wrapper::-webkit-scrollbar {
+    background-color: transparent;
+    width: 4px;
+  }
 }
 
 .cart-popup.active-cart {
