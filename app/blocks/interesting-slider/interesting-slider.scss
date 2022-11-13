@@ -33,6 +33,12 @@
   height: 34px;
 }
 
+@media (max-width: 1400px) {
+  .interesting-slider {
+    padding-left: 16px;
+  }
+}
+
 @media (max-width: 576px) {
   #interesting-block {
     padding-left: 20px;

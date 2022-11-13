@@ -138,8 +138,13 @@
       display: block;
     }
 
+    .article-page-content img {
+      padding-left: 16px;
+    }
+
     .article-page__head {
      flex-wrap: nowrap;
+      padding: 0 16px;
     }
 
     .container {
@@ -212,6 +217,7 @@
   #article-page-detail {
     .article-page__head {
       margin-top: 20px;
+      padding-left: 0;
     }
 
     .article-page-content__text {

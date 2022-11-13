@@ -119,6 +119,7 @@
 
     .news-page__head {
      flex-wrap: nowrap;
+      padding-left: 16px;
     }
 
     .container {
@@ -153,10 +154,14 @@
   }
 }
 
-@media (max-width: 970px) {
+@media (max-width: 1400px) {
   #news-page-detail {
     .news-page__head-item:last-child {
       display: none;
+    }
+
+    .news-page-content img {
+      padding-left: 16px;
     }
 
     .news-detail-info {
@@ -192,8 +197,13 @@
       width: 310px;
     }
 
+    .news-page-content img {
+      padding-left: 0;
+    }
+
     .news-page__head {
       margin-top: 20px;
+      padding-left: 0;
     }
 
     .news-page-content__text {
