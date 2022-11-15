@@ -56,6 +56,16 @@
     margin-top: 24px;
     padding-bottom: 50px;
     border-bottom: none;
+
+    .news-page__head-item:first-child {
+      width: 100%;
+      max-width: 940px;
+
+      img {
+        width: 100%;
+        border-radius: 6px;
+      }
+    }
   }
 
   .news-page-content {

@@ -68,6 +68,15 @@
     margin-bottom: 50px;
     border-bottom: none;
     padding-bottom: 0;
+
+    .article-page__head-item:first-child {
+      width: 100%;
+      max-width: 940px;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   .article-page-content {
@@ -217,6 +226,11 @@
   #article-page-detail {
     .article-page__head {
       margin-top: 20px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .article-page-content img {
       padding-left: 0;
     }
 

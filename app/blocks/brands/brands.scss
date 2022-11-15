@@ -13,6 +13,11 @@
 .brands-item {
     width: 256px;
     margin-bottom: 20px;
+
+  img {
+    height: 100px;
+    width: 100%;
+  }
 }
 
 .brands-item:not(last-child):hover {
@@ -43,6 +48,11 @@
 
     .brands-item {
         width: 150px;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
     }
 
     .brand-btn {

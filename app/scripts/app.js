@@ -150,6 +150,30 @@ const activateSliders = () => {
     },
   });
 
+  const goodsSlider5 = new Swiper('#good-detail__slider .goods-slider', {
+    loop: true,
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    speed: 650,
+    navigation: {
+      nextEl: '#good-detail__slider .arrow-goods__next',
+      prevEl: '#good-detail__slider .arrow-goods__prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 8,
+      },
+      576: {
+        slidesPerView: 3,
+      },
+      911: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
   const bannersSlide = new Swiper('.banners', {
     slidesPerView: 2,
     slidesPerGroup: 1,

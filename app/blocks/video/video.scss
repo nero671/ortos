@@ -59,6 +59,40 @@
   }
 }
 
+@media (min-width: 1400px) {
+  .video-wrapper {
+    height: 220px;
+
+    img {
+      height: 100%;
+      border-radius: 6px;
+    }
+  }
+}
+
+@media (min-width: 991px) {
+  .video-wrapper {
+    height: 180px;
+
+    img {
+      height: 100%;
+      border-radius: 6px;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .video-wrapper {
+    height: 145px;
+
+    img {
+      height: 100%;
+      border-radius: 6px;
+    }
+  }
+}
+
+
 @media (max-height: 450px) {
   .video-wrapper img {
     display: none;

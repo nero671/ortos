@@ -25,11 +25,12 @@
 
     img {
         height: 100%;
-        object-fit: cover;
         border-radius: $brs;
+        width: 100%;
 
       @media (min-width: 1500px) {
         height: 360px;
+        width: 100%;
       }
     }
 }
