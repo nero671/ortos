@@ -99,8 +99,10 @@
   width: 555px;
 }
 
-.ortos-tab__content-item.active {
-  display: block;
+@media (min-width: 860px) {
+  .ortos-tab__content-item.active {
+    display: block;
+  }
 }
 
 .ortos-tab__link-text svg {
@@ -138,12 +140,13 @@
     display: block;
     height: 0;
     overflow: hidden;
-    transition: 0.35s;
+    transition: 1s;
+    display: block;
   }
 
   .ortos-tab__content-item.active {
     height: auto;
-    transition: 0.35s;
+    transition: 1s;
     padding-top: 14px;
     padding-bottom: 20px;
   }
@@ -198,6 +201,29 @@
 
   .ortos-tab__btn {
     padding: 12px;
+  }
+
+  .ortos-tab__link-text {
+    svg {
+      transition: 1s;
+    }
+  }
+
+  .ortos-tab__link-text.active {
+    color: #DBA300;
+
+    span {
+      color: #DBA300;
+    }
+
+    svg {
+      transform: rotate(180deg);
+      transition: 1s;
+    }
+
+    svg path {
+      fill: #DBA300;
+    }
   }
 }
 

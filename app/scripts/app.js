@@ -787,8 +787,8 @@ const ortosTAbBlock = () => {
       } else if (bw < 860) {
         if (index === i) {
           if (bw < 860) {
-            ortosTabLink[i].classList.toggle('active');
-            ortosTabContentItem[i].classList.toggle('active');
+            ortosTabLink[i].classList.add('active');
+            ortosTabContentItem[i].classList.add('active');
           } else {
             ortosTabLink[i].classList.add('active');
             ortosTabContentItem[i].classList.add('active');
@@ -798,18 +798,58 @@ const ortosTAbBlock = () => {
     }
   };
 
-  if (ortosTabs) {
-    ortosTabs.addEventListener('click', (e) => {
-      const target = e.target.closest('.ortos-tab__link');
+  const open = (button, dropdown) => {
+    // eslint-disable-next-line no-use-before-define
+    closeDrops();
+    /* eslint-disable-next-line */
+    dropdown.style.height = "".concat(dropdown.scrollHeight + 15, "px");
+    button.classList.add('active');
+    dropdown.classList.add('active');
+  };
 
-      if (target) {
-        ortosTabLink.forEach((item, i) => {
-          if (target === item) {
-            toggleOrtosTab(i);
-          }
-        });
+  const close = (button, dropdown) => {
+    button.classList.remove('active');
+    /* eslint-disable-next-line */
+    dropdown.classList.remove('active');
+    /* eslint-disable-next-line */
+    dropdown.style.height = '';
+  };
+
+  const closeDrops = (button, dropdown) => {
+    /* eslint-disable-next-line */
+    ortosTabLink.forEach(item => {
+      if (item.children[0] !== button && item.children[1] !== dropdown) {
+        close(item.children[0], item.children[1]);
       }
     });
+  };
+
+  if (ortosTabs) {
+    if (bw > 860) {
+      ortosTabs.addEventListener('click', (e) => {
+        const target = e.target.closest('.ortos-tab__link');
+
+        if (target) {
+          ortosTabLink.forEach((item, i) => {
+            if (target === item) {
+              toggleOrtosTab(i);
+            }
+          });
+        }
+      });
+    } else if (bw < 860) {
+      ortosTabs.addEventListener('click', (e) => {
+        /* eslint-disable-next-line */
+        const target = e.target;
+        if (target.closest('.ortos-tab__link-text')) {
+          const parent = target.closest('.ortos-tab__link');
+          const button = target.closest('.ortos-tab__link-text');
+          const dropdown = parent.querySelector('.ortos-tab__content-item');
+          /* eslint-disable-next-line */
+          dropdown.classList.contains('active') ? close(button, dropdown) : open(button, dropdown);
+        }
+      });
+    }
   }
 };
 

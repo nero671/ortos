@@ -151,6 +151,13 @@
   margin-top: -17px;
 }
 
+@media (min-width: 1200px) {
+  .good-stats__about {
+    width: 85%;
+  }
+}
+
+
 .good-stats__size-item input[type="radio"] {
   width: 0;
   opacity: 0;

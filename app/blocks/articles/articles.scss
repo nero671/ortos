@@ -72,4 +72,16 @@
   .articles {
     margin-top: 0;
   }
+
+  .articles-img__wrapper {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.8%;
+    position: relative;
+  }
+
+  .articles-img__wrapper img {
+    height: 100%;
+    position: absolute;
+  }
 }
