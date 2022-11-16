@@ -35,3 +35,68 @@
       }
     }
 }
+
+.input-label__card-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+
+  span {
+    margin-bottom: 0;
+  }
+}
+
+.tooltip {
+  width: 20px;
+  height: 20px;
+  background: url('../images/tooltip.svg') no-repeat;
+  cursor: pointer;
+  margin-left: 8px;
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 135%;
+  left: 50%;
+  margin-left: -60px;
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 15%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+@media (max-width: 576px) {
+  .tooltip .tooltiptext {
+    width: 300px;
+    left: -200%;
+    padding: 10px;
+  }
+
+  .tooltip .tooltiptext::after {
+    left: 36.5%;
+  }
+}
