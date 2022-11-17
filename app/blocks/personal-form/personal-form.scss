@@ -53,6 +53,7 @@
   cursor: pointer;
   margin-left: 8px;
   position: relative;
+  margin-top: -2px;
 }
 
 .tooltip .tooltiptext {
@@ -99,4 +100,8 @@
   .tooltip .tooltiptext::after {
     left: 36.5%;
   }
+}
+
+.last-btn {
+  margin-top: 16px !important;
 }
