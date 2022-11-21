@@ -174,4 +174,16 @@
     }
 }
 
+.header-main.fixed #catalog {
+  height: 82vh;
+  overflow: auto;
+  box-shadow: 0px 7px 20px rgba(133, 133, 133, 0.12);
+}
+
+.header-main.fixed #catalog::-webkit-scrollbar {
+  width: 0;
+}
+
+
+
 @media (max-width: 1050px) {}

@@ -635,3 +635,21 @@
 .color-status .status.not-available::before {
   background-image: url('../images/red-cross.svg');
 }
+
+.detail-good__slider_small {
+  margin-top: 10px;
+}
+
+.detail-good__slider_small_fancy {
+  margin-top: 24px;
+}
+
+.details-good__slider_fancy img {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .detail-good__slider_small_fancy {
+    margin-top: 11px;
+  }
+}

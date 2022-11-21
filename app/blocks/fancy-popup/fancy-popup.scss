@@ -150,3 +150,9 @@
 .detail-good__slider_small_fancy .swiper-slide-thumb-active {
   opacity: 1;
 }
+
+@media (max-width: 576px) {
+  .fancy-popup__wrapper {
+    height: 51vh !important;
+  }
+}
