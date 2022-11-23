@@ -54,6 +54,14 @@ const activateSliders = () => {
     autoplay: true,
   });
 
+  mainBannersSlider.on('slideChange', () => {
+    const sliderBottomBtn = document.querySelector('.slider-bottom__btn a');
+    setTimeout(() => {
+      const activeSlide = document.querySelector('.main-banners-slider a.swiper-slide-active');
+      sliderBottomBtn.href = activeSlide.href;
+    }, 10);
+  });
+
   const goodsSlider = new Swiper('#hits .goods-slider', {
     loop: true,
     slidesPerView: 4,

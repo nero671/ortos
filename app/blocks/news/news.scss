@@ -100,6 +100,13 @@
   }
 }
 
+@media (min-width: 576px) {
+  .news-page__head-block-item img {
+    height: 140px;
+    border-radius: 6px;
+  }
+}
+
 .news-page__head {
   display: flex;
   justify-content: space-between;
@@ -126,6 +133,7 @@
 .news-page__item-img img {
   height: 100%;
   border-radius: 6px;
+  width: 100%;
 }
 
 
