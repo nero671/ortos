@@ -657,3 +657,10 @@
     padding-top: 30px;
   }
 }
+
+@media (max-width: 360px) {
+  .pagination ul li.numb {
+    height: 35px;
+    width: 35px;
+  }
+}

@@ -34,6 +34,11 @@
 
   span {
     max-width: 785px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
   }
 
   svg {
@@ -45,6 +50,10 @@
   svg {
     transform: rotate(180deg);
     transition: 0.35s;
+  }
+
+  span {
+    display: block;
   }
 }
 
