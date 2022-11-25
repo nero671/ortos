@@ -15,6 +15,16 @@
   }
 }
 
+@media (min-width: 991px) {
+  .article-page__item-img_wrapper {
+    height: 600px;
+  }
+
+  #article-page-detail .article-page__head .article-page__head-item:first-child img {
+    border-radius: 6px;
+  }
+}
+
 #article-page-detail {
   .article-page__head-item:last-child {
     width: initial;
@@ -71,10 +81,11 @@
 
     .article-page__head-item:first-child {
       width: 100%;
-      max-width: 940px;
+      max-width: 970px;
 
       img {
         width: 100%;
+        height: 100%;
       }
     }
   }
@@ -152,7 +163,7 @@
     }
 
     .article-page__head {
-     flex-wrap: nowrap;
+      flex-wrap: nowrap;
       padding: 0 16px;
     }
 

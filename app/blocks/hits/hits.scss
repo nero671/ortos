@@ -357,3 +357,22 @@
     right: 14%;
   }
 }
+
+@media (max-width: 576px) {
+  .goods-slide__content {
+    padding: 10px 8px;
+  }
+
+  .goods-slide__note {
+    margin-bottom: 6px;
+  }
+
+  .goods-slide__name {
+    height: auto;
+  }
+
+  .prices-wrapper {
+    margin-bottom: 0;
+    height: auto;
+  }
+}

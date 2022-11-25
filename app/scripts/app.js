@@ -1107,7 +1107,7 @@ const catalog = () => {
         } else {
           catalogFirstListItem[i].classList.remove('active');
           catalogSecondList[i].classList.remove('active');
-          // catalogThirdList[i].classList.remove('active');
+          catalogThirdList[i].classList.remove('active');
           catalogSecondListItem[i].classList.remove('active');
         }
       }
@@ -1217,9 +1217,7 @@ const goodDetailsTab = () => {
       if (index === i) {
         goodTabLink[i].classList.add('active');
         goodDetailTabContent[i].classList.add('active');
-        goodTabLink[i].scrollIfntoView({
-          block: 'center', behavior: 'smooth',
-        });
+
       } else {
         goodTabLink[i].classList.remove('active');
         goodDetailTabContent[i].classList.remove('active');
@@ -1259,6 +1257,9 @@ const goodDetailsTab = () => {
         goodTabLink.forEach((item, i) => {
           if (target === item) {
             toggleDetailTab(i);
+            e.target.scrollIfntoView({
+              block: 'center', behavior: 'smooth',
+            });
           }
         });
       }
@@ -2495,3 +2496,7 @@ fixHeader();
 addToCart();
 validateFooter();
 addToCartDetail();
+
+document.body.addEventListener('DOMContentLoaded', () => {
+  tabs();
+})

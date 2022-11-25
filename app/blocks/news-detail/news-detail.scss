@@ -59,7 +59,7 @@
 
     .news-page__head-item:first-child {
       width: 100%;
-      max-width: 940px;
+      max-width: 970px;
 
       img {
         width: 100%;
@@ -252,5 +252,11 @@
     .news-detail-info__social-links a {
       margin-left: 10px;
     }
+  }
+}
+
+@media (min-width: 991px) {
+  #news-page-detail .news-page__item-img_wrapper {
+    height: 600px;
   }
 }

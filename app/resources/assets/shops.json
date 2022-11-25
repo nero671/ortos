@@ -104,7 +104,7 @@
       "options": {
         "city": "brest",
         "iconImageHref": "assets/images/map.svg",
-        "iconLayout":"default#image",
+        "iconLayout":"default#imageWithContent",
         "iconImageSize": [27, 33],
         "iconImageOffset": [-13.5, -33]
       }
