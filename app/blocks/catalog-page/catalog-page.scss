@@ -74,7 +74,9 @@
 }
 
 .catalog-filter__content {
-  height: 0;
+  max-height: 181px;
+  height: 100%;
+  //height: 0;
   overflow: hidden;
   position: relative;
 }
@@ -610,7 +612,7 @@
   .mobile-filter__sortlist.active {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    border-bottom: 0;
+    border-bottom: 1px solid #fff;
 
     svg {
       transform: rotate(180deg);
@@ -663,4 +665,10 @@
     height: 35px;
     width: 35px;
   }
+}
+
+.catalog-filter__title_prev {
+  text-transform: initial;
+  font-size: 15px;
+  margin-top: 7px;
 }

@@ -1119,7 +1119,10 @@ const catalog = () => {
           catalogSecondListItem[i].classList.add('active');
           catalogThirdList[i].classList.add('active');
         } else {
-          catalogSecondListItem[i].classList.remove('active');
+          if (catalogSecondListItem[i]) {
+            catalogSecondListItem[i].classList.remove('active');
+          }
+
           catalogThirdList[i].classList.remove('active');
         }
       }
@@ -1217,7 +1220,6 @@ const goodDetailsTab = () => {
       if (index === i) {
         goodTabLink[i].classList.add('active');
         goodDetailTabContent[i].classList.add('active');
-
       } else {
         goodTabLink[i].classList.remove('active');
         goodDetailTabContent[i].classList.remove('active');
@@ -1346,26 +1348,54 @@ const useCatalogFilter = () => {
     return;
   }
 
-  const showDropdownContent = (dropdown) => {
-    const showMore = dropdown.querySelector('.show-more');
-    if (showMore) {
-      // showMore.classList.add('active');
+  const footerFormLabel1 = document.querySelectorAll('.footer-form__label');
+  const goodStatsSizeItem1 = document.querySelectorAll('.good-stats__size-item ');
+  const showMore1 = document.querySelector('.show-more');
 
-      showMore.addEventListener('click', () => {
-        if (showMore.textContent.includes('Показать все')) {
-          // eslint-disable-next-line no-param-reassign
-          dropdown.style.height = 'auto';
-          showMore.textContent = 'Свернуть';
-          showMore.classList.add('show-less');
-        } else {
-          showMore.classList.remove('show-less');
-          showMore.textContent = 'Показать все';
-          /* eslint-disable-next-line */
-          dropdown.style.height = 181 + 'px';
-        }
-      });
-    }
-  };
+  if (footerFormLabel1.length > 5) {
+    /* eslint-disable-next-line */
+    showMore1.classList.add('active');
+  } else if (goodStatsSizeItem1.length > 12) {
+    /* eslint-disable-next-line */
+    showMore1.classList.add('active');
+  }
+
+  if (showMore1) {
+    showMore1.addEventListener('click', (e) => {
+      if (showMore1.textContent.includes('Показать все')) {
+        // eslint-disable-next-line no-param-reassign
+        showMore1.parentNode.style.cssText = 'height: auto; max-height: 100%;';
+        showMore1.textContent = 'Свернуть';
+        showMore1.classList.add('show-less');
+      } else {
+        showMore1.classList.remove('show-less');
+        showMore1.textContent = 'Показать все';
+        /* eslint-disable-next-line */
+        showMore1.parentNode.style.height = 181 + 'px';
+      }
+    });
+  }
+
+  // const showDropdownContent = (dropdown) => {
+  //   const showMore = dropdown.querySelector('.show-more');
+  //   if (showMore) {
+  //     // showMore.classList.add('active');
+  //
+  //     showMore.addEventListener('click', () => {
+  //       if (showMore.textContent.includes('Показать все')) {
+  //         // eslint-disable-next-line no-param-reassign
+  //         dropdown.style.height = 'auto';
+  //         showMore.textContent = 'Свернуть';
+  //         showMore.classList.add('show-less');
+  //       } else {
+  //         showMore.classList.remove('show-less');
+  //         showMore.textContent = 'Показать все';
+  //         /* eslint-disable-next-line */
+  //         dropdown.style.height = 181 + 'px';
+  //       }
+  //     });
+  //   }
+  // };
 
   const open = (button, dropdown) => {
     const footerFormLabel = dropdown.querySelectorAll('.footer-form__label');
@@ -1399,7 +1429,7 @@ const useCatalogFilter = () => {
       showMore.classList.remove('show-less');
       showMore.textContent = 'Показать все';
       // eslint-disable-next-line no-param-reassign
-      dropdown.style.height = '';
+      dropdown.style.height = 0;
     }
   };
 
@@ -1413,7 +1443,7 @@ const useCatalogFilter = () => {
         const dropdown = parent.querySelector('.catalog-filter__content');
         /* eslint-disable-next-line */
         dropdown.classList.contains('active') ? close(button, dropdown) : open(button, dropdown);
-        showDropdownContent(dropdown);
+        // showDropdownContent(dropdown);
       }
     });
   }
@@ -2497,6 +2527,17 @@ addToCart();
 validateFooter();
 addToCartDetail();
 
-document.body.addEventListener('DOMContentLoaded', () => {
-  tabs();
-})
+const preLoader = () => {
+  const goodsSlider = document.querySelectorAll('.swiper img');
+
+  window.addEventListener('load', () => {
+    goodsSlider.forEach((item) => {
+      if (item) {
+        // eslint-disable-next-line no-param-reassign
+        item.style.opacity = 1;
+      }
+    });
+  });
+};
+
+preLoader();

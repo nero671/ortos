@@ -184,6 +184,30 @@
   width: 0;
 }
 
+.catalog-second__list-item_img-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: $gray-2;
+  margin-top: 10px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+ul.catalog-second__list .catalog-third__list-item {
+  width: 340px;
+}
 
 
 @media (max-width: 1050px) {}

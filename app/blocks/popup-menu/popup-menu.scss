@@ -6,11 +6,15 @@
     z-index: 999;
     background: rgba(43, 44, 46, 0.5);
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0s;
 }
 
 .popup-menu.active {
     visibility: visible;
     transition: 0.8s;
+    opacity: 1;
+    transition: opacity 0s;
 
     body {
         overflow: hidden;
@@ -154,7 +158,8 @@
     display: flex;
     align-items: center;
     padding: 16px 0;
-    border-bottom: 1px solid #e9e8ee;
+    width: 98%;
+    //border-bottom: 1px solid #e9e8ee;
 }
 
 .catalog-mobile__menu_link::after {
@@ -204,7 +209,7 @@
     letter-spacing: 0.02em;
     color: $gray-2;
     padding: 16px 0;
-    border-bottom: 1px solid #e9e8ee;
+    //border-bottom: 1px solid #e9e8ee;
     width: 100%;
     display: block;
 }
@@ -238,11 +243,15 @@
 @media (max-width: 416px) {
     .catalog-mobile__menu_link::after {
         position: absolute;
-        right: 0;
+        right: -5px;
     }
 
     .catalog-mobile__menu_list-back svg {
         width: 35px;
         margin-right: 3px;
     }
+}
+
+.catalog-mobile__menu_list-item {
+  border-bottom: 1px solid #e9e8ee;
 }
