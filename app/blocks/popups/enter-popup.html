@@ -2,22 +2,11 @@
      id="@@id"
      class="modal modal--size_xs">
   <div class="modal-title__wrapper">
-    <button class="modal__back " type="button">
-      <img src="assets/images/arrow-black.svg" alt="стрелка назад">
-    </button>
     <div class="modal__title">@@title</div>
   </div>
 
   <form action="#"
         class="modal__form">
-    <label class="personal-form__field form-field">
-      <span class="input-label">Имя*</span>
-      <input class="input" name="name">
-    </label>
-    <label class="personal-form__field form-field">
-      <span class="input-label">Фамилия*</span>
-      <input class="input" name="surname">
-    </label>
     <label class="modal__field form-field">
       <span class="input-label">Номер телефона*</span>
       <div class="phone-select">
@@ -67,20 +56,15 @@
                 Я ознакомлен (-а) с <a href="#">Политикой использования персональных данных</a> и <a href="#">Договором публичной оферты</a> и согласен (-а) на обработку моих персональных данных
             </span>
     </label>
-    <label class="modal__agree modal__letter">
-      <input type="checkbox"
-             class="custom-checkbox custom-checkbox--size_xl"
-             id="public-agree2"
-             name="public-agree2"
-             checked>
-      <label for="public-agree2"></label>
-      <span>
-                 Подписаться на рассылку новостей
-              </span>
-    </label>
     <a href="#phone-code"
        data-fancybox
        class="btn btn--style_bg-black"
-       type="submit">Зарегистрироваться</a>
+       type="submit">получить код</a>
   </form>
+  <div class="back_to-reg">
+    Нет аккаунта?
+    <button class="modal__back js-phone-code-back" type="button">
+      зарегистрироваться
+    </button>
+  </div>
 </div>

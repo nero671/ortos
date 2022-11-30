@@ -23,8 +23,12 @@
     </div>
     <form id="checkout-form" class="popup-form" novalidate="novalidate">
       <label class="checkout__field form-field">
-        <span class="input-label">Имя*</span>
-        <input class="input checkout__input" name="name">
+        <span class="input-label">Имя</span>
+        <input class="input checkout__input" name="name_no_validate">
+      </label>
+      <label class="personal-form__field form-field">
+        <span class="input-label">Фамилия</span>
+        <input class="input" name="surname_no_validate">
       </label>
       <label class="checkout__field form-field">
         <span class="input-label">Номер телефона*</span>
@@ -46,16 +50,23 @@
             </div>
         </div>
       </label>
-      <label class="checkout__field form-field">
-        <span class="input-label">E-mail*</span>
-        <input class="input checkout__input" type="email" name="email">
-      </label>
       <label class="modal__agree">
         <input type="checkbox" class="custom-checkbox custom-checkbox--size_xl" id="public-agree" name="public-agree" checked="" required>
         <label for="public-agree"></label>
         <span>
             Я ознакомлен (-а) с <a href="#">Политикой использования персональных данных</a> и <a href="#">Договором публичной оферты</a> и согласен (-а) на обработку моих персональных данных
         </span>
+      </label>
+      <label class="modal__agree modal__letter">
+        <input type="checkbox"
+               class="custom-checkbox custom-checkbox--size_xl"
+               id="public-agree2"
+               name="public-agree2"
+               checked>
+        <label for="public-agree2"></label>
+        <span>
+                 Подписаться на рассылку новостей
+              </span>
       </label>
       <button class="btn btn--style_bg-black" type="submit">Заказать</button>
     </form>
