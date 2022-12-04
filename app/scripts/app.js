@@ -2462,7 +2462,7 @@ const openFancy = () => {
   const mobileCross = document.querySelector('.fancy-popup .mobile-cross');
   const detailsGoodSlider = document.querySelector('.details-good__slider');
 
-  if (detailsGoodSlider) {
+  if (detailsGoodSlider && bw > 576) {
     detailsGoodSlider.addEventListener('click', (e) => {
       if (e.target.closest('.favorite-btn')) {
         const target = e.target.closest('.favorite-btn');
