@@ -54,6 +54,11 @@
         letter-spacing: 0.02em;
         color: $gray-2;
         margin-bottom: 28px;
+        margin-top: 20px;
+
+        @media (max-width: 576px) {
+          margin-top: 23.5px;
+        }
     }
 
     &__form {
@@ -77,6 +82,7 @@
         > span {
             &:first-child {
                 text-decoration: underline;
+                cursor: pointer;
             }
         }
     }

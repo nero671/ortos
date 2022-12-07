@@ -137,8 +137,9 @@
     height: 47px;
 
     img {
-      width: 25px;
+      width: 52px;
       height: 19px;
+      padding-right: 27px;
     }
   }
 
@@ -147,7 +148,7 @@
     top: 50%;
     transform: translateY(-50%);
     left: 16px;
-    padding-right: 27px;
+    //padding-right: 27px;
     background-color: transparent;
 
     &[disabled] {
@@ -161,6 +162,10 @@
       text-transform: uppercase;
       white-space: nowrap;
       color: #2B2C2E;
+
+      &.active {
+        padding-right: 27px;
+      }
     }
 
     &::after {
@@ -172,6 +177,7 @@
       height: 17px;
       background-image: url(../images/arrow-black.svg);
       transition: .3s transform;
+      z-index: -1;
     }
   }
 
