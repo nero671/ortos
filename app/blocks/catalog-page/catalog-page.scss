@@ -79,6 +79,7 @@
   //height: 0;
   overflow: hidden;
   position: relative;
+  transition: 0.5s;
 }
 
 .show-more {
@@ -545,6 +546,7 @@
     visibility: visible;
     display: flex;
     margin-left: -16px;
+    opacity: 1;
   }
 
   .catalog-filter__container {
@@ -641,7 +643,7 @@
   }
 
   .catalog-filter__content.active .good-stats__size-wrapper {
-    margin-top: 6px;
+    margin-top: -5px;
   }
 
   .catalog-filter__item:nth-child(2) .catalog-filter__content.active {

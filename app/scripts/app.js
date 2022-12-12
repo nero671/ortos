@@ -1350,7 +1350,6 @@ const useCatalogFilter = () => {
     return;
   }
 
-  const goodStatsSizeWrapper = document.querySelector('.good-stats__size-wrapper');
   const catalogFilterContent = document.querySelectorAll('.catalog-filter__content');
   const showMore = document.querySelectorAll('.show-more');
 
@@ -1363,12 +1362,12 @@ const useCatalogFilter = () => {
     }
   });
 
-  if (goodStatsSizeWrapper && goodStatsSizeWrapper.offsetHeight < 181) {
-    const showMore1 = goodStatsSizeWrapper.querySelector('.show-more');
-    /* eslint-disable-next-line */
-    showMore1.classList.remove('active');
-    showMore1.classList.remove('show-less');
-  }
+  // if (goodStatsSizeWrapper && goodStatsSizeWrapper.offsetHeight < 181) {
+  //   const showMore1 = goodStatsSizeWrapper.querySelector('.show-more');
+  //   /* eslint-disable-next-line */
+  //   showMore1.classList.remove('active');
+  //   showMore1.classList.remove('show-less');
+  // }
 
   showMore.forEach((item) => {
     if (item) {
@@ -1376,11 +1375,13 @@ const useCatalogFilter = () => {
         if (item.textContent.includes('Показать все')) {
           // eslint-disable-next-line no-param-reassign
           item.parentNode.parentNode.style.cssText = 'height: auto; max-height: 100%;';
+
           // eslint-disable-next-line no-param-reassign
           item.parentNode.style.cssText = 'height: auto; max-height: 100%;';
           // eslint-disable-next-line no-param-reassign
           item.textContent = 'Свернуть';
           item.classList.add('show-less');
+          console.log(item.parentNode.parentNode.parentNode);
         } else {
           item.classList.remove('show-less');
           // eslint-disable-next-line no-param-reassign
@@ -1389,6 +1390,8 @@ const useCatalogFilter = () => {
           item.parentNode.parentNode.style.height = 182 + 'px';
           /* eslint-disable-next-line */
           item.parentNode.style.height = 182 + 'px';
+          /* eslint-disable-next-line */
+          item.parentNode.parentNode.parentNode.style.height = 'auto';
         }
       });
     }
@@ -1400,24 +1403,43 @@ const useCatalogFilter = () => {
     /* eslint-disable-next-line */
     button.classList.add('active');
     dropdown.classList.add('active');
+    /* eslint-disable-next-line */
+    dropdown.parentNode.style.height = dropdown.style.height;
   };
 
   const close = (button, dropdown) => {
+    showMore.forEach((item) => {
+      if (item) {
+        if (item.textContent.includes('Показать все')) {
+          // eslint-disable-next-line no-param-reassign
+          item.parentNode.parentNode.style.cssText = 'height: auto; max-height: 100%;';
+          // eslint-disable-next-line no-param-reassign
+          item.parentNode.style.cssText = 'height: auto; max-height: 100%;';
+          // eslint-disable-next-line no-param-reassign
+          item.textContent = 'Свернуть';
+          item.classList.add('show-less');
+        }
+      }
+    });
+
     button.classList.remove('active');
     /* eslint-disable-next-line */
     dropdown.classList.remove('active');
     /* eslint-disable-next-line */
     dropdown.style.height = 0;
     /* eslint-disable-next-line */
-    const showMore = dropdown.querySelector('.show-more');
-    if (showMore) {
-      /* eslint-disable-next-line */
-      dropdown.parentNode.style.height = 'initial';
-      showMore.classList.remove('show-less');
-      showMore.textContent = 'Показать все';
-      // eslint-disable-next-line no-param-reassign
-      dropdown.style.height = 0;
-    }
+    dropdown.parentNode.style.height = dropdown.style.height;
+
+    /* eslint-disable-next-line */
+    // const showMore = dropdown.querySelector('.show-more');
+    // if (showMore) {
+    //   /* eslint-disable-next-line */
+    //   dropdown.parentNode.style.height = 'initial';
+    //   showMore.classList.remove('show-less');
+    //   showMore.textContent = 'Показать все';
+    //   // eslint-disable-next-line no-param-reassign
+    //   dropdown.style.height = 0;
+    // }
   };
 
   if (catalogFilterWrapper) {
@@ -2305,6 +2327,20 @@ const openMobileFilter = () => {
     filterBtnOpen.addEventListener('click', () => {
       catalogFilter.classList.add('popup');
       document.body.classList.add('open-mobile-menu');
+      const catalogFilterContent = document.querySelectorAll('.catalog-filter__content');
+
+      catalogFilterContent.forEach((item) => {
+        if (item && item.offsetHeight < 185) {
+          const showMore1 = item.querySelector('.show-more');
+          /* eslint-disable-next-line */
+          showMore1.classList.remove('active');
+          showMore1.classList.remove('show-less');
+        } else {
+          const showMore1 = item.querySelector('.show-more');
+          showMore1.classList.add('active');
+          showMore1.classList.add('show-less');
+        }
+      });
     });
   }
 
