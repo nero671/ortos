@@ -390,6 +390,12 @@ const navigatorTabsBlock = () => {
     const data = document.querySelectorAll('[data-part]');
     const bw = document.body.clientWidth;
     const arr = [];
+    const links = document.querySelectorAll('.navigator-content__picture a');
+    links.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+      })
+    });
 
     if (navigatorContent) {
       /* eslint-disable-next-line */
@@ -1136,6 +1142,9 @@ const catalog = () => {
 
       if (targetFirstMenu) {
         catalogFirstListItem.forEach((item, i) => {
+          catalogThirdList.forEach((link) => {
+            link.classList.remove('active');
+          });
           if (targetFirstMenu === item) {
             toggleCatalog(i);
           }
@@ -1341,6 +1350,7 @@ const togglePopup = () => {
 const useCatalogFilter = () => {
   const catalogFilterWrapper = document.querySelector('.catalog-filter__wrapper');
   const catalogFilterBtnResult = document.querySelector('.catalog-filter__btn-result');
+  const bw = document.body.clientWidth;
 
   if (!catalogFilterWrapper) {
     return;
@@ -1350,25 +1360,32 @@ const useCatalogFilter = () => {
     return;
   }
 
-  const goodStatsSizeWrapper = document.querySelector('.good-stats__size-wrapper');
-  const catalogFilterContent = document.querySelectorAll('.catalog-filter__content');
   const showMore = document.querySelectorAll('.show-more');
 
-  catalogFilterContent.forEach((item) => {
-    if (item && item.offsetHeight < 181) {
-      const showMore1 = item.querySelector('.show-more');
+  if (bw > 576) {
+    const goodStatsSizeWrapper = document.querySelector('.good-stats__size-wrapper');
+    const catalogFilterContent = document.querySelectorAll('.catalog-filter__content');
+
+
+    catalogFilterContent.forEach((item) => {
+      if (item && item.offsetHeight < 181) {
+        const showMore1 = item.querySelector('.show-more');
+        /* eslint-disable-next-line */
+        showMore1.classList.remove('active');
+        showMore1.classList.remove('show-less');
+      }
+    });
+
+    if (goodStatsSizeWrapper && goodStatsSizeWrapper.offsetHeight < 181) {
+      const showMore1 = goodStatsSizeWrapper.querySelector('.show-more');
       /* eslint-disable-next-line */
       showMore1.classList.remove('active');
       showMore1.classList.remove('show-less');
     }
-  });
-
-  if (goodStatsSizeWrapper && goodStatsSizeWrapper.offsetHeight < 181) {
-    const showMore1 = goodStatsSizeWrapper.querySelector('.show-more');
-    /* eslint-disable-next-line */
-    showMore1.classList.remove('active');
-    showMore1.classList.remove('show-less');
   }
+
+
+
 
   showMore.forEach((item) => {
     if (item) {
@@ -1410,14 +1427,14 @@ const useCatalogFilter = () => {
     dropdown.style.height = 0;
     /* eslint-disable-next-line */
     const showMore = dropdown.querySelector('.show-more');
-    if (showMore) {
-      /* eslint-disable-next-line */
-      dropdown.parentNode.style.height = 'initial';
-      showMore.classList.remove('show-less');
-      showMore.textContent = 'Показать все';
-      // eslint-disable-next-line no-param-reassign
-      dropdown.style.height = 0;
-    }
+    // if (showMore) {
+    //   /* eslint-disable-next-line */
+    //   dropdown.parentNode.style.height = 'initial';
+    //   showMore.classList.remove('show-less');
+    //   showMore.textContent = 'Показать все';
+    //   // eslint-disable-next-line no-param-reassign
+    //   dropdown.style.height = 0;
+    // }
   };
 
   if (catalogFilterWrapper) {
@@ -2305,6 +2322,33 @@ const openMobileFilter = () => {
     filterBtnOpen.addEventListener('click', () => {
       catalogFilter.classList.add('popup');
       document.body.classList.add('open-mobile-menu');
+
+
+        setTimeout(() => {
+          const goodStatsSizeWrapper = document.querySelector('.good-stats__size-wrapper');
+          const catalogFilterContent = document.querySelectorAll('.catalog-filter__content');
+          const showMore = document.querySelectorAll('.show-more');
+
+          catalogFilterContent.forEach((item) => {
+            console.log(item.offsetHeight)
+            if (item && item.offsetHeight < 181) {
+              const showMore1 = item.querySelector('.show-more');
+              /* eslint-disable-next-line */
+              showMore1.classList.remove('active');
+              showMore1.classList.remove('show-less');
+            }
+          });
+
+          if (goodStatsSizeWrapper && goodStatsSizeWrapper.offsetHeight < 181) {
+            const showMore1 = goodStatsSizeWrapper.querySelector('.show-more');
+            /* eslint-disable-next-line */
+            showMore1.classList.remove('active');
+            showMore1.classList.remove('show-less');
+          }
+        }, 1000);
+
+
+
     });
   }
 
@@ -2544,3 +2588,5 @@ const preLoader = () => {
 };
 
 preLoader();
+
+
