@@ -390,6 +390,12 @@ const navigatorTabsBlock = () => {
     const data = document.querySelectorAll('[data-part]');
     const bw = document.body.clientWidth;
     const arr = [];
+    const links = document.querySelectorAll('.navigator-content__picture a');
+    links.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+      })
+    });
 
     if (navigatorContent) {
       /* eslint-disable-next-line */
@@ -1136,6 +1142,9 @@ const catalog = () => {
 
       if (targetFirstMenu) {
         catalogFirstListItem.forEach((item, i) => {
+          catalogThirdList.forEach((link) => {
+            link.classList.remove('active');
+          });
           if (targetFirstMenu === item) {
             toggleCatalog(i);
           }
@@ -1341,6 +1350,7 @@ const togglePopup = () => {
 const useCatalogFilter = () => {
   const catalogFilterWrapper = document.querySelector('.catalog-filter__wrapper');
   const catalogFilterBtnResult = document.querySelector('.catalog-filter__btn-result');
+  const bw = document.body.clientWidth;
 
   if (!catalogFilterWrapper) {
     return;
@@ -1350,6 +1360,7 @@ const useCatalogFilter = () => {
     return;
   }
 
+  const goodStatsSizeWrapper = document.querySelector('.good-stats__size-wrapper');
   const catalogFilterContent = document.querySelectorAll('.catalog-filter__content');
   const showMore = document.querySelectorAll('.show-more');
 
@@ -1375,13 +1386,11 @@ const useCatalogFilter = () => {
         if (item.textContent.includes('Показать все')) {
           // eslint-disable-next-line no-param-reassign
           item.parentNode.parentNode.style.cssText = 'height: auto; max-height: 100%;';
-
           // eslint-disable-next-line no-param-reassign
           item.parentNode.style.cssText = 'height: auto; max-height: 100%;';
           // eslint-disable-next-line no-param-reassign
           item.textContent = 'Свернуть';
           item.classList.add('show-less');
-          console.log(item.parentNode.parentNode.parentNode);
         } else {
           item.classList.remove('show-less');
           // eslint-disable-next-line no-param-reassign
@@ -1614,21 +1623,25 @@ $('.phone-select__drop span').on('click', function () {
   $phoneSelect.toggleClass('active');
 });
 
-// $.fn.setCursorPosition = function (pos) {
-//   if ($(this).get(0).setSelectionRange) {
-//     $(this).get(0).setSelectionRange(pos, pos);
-//   } else if ($(this).get(0).createTextRange) {
-//     const range = $(this).get(0).createTextRange();
-//     range.collapse(true);
-//     range.moveEnd('character', pos);
-//     range.moveStart('character', pos);
-//     range.select();
-//   }
-// };
+$.fn.setCursorPosition = function (pos) {
+  if ($(this).get(0).setSelectionRange) {
+    $(this).get(0).setSelectionRange(pos, pos);
+  } else if ($(this).get(0).createTextRange) {
+    const range = $(this).get(0).createTextRange();
+    range.collapse(true);
+    range.moveEnd('character', pos);
+    range.moveStart('character', pos);
+    range.select();
+  }
+};
+
+if ($('.phone-select__input').length) {
+  // $('.phone-select__input').setCursorPosition(4);
+  $('.phone-select__input').mask('+375 (99) 999-99-99');
+}
 
 // выбор option
-
-$(document).on('click', '.phone-select__label', function () {
+$('.phone-select__label').on('click', function () {
   const $phoneSelectLabel = $(this);
   const $phoneSelect = $phoneSelectLabel.closest('.phone-select');
   const $phoneSelectTitle = $phoneSelect.find('.phone-select__title');
@@ -1639,107 +1652,29 @@ $(document).on('click', '.phone-select__label', function () {
   $phoneSelect.removeClass('active');
 
   if ($phoneSelectLabel.attr('data-value') === '+375') {
-    console.log('test1');
-    $('.phone-select__input').addClass('tel')
     $phoneSelectFlag.show();
     $phoneSelectDrop.find('span').empty();
     $phoneSelectInput.removeClass('any');
     $phoneSelectInput.val('');
     $phoneSelectInput.attr('placeholder', '+375');
-    //  $phoneSelectInput.setCursorPosition(4);
-    // $phoneSelectInput.mask("+375 (99) 999-99-99");
+    // $phoneSelectInput.setCursorPosition(4);
+    $phoneSelectInput.mask('+375 (99) 999-99-99');
+    $('.phone-select__drop span').removeClass('active');
   } else {
-    console.log('test2');
-    $('.phone-select__input').removeClass('tel')
     $phoneSelectFlag.hide();
     $phoneSelectDrop.find('span').text($phoneSelectLabel.attr('data-value'));
+
     $phoneSelectInput.addClass('any');
-    $phoneSelectInput.addClass('active');
     $phoneSelectInput.val('+');
     $phoneSelectInput.attr('placeholder', '+');
+
+    // $phoneSelectInput.mask('+');
     // $phoneSelectInput.setCursorPosition(0);
-    // $phoneSelectInput.unmask('+', { selectOnFocus: false });
+    // eslint-disable-next-line
+    $phoneSelectInput.unmask('+', { selectOnFocus: false });
+    $('.phone-select__drop span').addClass('active');
   }
 });
-
-[].forEach.call(document.querySelectorAll('input'), function (input) {
-  let keyCode;
-  function mask(event) {
-    event.keyCode && (keyCode = event.keyCode);
-    let pos = this.selectionStart;
-    if (pos < 3) event.preventDefault();
-    let matrix = "+7 (___) ___-__-__",
-      i = 0,
-      def = matrix.replace(/\D/g, ""),
-      val = this.value.replace(/\D/g, ""),
-      newValue = matrix.replace(/[_\d]/g, function (a) {
-        return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
-      });
-    i = newValue.indexOf("_");
-    if (i != -1) {
-      i < 5 && (i = 3);
-      newValue = newValue.slice(0, i);
-    }
-    let reg = matrix.substr(0, this.value.length).replace(/_+/g,
-      function (a) {
-        return "\\d{1," + a.length + "}";
-      }).replace(/[+()]/g, "\\$&");
-    reg = new RegExp("^" + reg + "$");
-    if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = newValue;
-    if (event.type == "blur" && this.value.length < 5) this.value = "";
-  }
-
-  input.addEventListener("input", mask, false);
-  input.addEventListener("focus", mask, false);
-  input.addEventListener("blur", mask, false);
-  input.addEventListener("keydown", mask, false);
-});
-
-const maskPhone = (selector, masked) => {
-  const elems = document.querySelectorAll(selector);
-
-  function mask(event) {
-    const { keyCode } = event;
-    const template = masked;
-    const def = template.replace(/\D/g, '');
-    const val = this.value.replace(/\D/g, '');
-    let i = 0;
-    // eslint-disable-next-line
-    let newValue = template.replace(/[_\d]/g, (a) => (i < val.length ? val.charAt(i++) || def.charAt(i) : a));
-    i = newValue.indexOf('_');
-    if (i !== -1) {
-      newValue = newValue.slice(0, i);
-    }
-    let reg = template.substr(0, this.value.length).replace(/_+/g,
-      (a) => `\\d{1,${a.length}}`).replace(/[+()]/g, '\\$&');
-    reg = new RegExp(`^${reg}$`);
-
-    // eslint-disable-next-line
-    if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
-      this.value = newValue;
-    }
-    if (event.type === 'blur' && this.value.length < 5) {
-      this.value = '';
-    }
-  }
-
-  for (const elem of elems) {
-    elem.addEventListener('input', mask);
-    elem.addEventListener('focus', mask);
-    elem.addEventListener('blur', mask);
-  }
-
-};
-
-maskPhone('.phone-select__input.tel', '+375 (__) ___-__-__');
-maskPhone('.phone-select__input.any', '+_____________');
-
-// if ($('.phone-select__input').length) {
-//   $('.phone-select__input').setCursorPosition(4);
-//   $('.phone-select__input').mask('+375 (99) 999-99-99');
-// }
-
-
 
 // Клик по кнопке ввести промокод в оформлении заказа
 const showPromocode = () => {
@@ -1849,15 +1784,15 @@ $('.submit-form .input-wrap__input').on('input', function () {
 
 // validation
 
-// const phoneSelectInput = document.querySelectorAll('.phone-select__input');
-// phoneSelectInput.forEach((phone) => {
-//   phone.addEventListener('input', () => {
-//     // eslint-disable-next-line no-param-reassign
-//     phone.value = phone.value.replace(/([^0-9+])/g, '');
-//     // eslint-disable-next-line no-param-reassign
-//     phone.value = phone.value.replace(/[+]{2}/g, '');
-//   });
-// });
+const phoneSelectInput = document.querySelectorAll('.phone-select__input');
+phoneSelectInput.forEach((phone) => {
+  phone.addEventListener('input', () => {
+    // eslint-disable-next-line no-param-reassign
+    phone.value = phone.value.replace(/([^0-9+])/g, '');
+    // eslint-disable-next-line no-param-reassign
+    phone.value = phone.value.replace(/[+]{2}/g, '');
+  });
+});
 
 $.validator.addMethod('minlenghtphone', (value, element) => value.replace(/\D+/g, '').length > 1);
 
@@ -2654,3 +2589,5 @@ const preLoader = () => {
 };
 
 preLoader();
+
+
