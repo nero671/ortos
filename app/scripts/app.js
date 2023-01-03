@@ -394,7 +394,7 @@ const navigatorTabsBlock = () => {
     links.forEach((item) => {
       item.addEventListener('click', (e) => {
         e.preventDefault();
-      })
+      });
     });
 
     if (navigatorContent) {
@@ -1366,7 +1366,6 @@ const useCatalogFilter = () => {
     const goodStatsSizeWrapper = document.querySelector('.good-stats__size-wrapper');
     const catalogFilterContent = document.querySelectorAll('.catalog-filter__content');
 
-
     catalogFilterContent.forEach((item) => {
       if (item && item.offsetHeight < 181) {
         const showMore1 = item.querySelector('.show-more');
@@ -1383,9 +1382,6 @@ const useCatalogFilter = () => {
       showMore1.classList.remove('show-less');
     }
   }
-
-
-
 
   showMore.forEach((item) => {
     if (item) {
@@ -2323,32 +2319,28 @@ const openMobileFilter = () => {
       catalogFilter.classList.add('popup');
       document.body.classList.add('open-mobile-menu');
 
+      setTimeout(() => {
+        const goodStatsSizeWrapper = document.querySelector('.good-stats__size-wrapper');
+        const catalogFilterContent = document.querySelectorAll('.catalog-filter__content');
+        const showMore = document.querySelectorAll('.show-more');
 
-        setTimeout(() => {
-          const goodStatsSizeWrapper = document.querySelector('.good-stats__size-wrapper');
-          const catalogFilterContent = document.querySelectorAll('.catalog-filter__content');
-          const showMore = document.querySelectorAll('.show-more');
-
-          catalogFilterContent.forEach((item) => {
-            console.log(item.offsetHeight)
-            if (item && item.offsetHeight < 181) {
-              const showMore1 = item.querySelector('.show-more');
-              /* eslint-disable-next-line */
-              showMore1.classList.remove('active');
-              showMore1.classList.remove('show-less');
-            }
-          });
-
-          if (goodStatsSizeWrapper && goodStatsSizeWrapper.offsetHeight < 181) {
-            const showMore1 = goodStatsSizeWrapper.querySelector('.show-more');
+        catalogFilterContent.forEach((item) => {
+          console.log(item.offsetHeight);
+          if (item && item.offsetHeight < 181) {
+            const showMore1 = item.querySelector('.show-more');
             /* eslint-disable-next-line */
-            showMore1.classList.remove('active');
+              showMore1.classList.remove('active');
             showMore1.classList.remove('show-less');
           }
-        }, 1000);
+        });
 
-
-
+        if (goodStatsSizeWrapper && goodStatsSizeWrapper.offsetHeight < 181) {
+          const showMore1 = goodStatsSizeWrapper.querySelector('.show-more');
+          /* eslint-disable-next-line */
+            showMore1.classList.remove('active');
+          showMore1.classList.remove('show-less');
+        }
+      }, 1000);
     });
   }
 
@@ -2540,6 +2532,51 @@ const openFancy = () => {
   }
 };
 
+$(document).on('click', 'ymaps', () => {
+  const mapBalloonBtn = document.querySelectorAll('.map-balloon__btn');
+
+  const checkoutBtn = document.querySelector('.checkout__btn');
+  const pickupField = document.querySelector('.pickup-field');
+
+  const toggleAdress = () => {
+    $.fancybox.close({
+      src: '#shops',
+      type: 'inline',
+    });
+
+    checkoutBtn.classList.add('hide');
+    pickupField.classList.add('active');
+  };
+
+  mapBalloonBtn.forEach((item) => {
+    item.addEventListener('click', () => {
+      toggleAdress();
+    });
+  });
+});
+
+$(document).on('click', '.checkout__btn', () => {
+  const shopsTableBtn = document.querySelectorAll('.shops-table__btn');
+  const checkoutBtn = document.querySelector('.checkout__btn');
+  const pickupField = document.querySelector('.pickup-field');
+
+  const toggleAdress = () => {
+    $.fancybox.close({
+      src: '#shops',
+      type: 'inline',
+    });
+
+    checkoutBtn.classList.add('hide');
+    pickupField.classList.add('active');
+  };
+
+  shopsTableBtn.forEach((item) => {
+    item.addEventListener('click', () => {
+      toggleAdress();
+    });
+  });
+});
+
 activateSliders();
 navigatorTabsBlock();
 // mapBlock(); // вылетает ошибка на других страницах
@@ -2588,5 +2625,3 @@ const preLoader = () => {
 };
 
 preLoader();
-
-

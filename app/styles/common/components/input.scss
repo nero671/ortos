@@ -27,6 +27,10 @@
         &:focus {
             border: none;
         }
+
+      &:active {
+        border: none;
+      }
     }
 
     &.tel {
@@ -282,4 +286,8 @@ label.error {
     @media(max-width: 576px) {
         font-size: 12px;
     }
+}
+
+.phone-select__title .phone-select__input {
+  pointer-events: none;
 }

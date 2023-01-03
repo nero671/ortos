@@ -375,3 +375,27 @@
         }
     }
 }
+
+.checkout__btn.hide {
+  display: none;
+}
+
+.pickup-field.active {
+  display: block;
+}
+
+.pickup-field__input {
+  pointer-events: none;
+}
+
+.pickup-field__input:focus {
+  border: 1px solid #E9E8EE !important;
+}
+
+.pickup-field__input-wrap .pickup-field__btn {
+  margin-top: 0 !important;
+}
+
+.shops-popup__tabs {
+  margin-top: 30px;
+}
