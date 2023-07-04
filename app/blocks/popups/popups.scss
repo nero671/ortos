@@ -19,12 +19,12 @@
 
 .modal__form .modal__letter {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .popup-form .modal__letter {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   label {
     margin-bottom: 0 !important;

@@ -1605,22 +1605,37 @@ $('.phone-select__drop span').on('click', function () {
   $phoneSelect.toggleClass('active');
 });
 
-$.fn.setCursorPosition = function (pos) {
-  if ($(this).get(0).setSelectionRange) {
-    $(this).get(0).setSelectionRange(pos, pos);
-  } else if ($(this).get(0).createTextRange) {
-    const range = $(this).get(0).createTextRange();
-    range.collapse(true);
-    range.moveEnd('character', pos);
-    range.moveStart('character', pos);
-    range.select();
-  }
-};
+// $.fn.setCursorPosition = function (pos) {
+//   if ($(this).get(0).setSelectionRange) {
+//     $(this).get(0).setSelectionRange(pos, pos);
+//   } else if ($(this).get(0).createTextRange) {
+//     const range = $(this).get(0).createTextRange();
+//     range.collapse(true);
+//     range.moveEnd('character', pos);
+//     range.moveStart('character', pos);
+//     range.select();
+//   }
+// };
 
 if ($('.phone-select__input').length) {
   // $('.phone-select__input').setCursorPosition(4);
-  $('.phone-select__input').mask('+375 (99) 999-99-99');
+  // $('.phone-select__input').mask('+375 (99) 999-99-99');
+  $('.phone-select__input').inputmask({
+    mask: '+375 (99) 999-99-99',
+    clearIncomplete: true,
+  });
 }
+
+// const elementList = document.querySelectorAll('.phone-select .tel');
+
+// elementList.forEach((element) => {
+//   const maskOptions = {
+//     mask: '+{375} 00 000-00-00',
+//     lazy: false,
+//   };
+//   const mask = new IMask(element, maskOptions);
+//   mask.updateValue();
+// });
 
 // выбор option
 $('.phone-select__label').on('click', function () {
@@ -1640,20 +1655,26 @@ $('.phone-select__label').on('click', function () {
     $phoneSelectInput.val('');
     $phoneSelectInput.attr('placeholder', '+375');
     // $phoneSelectInput.setCursorPosition(4);
-    $phoneSelectInput.mask('+375 (99) 999-99-99');
+    // $phoneSelectInput.mask('+375 (99) 999-99-99');
+    $('.phone-select__input').inputmask({
+      mask: '+375 (99) 999-99-99',
+      clearIfNotMatch: true,
+    });
     $('.phone-select__drop span').removeClass('active');
   } else {
     $phoneSelectFlag.hide();
     $phoneSelectDrop.find('span').text($phoneSelectLabel.attr('data-value'));
 
     $phoneSelectInput.addClass('any');
-    $phoneSelectInput.val('+');
+
     $phoneSelectInput.attr('placeholder', '+');
 
     // $phoneSelectInput.mask('+');
     // $phoneSelectInput.setCursorPosition(0);
     // eslint-disable-next-line
-    $phoneSelectInput.unmask('+', { selectOnFocus: false });
+    // $phoneSelectInput.unmask('+', { selectOnFocus: false });
+    $('.phone-select__input').inputmask('remove');
+    $phoneSelectInput.val('+');
     $('.phone-select__drop span').addClass('active');
   }
 });
